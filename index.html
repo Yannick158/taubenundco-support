@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Tauben &amp; Co — Hilfe und Datenschutz</title>
+<!--
+  Startseite der Support-Seite zur App "Tauben & Co".
+  Zweck: oeffentlich erreichbare Adresse fuer Google Play (Datenschutz-URL,
+  Pflicht) und App Store Connect (Support-URL, Pflicht). Die Webseite
+  taubenundco.de selbst liegt hinter dem Anmelde-Tor und taugt dafuer nicht.
+  Stil: Papier/Tinte aus docs/DESIGN.md §3, alles inline, kein Skript,
+  kein externer Aufruf, keine Daten aus der Station.
+-->
+<style>
+  :root {
+    --paper:  #FCFCFB;
+    --paper2: #F3F2EE;
+    --ink:    #1A1612;
+    --ink2:   #4A3F31;
+    --ink-soft-text: #766C60;
+    --hairline: rgba(26,22,18,.14);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:  #17181C;
+      --paper2: #212329;
+      --ink:    #ECE8E1;
+      --ink2:   #B7AFA2;
+      --ink-soft-text: #90897D;
+      --hairline: rgba(236,232,225,.20);
+    }
+  }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: ui-serif, "Iowan Old Style", "New York", Georgia, serif;
+    font-size: 17px;
+    line-height: 1.45;
+  }
+  main { max-width: 34rem; margin: 0 auto; padding: 34px 24px 56px; }
+  .pre {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--ink-soft-text); margin: 0 0 8px;
+  }
+  h1 { font-size: 28px; font-weight: 600; line-height: 1.2; margin: 0 0 4px; }
+  .stand { color: var(--ink2); font-style: italic; margin: 0 0 28px; }
+  h2 {
+    font-size: 19px; font-weight: 600; margin: 28px 0 8px;
+    padding-top: 20px; border-top: 1px solid var(--hairline);
+  }
+  h2:first-of-type { border-top: 0; padding-top: 0; }
+  p, li { color: var(--ink); }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 12px; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--ink); text-underline-offset: 3px; }
+  .platzhalter {
+    display: block; background: var(--paper2);
+    border: 1px dashed var(--hairline); border-radius: 8px;
+    padding: 16px; margin: 0 0 12px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 13px; line-height: 1.5; color: var(--ink2);
+  }
+  .platzhalter b { display: block; margin-bottom: 6px; color: var(--ink); }
+  footer {
+    margin-top: 40px; padding-top: 16px;
+    border-top: 1px solid var(--hairline);
+    color: var(--ink-soft-text); font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <p class="pre">Tauben &amp; Co — App für iPhone und Android</p>
+  <h1>Hilfe und Datenschutz</h1>
+  <p class="stand">Stand: 11. September 2026</p>
+
+  <h2>Was die App ist</h2>
+  <p>
+    <strong>Tauben &amp; Co</strong> zeigt, welche Vögel im Garten waren. Ein
+    Mikrofon hört dort den ganzen Tag zu und erkennt die Vögel an ihrer Stimme;
+    die App macht daraus eine gezeichnete Collage des Tages, eine Statistik und
+    kurze Rückblicke. Wer kein Gartenmikrofon hat, kann mit dem Handy-Mikrofon
+    zuhören — die Erkennung läuft dann auf dem Gerät.
+  </p>
+  <p>
+    Die App ist privat. Sie hat keine Werbung, keine Analyse-Werkzeuge und kein
+    Nutzerkonto mit Namen.
+  </p>
+
+  <h2>Datenschutz</h2>
+  <p>
+    Was gespeichert wird, wie lange und warum, steht in der
+    <a href="datenschutz.html"><strong>Datenschutzerklärung</strong></a>.
+  </p>
+
+  <h2>Fragen, Fehler, Rückmeldungen</h2>
+  <p class="platzhalter">
+    <b>Bitte vor der Veröffentlichung ausfüllen</b>
+    &lt;E-Mail-Adresse für Rückmeldungen&gt;
+  </p>
+  <p>
+    Aus der Beta heraus geht es am schnellsten direkt: In TestFlight einen
+    Screenshot machen und „Feedback senden“ wählen; im internen Test bei Google
+    Play den Weg über die Testerseite nutzen.
+  </p>
+
+  <footer>
+    Diese Seite liegt bewusst außerhalb der Vogelstation und enthält keine
+    Aufnahmen, keine Fundzahlen und keine Adresse eines Standorts.
+  </footer>
+
+</main>
+</body>
+</html>
