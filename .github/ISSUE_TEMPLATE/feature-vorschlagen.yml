@@ -1,0 +1,20 @@
+name: "Suggest a feature / Wunsch äußern"
+description: "An idea or wish for the app. / Eine Idee oder ein Wunsch für die App."
+title: "[Wunsch] "
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Please do not post private data** (passwords, addresses, exact locations, IP addresses).
+        **Bitte keine privaten Daten posten** (Passwörter, Adressen, genaue Standorte, IP-Adressen).
+  - type: textarea
+    id: wish
+    attributes:
+      label: "What would you like? / Was wünschst du dir?"
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: "Why would it help? / Wozu wäre es gut?"

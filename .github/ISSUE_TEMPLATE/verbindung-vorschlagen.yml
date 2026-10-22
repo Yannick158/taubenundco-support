@@ -1,0 +1,56 @@
+name: "Suggest an integration / Anbindung vorschlagen"
+description: "Which station or software should the app connect to? / Welche Station oder Software soll die App noch anbinden?"
+title: "[Integration] "
+labels: ["integration"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea! / Danke für den Vorschlag!
+
+        **Please do not post private data**: no passwords, no home address, no exact location, no IP addresses or access links to your own station.
+        **Bitte keine privaten Daten posten**: keine Passwörter, keine Wohnadresse, keinen genauen Standort, keine IP-Adressen oder Zugangslinks zu deiner eigenen Station.
+  - type: dropdown
+    id: target
+    attributes:
+      label: "What should be connected? / Was soll verbunden werden?"
+      options:
+        - BirdNET-Go
+        - BirdNET-Pi
+        - AvianVisitors
+        - BirdWeather
+        - Haikubox
+        - Other / Andere (please fill in below / bitte unten ausfüllen)
+    validations:
+      required: true
+  - type: input
+    id: other
+    attributes:
+      label: "If other: name / Falls andere: Name"
+      description: "Name of the station or software. / Name der Station oder Software."
+  - type: input
+    id: link
+    attributes:
+      label: "Link to the project / Link zum Projekt"
+      description: "Public project page or documentation only. / Nur öffentliche Projektseite oder Dokumentation."
+      placeholder: "https://"
+  - type: textarea
+    id: purpose
+    attributes:
+      label: "What would you use it for? / Wofür würdest du es nutzen?"
+      description: "What should be visible or possible in the app? / Was soll in der App davon zu sehen oder möglich sein?"
+    validations:
+      required: true
+  - type: checkboxes
+    id: uses
+    attributes:
+      label: "Your use / Deine Nutzung"
+      options:
+        - label: "I use this station or software myself. / Ich nutze diese Station oder Software selbst."
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: "Privacy / Datenschutz"
+      options:
+        - label: "I did not post passwords, addresses, exact locations or IP addresses. / Ich habe keine Passwörter, Adressen, genauen Standorte oder IP-Adressen gepostet."
+          required: true

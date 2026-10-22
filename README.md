@@ -12,6 +12,7 @@ deshalb diese Seite über GitHub Pages.
 |---|---|
 | `index.html` | Startseite: was die App ist, Support-Kontakt |
 | `datenschutz.html` | Datenschutzerklärung (Play: Datenschutz-URL) |
+| `.github/ISSUE_TEMPLATE/` | Issue-Formulare: Anbindung vorschlagen, Wunsch, Fehler |
 | `.nojekyll` | GitHub Pages soll die Dateien unverändert ausliefern |
 
 Die Quelle von `datenschutz.html` liegt im App-Projekt unter
