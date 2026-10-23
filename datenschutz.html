@@ -4,11 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Datenschutz — Tauben &amp; Co</title>
+<title>Datenschutz — Tauben &amp; Co · Privacy policy</title>
 <!--
   Datenschutzerklaerung fuer die App "Tauben & Co".
   Pflichtangabe in der Google Play Console (Mikrofon + Standort) und
-  sinnvoll fuer TestFlight. Inhalt aus docs/ARCHITEKTUR.md §7 und §10.
+  sinnvoll fuer TestFlight. Inhalt aus docs/ARCHITEKTUR.md §7 und §10;
+  Stand 23.10.2026 um eigene Stationen, Collage/Widget und Drive-Archiv
+  erweitert (docs/STAND-DATENSCHUTZ.md). Deutsch zuerst, darunter dieselbe
+  Erklaerung auf Englisch (Abschnitte #de und #en, eine Datei, ein Aufruf).
 
   Liegt oeffentlich VOR dem Anmelde-Tor unter /app/datenschutz.html
   (Caddy-Ausnahme @datenschutz, siehe server/deploy-datenschutz.sh).
@@ -152,14 +155,29 @@
     color: var(--ink-soft-text);
   }
   a { color: var(--ink); text-decoration-color: var(--hairline); }
+
+  .sprachhinweis {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 12px;
+    margin: -16px 0 24px;
+  }
+  section + section {
+    margin-top: 56px;
+    padding-top: 40px;
+    border-top: 2px solid var(--hairline);
+  }
+  section { scroll-margin-top: 16px; }
 </style>
 </head>
 <body>
 <main>
 
+<section id="de" lang="de">
+
   <p class="pre">Tauben &amp; Co — App für iPhone und Android</p>
   <h1>Datenschutzerklärung</h1>
-  <p class="stand">Stand: 29. September 2026</p>
+  <p class="stand">Stand: 23. Oktober 2026</p>
+  <p class="sprachhinweis"><a href="#en" hreflang="en">English version below</a></p>
 
   <h2>1. Verantwortlicher</h2>
   <p>
@@ -174,7 +192,9 @@
   <p>
     Diese Erklärung gilt für die App <strong>„Tauben &amp; Co“</strong>
     (<code>de.taubenundco.app</code>) und für die Webseite
-    <strong>taubenundco.de</strong>, die die App anzeigt.
+    <strong>taubenundco.de</strong>, die die App anzeigt. Verbinden Sie die App mit
+    einer Station, die jemand anderes betreibt (Abschnitt 3.6), gilt sie nur für die
+    App — nicht für die Station selbst.
   </p>
 
   <h2>2. Kurz gesagt</h2>
@@ -184,23 +204,41 @@
       Analyse-Werkzeuge und keine Weitergabe an Dritte zu Werbezwecken</strong>.
     </p>
     <p>
-      Es gibt <strong>kein Nutzerkonto mit Namen</strong>: Der Zugang läuft über ein
-      gemeinsames Passwort für den jeweiligen Standort.
+      Bei Tauben-&amp;-Co-Stationen gibt es <strong>kein Nutzerkonto mit Namen</strong>:
+      Der Zugang läuft über ein gemeinsames Passwort für den jeweiligen Standort.
     </p>
     <p>
-      Das <strong>Mikrofon</strong> wird nur ausgewertet, solange „Zuhören“ läuft.
-      Der Ton wird <strong>nicht gespeichert und nicht gesendet</strong>.
+      Das <strong>Mikrofon Ihres Handys</strong> wird nur ausgewertet, solange
+      „Zuhören“ läuft. Der Ton wird <strong>nicht gespeichert und nicht gesendet</strong>.
     </p>
     <p>
       Der <strong>Standort</strong> bleibt auf dem Gerät und wird nicht an den
       Server geschickt.
     </p>
-      <p>
+    <p>
+      Verbinden Sie die App mit <strong>Ihrer eigenen Station</strong> (BirdNET-Go,
+      AvianVisitors oder einem eigenen Server), bleibt deren <strong>Adresse auf dem
+      Gerät</strong>. Die App verbindet sich <strong>direkt</strong> mit der Station;
+      wir sind nicht dazwischen. Ein BirdNET-Go-Passwort speichert die App nur,
+      wenn Sie zustimmen, und nur in der geschützten Ablage Ihres Geräts.
+    </p>
+    <p>
+      Für das Collage-Bild und das Widget bei einer solchen Station gehen nur
+      <strong>wissenschaftliche Artnamen und Zählungen</strong> an unseren Server —
+      keine Orte, keine Aufnahmen. Er zeichnet das Bild und <strong>speichert
+      nichts davon</strong>.
+    </p>
+    <p>
       Fotos, die Sie an ein <strong>verbundenes Gerät</strong> schicken, laufen über
       den Server, werden dort neu gezeichnet — ohne Aufnahmeort und andere
       Zusatzdaten — und nach 30 Tagen gelöscht.
     </p>
-</div>
+    <p>
+      Ein <strong>Archiv auf Google Drive</strong> gibt es nur für Stationen, die ich
+      selbst betreibe, und nur, wenn ich es ausdrücklich eingeschaltet habe.
+      Standardmäßig ist es aus.
+    </p>
+  </div>
 
   <h2>3. Welche Daten verarbeitet werden</h2>
 
@@ -210,6 +248,11 @@
     <tr>
       <td>Gewählter Standort (Kennung, Adresse, Anzeigename)</td>
       <td>damit die App weiß, welche Vogelanzeige sie öffnen soll</td>
+    </tr>
+    <tr>
+      <td>Gewählte eigene Station (Adresse, erkannte Art, Anzeigename) und die
+          zuletzt von ihr geholte Artenliste</td>
+      <td>damit die App und das Widget wissen, wohin sie sich verbinden; Abschnitt 3.6</td>
     </tr>
     <tr>
       <td>Funde des Handy-Mikrofons: Zeitpunkt, Artname, Trefferwert</td>
@@ -269,6 +312,11 @@
     im Klartext. Auf dem Gerät liegt er im Schlüsselbund (iOS) beziehungsweise in
     verschlüsselten Einstellungen (Android).
   </p>
+  <p>
+    Diese Tabelle gilt für Tauben-&amp;-Co-Stationen. Bei einer fremden Station
+    (Abschnitt 3.6) gehen Sitzungs-Cookie, Geräte-Token, Gerätename und Push-Token
+    gar nicht erst zustande.
+  </p>
 
   <h3>3.3 Mikrofon</h3>
   <p>
@@ -281,13 +329,29 @@
     legen, zeigt das Gerät eine Dauermeldung an, bis Sie „Aufhören“ antippen.
   </p>
 
-  <h3>3.4 Collage-Bilder</h3>
+  <h3>3.4 Collage-Bilder, Widget und Vogelzeichnungen</h3>
   <p>
     Für die Tagescollage schickt die App eine Liste von
-    <strong>Artnamen mit Anzahl</strong> an den Server, der daraus ein Bild
-    zeichnet und es <strong>ohne zu speichern</strong> zurückgibt.
-    <strong>Kein Standort, kein Gerätename und keine Kennung</strong> gehen dabei
-    mit. Dasselbe gilt für den Abruf einzelner Vogelzeichnungen.
+    <strong>wissenschaftlichen Artnamen mit Anzahl</strong> an den Server, der
+    daraus ein Bild zeichnet und es <strong>ohne zu speichern</strong>
+    zurückgibt. Das gilt für „Zuhören“ mit dem Handy-Mikrofon und ebenso für das
+    Widget bei einer eigenen BirdNET-Go- oder AvianVisitors-Station: Die App holt
+    die Artenliste von Ihrer Station und schickt sie — nur die Namen und
+    Zahlen — an uns, damit das Bild im gewohnten Stil entsteht.
+    <strong>Keine Orte, keine Aufnahmen, keine Stationsadresse, kein Stationsname,
+    kein Gerätename und keine Kennung</strong> gehen dabei mit.
+  </p>
+  <p>
+    Die Liste steht nur für die Dauer der Anfrage in einer Arbeitsdatei, die noch
+    im selben Aufruf gelöscht wird; sie landet in keinem Protokoll. Zur Abwehr von
+    Missbrauch zählt der Server Anfragen je IP-Adresse — nur als Prüfsumme und
+    höchstens zwei Minuten lang.
+  </p>
+  <p>
+    Einzelne Vogelzeichnungen (zum Beispiel in der Liste der Funde) lädt die App
+    ebenfalls von unserem Server. Die Anfrage enthält nur den wissenschaftlichen
+    Artnamen. Wie bei jedem Abruf sieht der Server dabei die IP-Adresse und die
+    aufgerufene Adresse in den kurzlebigen Server-Protokollen (Abschnitt 3.2).
   </p>
 
   <h3>3.5 Nachrichten zwischen verbundenen Geräten</h3>
@@ -330,6 +394,90 @@
     Abschnitt 5) und sind nur für die beiden verbundenen Geräte abrufbar.
   </p>
 
+  <h3>3.6 Eigene Station verbinden (BirdNET-Go, AvianVisitors, eigener Server)</h3>
+  <p>
+    Beim ersten Start wählen Sie, womit die App Vögel zeigt: mit einer
+    <strong>BirdNET-Go</strong>-Station, mit einer <strong>AvianVisitors</strong>-Seite
+    (zum Beispiel auf einem BirdNET-Pi), mit einem Server, auf dem das
+    Tauben-&amp;-Co-System läuft — meinem oder Ihrem eigenen — oder nur mit dem
+    Mikrofon dieses Handys. Für die ersten beiden Möglichkeiten gilt:
+  </p>
+  <table>
+    <tr><th>Was</th><th>Wozu</th><th>Wo</th></tr>
+    <tr>
+      <td><strong>Adresse der Station</strong>, erkannte Art, Anzeigename</td>
+      <td>damit die App weiß, wohin sie sich verbindet</td>
+      <td>nur auf dem Gerät; <strong>geht nicht an uns</strong></td>
+    </tr>
+    <tr>
+      <td><strong>BirdNET-Go-Passwort</strong> — nur, wenn Sie ausdrücklich
+          zustimmen („angemeldet bleiben“)</td>
+      <td>damit die App Einstellungen Ihrer Station ändern kann, ohne bei jedem
+          Öffnen neu zu fragen</td>
+      <td>nur im Schlüsselbund (iOS) beziehungsweise Keystore (Android) des Geräts;
+          <strong>nie an uns</strong>; wird beim Abmelden und Löschen der App
+          entfernt</td>
+    </tr>
+  </table>
+  <p>
+    <strong>Direkte Verbindung.</strong> Die App und das Widget holen die Daten
+    unmittelbar von Ihrer Station: die Artenliste und die Seite, die im App-Fenster
+    erscheint. Wir sind nicht dazwischen und erfahren weder die Adresse noch, was
+    Ihre Station anzeigt. Von unserem Server geht nichts an Ihre Station — auch
+    kein Geräte-Token. Was die Station selbst speichert und protokolliert, bestimmt,
+    wer sie betreibt; für die Seite der Station gilt deren Datenschutz.
+  </p>
+  <p>
+    <strong>Passwörter der Station.</strong> Fragt Ihre Station beim Öffnen mit dem
+    Anmeldefenster des Systems nach Benutzer und Passwort, benutzt die App beides
+    nur für die laufende Sitzung und merkt es sich nicht. Gespeichert wird ein
+    Passwort nur im Fall der Tabelle oben, und nur mit Ihrer Zustimmung.
+  </p>
+  <p>
+    <strong>Verschlüsselung.</strong> Verschlüsselte Adressen (<code>https://</code>)
+    sind überall möglich. Unverschlüsselt (<code>http://</code>) verbindet sich die
+    App nur mit Adressen im Heimnetz, zum Beispiel <code>192.168.…</code> oder
+    <code>birdnet.local</code> — nicht mit dem offenen Internet.
+  </p>
+  <p>
+    <strong>Zugriff aufs lokale Netzwerk.</strong> Auf dem iPhone fragt iOS beim
+    ersten Verbinden, ob die App auf Geräte im lokalen Netzwerk zugreifen darf.
+    Der Grund: Stationen wie BirdNET-Go oder ein BirdNET-Pi stehen meist bei Ihnen
+    zu Hause im WLAN, und iOS erlaubt einer App den Weg dorthin nur mit dieser
+    Freigabe. Die App nutzt sie ausschließlich, um die Station zu erreichen, die
+    Sie selbst eingetragen haben. Sie durchsucht das Netz nicht nach anderen Geräten
+    und gibt nichts darüber weiter. Auf Android braucht es dafür derzeit keine
+    eigene Freigabe.
+  </p>
+  <p>
+    Was bei einer solchen Station <em>an uns</em> geht, steht in Abschnitt 3.4:
+    nur Artnamen und Zählungen für das Collage-Bild.
+  </p>
+
+  <h3>3.7 Archiv auf Google Drive (nur wenn eingeschaltet)</h3>
+  <p>
+    Dieser Abschnitt betrifft nur Tauben-&amp;-Co-Stationen, die ich selbst
+    betreibe — nicht Ihre eigene Station und nicht Ihr Gerät. Für eine meiner
+    Stationen kann ich ein nächtliches Archiv einschalten. Standardmäßig ist es aus.
+    Der Schalter liegt im geschützten Bereich der Webseite, ist nur mit
+    Betreiber-Zugang erreichbar und lässt sich erst nach der Bestätigung eines
+    Hinweises umlegen. Danach kopiert der Server jede Nacht Daten dieser Station in
+    einen Ordner im Google Drive des Betreibers: die Datenbank mit den Erkennungen
+    (Art, Zeitpunkt, Trefferwert), die Falsch-Markierungen, die
+    Wochenrückblick-Videos und die Tonaufnahmen der Vögel vom Mikrofon der Station.
+    Die Aufnahmen können leise Gesprächsfetzen enthalten, weil der Filter für
+    menschliche Stimmen nur Ausschnitte mit klar hörbarer Stimme stummschaltet.
+  </p>
+  <p>
+    Der Ordner wird nicht freigegeben. Das Kopierprogramm (rclone) hat nur Zugriff
+    auf Dateien, die es selbst angelegt hat, nicht auf das übrige Drive. Das Archiv
+    lässt sich jederzeit ausschalten; was bereits im Drive liegt, bleibt dort, bis
+    ich es lösche. Es enthält keine Daten aus der App auf Ihrem Gerät
+    (Mikrofon-Funde, Position, Geräte-Token) und nichts von Stationen anderer
+    Betreiber: Es betrifft nur die Aufnahmen und Auswertungen meiner eigenen
+    Stationen.
+  </p>
+
   <h2>4. Berechtigungen und warum</h2>
   <ul>
     <li><strong>Mikrofon</strong> — nur für „Zuhören“ (Abschnitt 3.3). Ohne
@@ -338,6 +486,9 @@
         „Meine Position verwenden“. Verlässt das Gerät nicht.</li>
     <li><strong>Meldungen</strong> — freiwillig, nur wenn Sie Meldungen
         einschalten.</li>
+    <li><strong>Lokales Netzwerk</strong> (iPhone) — nur, damit die App die
+        Station erreicht, die Sie selbst eintragen (Abschnitt 3.6). Ohne Freigabe
+        funktionieren Stationen im Heimnetz nicht; alles andere schon.</li>
   </ul>
   <p>
     Jede Freigabe können Sie jederzeit in den Einstellungen Ihres Geräts wieder
@@ -362,22 +513,36 @@
       <td>betreibt den Server, auf dem die Vogelanzeige läuft; Standort des
           Servers: Deutschland</td>
     </tr>
+    <tr>
+      <td><strong>Google</strong> (Google Drive; Google Ireland Limited
+          beziehungsweise Google LLC)</td>
+      <td>Ablage des Archivs aus Abschnitt 3.7 — <strong>nur, wenn ich es für eine
+          meiner Stationen eingeschaltet habe</strong>; Zugriff nur über ein
+          privates Konto des Betreibers, ohne Freigabe</td>
+    </tr>
   </table>
   <p>
     Eine Meldung enthält nur, was ohnehin auf dem Bildschirm steht (etwa „Neue
-    Art: Buchfink“). Weiter geht nichts an Dritte. <strong>Kein Verkauf von
-    Daten, keine Werbenetzwerke, keine Analyse-Bibliotheken.</strong>
+    Art: Buchfink“). Die Station, die Sie selbst eintragen, ist kein Empfänger
+    unserer Daten: Die App spricht mit ihr direkt (Abschnitt 3.6). Weiter geht
+    nichts an Dritte. <strong>Kein Verkauf von Daten, keine Werbenetzwerke, keine
+    Analyse-Bibliotheken.</strong>
   </p>
 
   <h2>6. Rechtsgrundlagen</h2>
   <ul>
     <li><strong>Art. 6 Abs. 1 lit. b DSGVO</strong> (Erfüllung) — Anmeldung,
-        Sitzungs-Cookie, Geräte-Token: ohne sie funktioniert die App nicht.</li>
+        Sitzungs-Cookie, Geräte-Token sowie das Anzeigen Ihrer Station und das
+        Zeichnen des Collage-Bildes: ohne sie funktioniert die App nicht.</li>
     <li><strong>Art. 6 Abs. 1 lit. a DSGVO</strong> (Einwilligung) — Mikrofon,
-        Standort und Meldungen; Sie erteilen sie im Systemdialog und können sie
-        jederzeit widerrufen.</li>
+        Standort, Meldungen und lokales Netzwerk; Sie erteilen sie im Systemdialog
+        und können sie jederzeit widerrufen. Ebenso das Speichern eines
+        BirdNET-Go-Passworts: Es geschieht nur mit Ihrer Zustimmung.</li>
     <li><strong>Art. 6 Abs. 1 lit. f DSGVO</strong> (berechtigtes Interesse) —
-        kurzlebige Server-Protokolle zum sicheren Betrieb.</li>
+        kurzlebige Server-Protokolle zum sicheren Betrieb sowie das Archiv auf
+        Google Drive (Datensicherung der Aufnahmen und Auswertungen meiner eigenen
+        Stationen, bewusst eingeschaltet, ohne Weitergabe und ohne
+        Freigabe-Link).</li>
   </ul>
 
   <h2>7. Speicherdauer</h2>
@@ -385,13 +550,18 @@
     <li>Sitzungs-Cookie: höchstens 90 Tage.</li>
     <li>Geräte-Token, Gerätename, Push-Token: bis das Gerät ausgesperrt oder die
         App gelöscht wird.</li>
-    <li>Daten auf dem Gerät (Funde, gerundete Position, Einstellungen): bis Sie
-        die App löschen.</li>
+    <li>Daten auf dem Gerät (Funde, gerundete Position, Einstellungen, Adresse
+        Ihrer Station): bis Sie die Station wechseln oder die App löschen.</li>
+    <li>BirdNET-Go-Passwort (nur falls gespeichert): bis Sie sich abmelden oder
+        die App löschen; es liegt nie bei uns.</li>
     <li>Server-Protokolle: kurzfristig, automatische Löschung.</li>
-    <li>Collage-Anfragen: werden nicht gespeichert.</li>
-      <li>Fotos und Zeilen zwischen verbundenen Geräten: 30 Tage, dann automatische
+    <li>Collage-Anfragen (Artnamen und Zählungen): werden nicht gespeichert.</li>
+    <li>Fotos und Zeilen zwischen verbundenen Geräten: 30 Tage, dann automatische
         Löschung; sofort beim Lösen der Verbindung oder beim Löschen der Nachricht.</li>
-</ul>
+    <li>Archiv auf Google Drive (nur falls eingeschaltet): bis ich die Dateien im
+        Drive lösche. Gelöschte Dateien liegen danach noch bis zu 30 Tage im
+        Papierkorb von Google.</li>
+  </ul>
 
   <h2>8. Ihre Rechte</h2>
   <p>
@@ -406,6 +576,9 @@
     <li><strong>In der App:</strong> Einstellungen → Geräte → dieses Gerät
         aussperren. Geräte-Token, Gerätename und Push-Token auf dem Server
         werden damit ungültig und entfernt.</li>
+    <li><strong>Eigene Station:</strong> in den Einstellungen die Station wechseln
+        beziehungsweise abmelden — Adresse und ein gespeichertes Passwort
+        verschwinden vom Gerät. Bei uns lag dazu nichts.</li>
     <li><strong>Auf dem Gerät:</strong> App löschen — alle lokalen Daten
         verschwinden mit.</li>
     <li><strong>Schriftlich:</strong> formlos an die Kontaktadresse in Abschnitt 1.</li>
@@ -419,10 +592,11 @@
 
   <h2>10. Sicherheit</h2>
   <p>
-    Die Verbindung zwischen App und Server läuft ausschließlich über
-    <strong>HTTPS</strong>. Geheimnisse liegen auf dem Gerät im Schlüsselbund
-    beziehungsweise in verschlüsselten Einstellungen und werden nicht
-    protokolliert.
+    Die Verbindung zwischen App und unserem Server läuft ausschließlich über
+    <strong>HTTPS</strong>. Verbindungen zu Ihrer eigenen Station sind nur dann
+    unverschlüsselt, wenn die Station in Ihrem Heimnetz steht (Abschnitt 3.6).
+    Geheimnisse liegen auf dem Gerät im Schlüsselbund beziehungsweise in
+    verschlüsselten Einstellungen und werden nicht protokolliert.
   </p>
 
   <h2>11. Änderungen</h2>
@@ -430,6 +604,445 @@
     Ändert sich etwas an der Verarbeitung, wird diese Seite angepasst; oben steht
     jeweils der Stand.
   </p>
+  <p>
+    Zuletzt geändert am 23. Oktober 2026: eigene Stationen (BirdNET-Go,
+    AvianVisitors, eigener Server) mit direkter Verbindung, lokalem Netzwerk und
+    optionalem BirdNET-Go-Passwort; Collage-Bild und Widget für diese Stationen;
+    das optionale Archiv auf Google Drive; englische Fassung.
+  </p>
+
+</section>
+
+<section id="en" lang="en">
+
+  <p class="pre">Tauben &amp; Co — app for iPhone and Android</p>
+  <h1>Privacy policy</h1>
+  <p class="stand">Last updated: 23 October 2026</p>
+  <p class="sprachhinweis"><a href="#de" hreflang="de">Deutsche Fassung oben</a></p>
+
+  <h2>1. Controller</h2>
+  <p>
+    <strong>Yannik Sauerwein</strong><br>
+    Email: <a href="mailto:yannik.sauerwein@gmail.com">yannik.sauerwein@gmail.com</a>
+  </p>
+  <p>
+    The app is run privately and with no commercial interest. Questions about data
+    protection and deletion go to the email address above; I will give you a postal
+    address on request.
+  </p>
+  <p>
+    This policy covers the app <strong>“Tauben &amp; Co”</strong>
+    (<code>de.taubenundco.app</code>) and the website <strong>taubenundco.de</strong>
+    that the app displays. If you connect the app to a station that someone else
+    runs (section 3.6), it covers only the app — not the station itself.
+  </p>
+
+  <h2>2. In short</h2>
+  <div class="kasten">
+    <p>
+      The app is a private bird diary. It has <strong>no advertising, no analytics
+      tools and no sharing with third parties for advertising</strong>.
+    </p>
+    <p>
+      With Tauben &amp; Co stations there is <strong>no user account with a
+      name</strong>: access works with a shared password for each location.
+    </p>
+    <p>
+      The <strong>microphone of your phone</strong> is only used while “Listen” is
+      running. The sound is <strong>neither stored nor sent</strong>.
+    </p>
+    <p>
+      Your <strong>position</strong> stays on the device and is not sent to the
+      server.
+    </p>
+    <p>
+      If you connect the app to <strong>your own station</strong> (BirdNET-Go,
+      AvianVisitors or your own server), its <strong>address stays on the
+      device</strong>. The app connects to the station <strong>directly</strong>;
+      we are not in between. The app only saves a BirdNET-Go password if you agree,
+      and only in your device’s protected storage.
+    </p>
+    <p>
+      For the collage picture and the widget with such a station, only
+      <strong>scientific species names and counts</strong> go to our server — no
+      places, no recordings. It draws the picture and <strong>stores none of
+      it</strong>.
+    </p>
+    <p>
+      Pictures you send to a <strong>connected device</strong> pass through the
+      server, are redrawn there — without the place they were taken and other extra
+      data — and are deleted after 30 days.
+    </p>
+    <p>
+      An <strong>archive on Google Drive</strong> exists only for stations that I run
+      myself, and only if I have explicitly turned it on. It is off by default.
+    </p>
+  </div>
+
+  <h2>3. What data is processed</h2>
+
+  <h3>3.1 On the device — stays there</h3>
+  <table>
+    <tr><th>What</th><th>Why</th></tr>
+    <tr>
+      <td>Chosen location (ID, address, display name)</td>
+      <td>so the app knows which bird display to open</td>
+    </tr>
+    <tr>
+      <td>Chosen station of your own (address, detected type, display name) and the
+          species list last fetched from it</td>
+      <td>so the app and the widget know where to connect; section 3.6</td>
+    </tr>
+    <tr>
+      <td>Detections from the phone’s microphone: time, species name, confidence</td>
+      <td>the daily collage and the list on the “Listen” screen</td>
+    </tr>
+    <tr>
+      <td>Position, <strong>rounded to two decimal places</strong> (accurate to about
+          a kilometre) — only if you tap “Use my position”</td>
+      <td>narrows the species list to the birds of the area; <strong>never
+          transmitted</strong></td>
+    </tr>
+    <tr>
+      <td>Settings (notification mode, switch for reports, last week seen), latest
+          collage picture</td>
+      <td>operation and widget</td>
+    </tr>
+  </table>
+  <p>
+    This information sits in the app’s protected area on the device. It is removed
+    when you delete the app.
+  </p>
+
+  <h3>3.2 Between the app and the server</h3>
+  <table>
+    <tr><th>What</th><th>Why</th><th>How long</th></tr>
+    <tr>
+      <td><strong>Session cookie</strong> after sign-in</td>
+      <td>keeps you signed in without storing the password</td>
+      <td>up to 90 days, then sign in again</td>
+    </tr>
+    <tr>
+      <td><strong>Device token</strong> (random value) and a <strong>device
+          ID</strong></td>
+      <td>so the widget and background refresh can look things up without a
+          password</td>
+      <td>until you lock the device out in the settings or delete the app</td>
+    </tr>
+    <tr>
+      <td><strong>Device name</strong> (for example “Anna’s iPhone”)</td>
+      <td>so you can tell in the device list which device you are locking out</td>
+      <td>same as the device token</td>
+    </tr>
+    <tr>
+      <td><strong>Push token</strong> from Apple or Google</td>
+      <td>delivery of notifications; only if you turn notifications on</td>
+      <td>same as the device token</td>
+    </tr>
+    <tr>
+      <td><strong>Server logs</strong>: IP address, time, requested address</td>
+      <td>operation and defence against attacks</td>
+      <td>short-term, then deleted automatically</td>
+    </tr>
+  </table>
+  <p>
+    On the server the device token is kept <strong>only as a checksum</strong>, not
+    in plain text. On the device it sits in the Keychain (iOS) or in encrypted
+    settings (Android).
+  </p>
+  <p>
+    This table applies to Tauben &amp; Co stations. With a station of someone else
+    (section 3.6), the session cookie, device token, device name and push token are
+    never created in the first place.
+  </p>
+
+  <h3>3.3 Microphone</h3>
+  <p>
+    On the “Listen” screen the app analyses the sound <strong>on the device
+    itself</strong> (BirdNET model, included in the app). <strong>No sound
+    recording</strong> is made: the sound is analysed in three-second slices and
+    discarded straight away. <strong>Nothing is uploaded</strong> — neither sound nor
+    spectrogram. The microphone only runs while “Listen” is active; if you put the
+    app in the background, the device shows a permanent notice until you tap
+    “Stop”.
+  </p>
+
+  <h3>3.4 Collage pictures, widget and bird drawings</h3>
+  <p>
+    For the daily collage the app sends a list of <strong>scientific species names
+    with counts</strong> to the server, which draws a picture from it and returns it
+    <strong>without storing anything</strong>. This applies to “Listen” with the
+    phone’s microphone and equally to the widget with your own BirdNET-Go or
+    AvianVisitors station: the app fetches the species list from your station and
+    sends it to us — just the names and numbers — so that the picture can be drawn
+    in the usual style. <strong>No places, no recordings, no station address, no
+    station name, no device name and no ID</strong> go with it.
+  </p>
+  <p>
+    The list sits in a working file only for the duration of the request, and that
+    file is deleted within the same call; it appears in no log. To guard against
+    abuse the server counts requests per IP address — only as a checksum and for no
+    more than two minutes.
+  </p>
+  <p>
+    The app also loads individual bird drawings (for example in the list of
+    detections) from our server. The request contains only the scientific species
+    name. As with any request, the server sees the IP address and the requested
+    address in its short-lived server logs (section 3.2).
+  </p>
+
+  <h3>3.5 Messages between connected devices</h3>
+  <p>
+    You can connect your device to someone else’s device — your parents’, say — and
+    send them pictures and short notes. This only works if the other side of the
+    connection has <strong>explicitly agreed</strong>; either side can end or block
+    a connection at any time.
+  </p>
+  <table>
+    <tr><th>What</th><th>Why</th><th>How long</th></tr>
+    <tr>
+      <td><strong>Connection code</strong> (six characters, random)</td>
+      <td>so another device can ask you for a connection</td>
+      <td>until you renew it or lock the device out</td>
+    </tr>
+    <tr>
+      <td><strong>Connections</strong> (which two devices, since when, status)</td>
+      <td>the basis for who may send what to whom</td>
+      <td>until one side ends the connection</td>
+    </tr>
+    <tr>
+      <td><strong>Pictures and notes</strong> you send or receive</td>
+      <td>delivery to the connected device</td>
+      <td><strong>30 days</strong>, then deleted automatically; immediately when the
+          connection is ended or you delete the message</td>
+    </tr>
+  </table>
+  <p>
+    A picture you send is <strong>redrawn</strong> on the server: from its pixels a
+    reduced copy is made with no extra information at all. The place, camera and
+    time stamp of the original therefore never reach the recipient — and a file
+    that is not a real picture is rejected. The original is deleted straight after
+    the check. Text is transmitted and shown as plain text; links are not
+    clickable.
+  </p>
+  <p>
+    Until deleted, the pictures are kept on the server in Germany (see section 5)
+    and can only be fetched by the two connected devices.
+  </p>
+
+  <h3>3.6 Connecting a station of your own (BirdNET-Go, AvianVisitors, own server)</h3>
+  <p>
+    On first launch you choose what the app shows birds with: a
+    <strong>BirdNET-Go</strong> station, an <strong>AvianVisitors</strong> page (for
+    example on a BirdNET-Pi), a server running the Tauben &amp; Co system — mine or
+    your own — or just the microphone of this phone. For the first two options:
+  </p>
+  <table>
+    <tr><th>What</th><th>Why</th><th>Where</th></tr>
+    <tr>
+      <td><strong>Address of the station</strong>, detected type, display name</td>
+      <td>so the app knows where to connect</td>
+      <td>on the device only; <strong>does not go to us</strong></td>
+    </tr>
+    <tr>
+      <td><strong>BirdNET-Go password</strong> — only if you explicitly agree (“stay
+          signed in”)</td>
+      <td>so the app can change your station’s settings without asking again every
+          time you open them</td>
+      <td>only in the Keychain (iOS) or Keystore (Android) of the device;
+          <strong>never sent to us</strong>; removed when you sign out and when you
+          delete the app</td>
+    </tr>
+  </table>
+  <p>
+    <strong>Direct connection.</strong> The app and the widget fetch the data
+    straight from your station: the species list and the page that appears in the
+    app window. We are not in between, and we learn neither the address nor what
+    your station displays. Nothing goes from our server to your station — not even a
+    device token. What the station itself stores and logs is decided by whoever runs
+    it; the station’s own privacy policy applies to its page.
+  </p>
+  <p>
+    <strong>Station passwords.</strong> If your station asks for a user name and
+    password in the system’s sign-in window when you open it, the app uses both only
+    for the current session and does not remember them. A password is saved only in
+    the case in the table above, and only with your agreement.
+  </p>
+  <p>
+    <strong>Encryption.</strong> Encrypted addresses (<code>https://</code>) work
+    anywhere. The app connects without encryption (<code>http://</code>) only to
+    addresses on your home network, for example <code>192.168.…</code> or
+    <code>birdnet.local</code> — never to the open internet.
+  </p>
+  <p>
+    <strong>Access to the local network.</strong> On the iPhone, iOS asks the first
+    time you connect whether the app may access devices on the local network. The
+    reason: stations such as BirdNET-Go or a BirdNET-Pi usually sit at your home on
+    the Wi-Fi, and iOS only lets an app reach them with this permission. The app
+    uses it solely to reach the station you entered yourself. It does not scan the
+    network for other devices and passes nothing about them on. On Android no
+    separate permission is currently needed for this.
+  </p>
+  <p>
+    What goes <em>to us</em> with such a station is described in section 3.4: only
+    species names and counts for the collage picture.
+  </p>
+
+  <h3>3.7 Archive on Google Drive (only if turned on)</h3>
+  <p>
+    This section concerns only Tauben &amp; Co stations that I run myself — not your
+    own station and not your device. I can turn on a nightly archive for one of my
+    stations. It is off by default. The switch is in the protected area of the
+    website, can only be reached with operator access, and can only be flipped after
+    a notice has been confirmed. After that, the server copies data of that station
+    every night into a folder in the operator’s own Google Drive: the database of
+    detections (species, time, confidence), the false-detection marks, the weekly
+    review videos and the sound recordings of the birds from the station’s
+    microphone. The recordings can contain quiet fragments of conversation, because
+    the filter for human voices only mutes clips with a clearly audible voice.
+  </p>
+  <p>
+    The folder is not shared. The copy tool (rclone) can only access files it
+    created itself, not the rest of the Drive. The archive can be turned off at any
+    time; what is already in the Drive stays there until I delete it. It contains no
+    data from the app on your device (microphone results, position, device token)
+    and nothing from stations of other operators: it only concerns the recordings
+    and evaluations of my own stations.
+  </p>
+
+  <h2>4. Permissions and why</h2>
+  <ul>
+    <li><strong>Microphone</strong> — only for “Listen” (section 3.3). Without it
+        the rest of the app works fully.</li>
+    <li><strong>Location</strong> — voluntary, one-off, only when you tap “Use my
+        position”. Never leaves the device.</li>
+    <li><strong>Notifications</strong> — voluntary, only if you turn notifications
+        on.</li>
+    <li><strong>Local network</strong> (iPhone) — only so the app can reach the
+        station you enter yourself (section 3.6). Without it, stations on your home
+        network do not work; everything else does.</li>
+  </ul>
+  <p>
+    You can withdraw any permission at any time in your device’s settings.
+  </p>
+
+  <h2>5. Recipients</h2>
+  <table>
+    <tr><th>Who</th><th>What for</th></tr>
+    <tr>
+      <td><strong>Apple</strong> (Apple Push Notification service)</td>
+      <td>delivery of notifications on iPhones — only if notifications are turned
+          on</td>
+    </tr>
+    <tr>
+      <td><strong>Google</strong> (Firebase Cloud Messaging)</td>
+      <td>delivery of notifications on Android devices — only if notifications are
+          turned on</td>
+    </tr>
+    <tr>
+      <td><strong>Hetzner Online GmbH</strong> (Gallusstraße 25, 91710 Gunzenhausen,
+          Germany)</td>
+      <td>runs the server on which the bird display runs; server location:
+          Germany</td>
+    </tr>
+    <tr>
+      <td><strong>Google</strong> (Google Drive; Google Ireland Limited or Google
+          LLC)</td>
+      <td>storage of the archive from section 3.7 — <strong>only if I have turned it
+          on for one of my stations</strong>; accessed only through a private
+          account of the operator, not shared</td>
+    </tr>
+  </table>
+  <p>
+    A notification contains only what is on the screen anyway (such as “New
+    species: Chaffinch”). The station you enter yourself is not a recipient of our
+    data: the app talks to it directly (section 3.6). Nothing else goes to third
+    parties. <strong>No sale of data, no advertising networks, no analytics
+    libraries.</strong>
+  </p>
+
+  <h2>6. Legal bases</h2>
+  <ul>
+    <li><strong>Art. 6(1)(b) GDPR</strong> (performance) — sign-in, session cookie,
+        device token, as well as showing your station and drawing the collage
+        picture: without them the app does not work.</li>
+    <li><strong>Art. 6(1)(a) GDPR</strong> (consent) — microphone, location,
+        notifications and local network; you give it in the system dialog and can
+        withdraw it at any time. The same goes for saving a BirdNET-Go password: it
+        only happens with your agreement.</li>
+    <li><strong>Art. 6(1)(f) GDPR</strong> (legitimate interest) — short-lived
+        server logs for secure operation, and the archive on Google Drive (backup
+        of the recordings and evaluations of my own stations, deliberately turned
+        on, with no onward transfer and no share link).</li>
+  </ul>
+
+  <h2>7. Retention</h2>
+  <ul>
+    <li>Session cookie: 90 days at most.</li>
+    <li>Device token, device name, push token: until the device is locked out or the
+        app is deleted.</li>
+    <li>Data on the device (detections, rounded position, settings, address of your
+        station): until you change the station or delete the app.</li>
+    <li>BirdNET-Go password (only if saved): until you sign out or delete the app;
+        it is never with us.</li>
+    <li>Server logs: short-term, deleted automatically.</li>
+    <li>Collage requests (species names and counts): not stored.</li>
+    <li>Pictures and notes between connected devices: 30 days, then deleted
+        automatically; immediately when the connection is ended or the message is
+        deleted.</li>
+    <li>Archive on Google Drive (only if turned on): until I delete the files in the
+        Drive. Deleted files then stay in Google’s bin for up to 30 days.</li>
+  </ul>
+
+  <h2>8. Your rights</h2>
+  <p>
+    You have the right of <strong>access</strong> (Art. 15),
+    <strong>rectification</strong> (Art. 16), <strong>erasure</strong> (Art. 17),
+    <strong>restriction</strong> (Art. 18), <strong>data portability</strong>
+    (Art. 20) and <strong>objection</strong> (Art. 21 GDPR). You can also complain
+    to a <strong>data protection supervisory authority</strong>.
+  </p>
+  <h3>Deleting — the quick way</h3>
+  <ul>
+    <li><strong>In the app:</strong> Settings → Devices → lock this device out.
+        Device token, device name and push token on the server become invalid and
+        are removed.</li>
+    <li><strong>Your own station:</strong> change the station or sign out in the
+        settings — the address and a saved password disappear from the device. We
+        never held them.</li>
+    <li><strong>On the device:</strong> delete the app — all local data goes with
+        it.</li>
+    <li><strong>In writing:</strong> informally to the contact address in section
+        1.</li>
+  </ul>
+
+  <h2>9. Children</h2>
+  <p>
+    The app is not aimed at children and does not knowingly collect data from
+    children.
+  </p>
+
+  <h2>10. Security</h2>
+  <p>
+    The connection between the app and our server uses <strong>HTTPS</strong> only.
+    Connections to your own station are unencrypted only when the station is on your
+    home network (section 3.6). Secrets are kept on the device in the Keychain or in
+    encrypted settings and are not logged.
+  </p>
+
+  <h2>11. Changes</h2>
+  <p>
+    If anything about the processing changes, this page is updated; the date at the
+    top always shows when.
+  </p>
+  <p>
+    Last changed on 23 October 2026: stations of your own (BirdNET-Go,
+    AvianVisitors, own server) with a direct connection, local network access and an
+    optional BirdNET-Go password; collage picture and widget for these stations; the
+    optional archive on Google Drive; English version.
+  </p>
+
+</section>
 
   <footer>
     Tauben &amp; Co · taubenundco.de
