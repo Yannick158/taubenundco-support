@@ -4,115 +4,96 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Tauben &amp; Co — Hilfe und Datenschutz</title>
-<!--
-  Startseite der Support-Seite zur App "Tauben & Co".
-  Zweck: oeffentlich erreichbare Adresse fuer Google Play (Datenschutz-URL,
-  Pflicht) und App Store Connect (Support-URL, Pflicht). Die Webseite
-  taubenundco.de selbst liegt hinter dem Anmelde-Tor und taugt dafuer nicht.
-  Stil: Papier/Tinte aus docs/DESIGN.md §3, alles inline, kein Skript,
-  kein externer Aufruf, keine Daten aus der Station.
--->
-<style>
-  :root {
-    --paper:  #FCFCFB;
-    --paper2: #F3F2EE;
-    --ink:    #1A1612;
-    --ink2:   #4A3F31;
-    --ink-soft-text: #766C60;
-    --hairline: rgba(26,22,18,.14);
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --paper:  #17181C;
-      --paper2: #212329;
-      --ink:    #ECE8E1;
-      --ink2:   #B7AFA2;
-      --ink-soft-text: #90897D;
-      --hairline: rgba(236,232,225,.20);
-    }
-  }
-  html { -webkit-text-size-adjust: 100%; }
-  body {
-    margin: 0;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: ui-serif, "Iowan Old Style", "New York", Georgia, serif;
-    font-size: 17px;
-    line-height: 1.45;
-  }
-  main { max-width: 34rem; margin: 0 auto; padding: 34px 24px 56px; }
-  .pre {
-    font-family: ui-monospace, "SF Mono", Menlo, monospace;
-    font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
-    color: var(--ink-soft-text); margin: 0 0 8px;
-  }
-  h1 { font-size: 28px; font-weight: 600; line-height: 1.2; margin: 0 0 4px; }
-  .stand { color: var(--ink2); font-style: italic; margin: 0 0 28px; }
-  h2 {
-    font-size: 19px; font-weight: 600; margin: 28px 0 8px;
-    padding-top: 20px; border-top: 1px solid var(--hairline);
-  }
-  h2:first-of-type { border-top: 0; padding-top: 0; }
-  p, li { color: var(--ink); }
-  p { margin: 0 0 12px; }
-  ul { margin: 0 0 12px; padding-left: 20px; }
-  li { margin-bottom: 6px; }
-  a { color: var(--ink); text-underline-offset: 3px; }
-  .platzhalter {
-    display: block; background: var(--paper2);
-    border: 1px dashed var(--hairline); border-radius: 8px;
-    padding: 16px; margin: 0 0 12px;
-    font-family: ui-monospace, "SF Mono", Menlo, monospace;
-    font-size: 13px; line-height: 1.5; color: var(--ink2);
-  }
-  .platzhalter b { display: block; margin-bottom: 6px; color: var(--ink); }
-  footer {
-    margin-top: 40px; padding-top: 16px;
-    border-top: 1px solid var(--hairline);
-    color: var(--ink-soft-text); font-size: 14px;
-  }
-</style>
+<meta name="description" content="Tauben &amp; Co zeigt, welche Vögel zu Hause zu hören waren: vier Wege, Hilfe und Datenschutz.">
+<title>Hilfe und Datenschutz — Tauben &amp; Co · Help and privacy</title>
+<link rel="stylesheet" href="stil.css">
 </head>
 <body>
 <main>
 
+<section id="de" lang="de">
+  <nav class="nav" aria-label="Seiten"><a class="marke" href="index.html">Tauben &amp; Co</a><a href="index.html" aria-current="page">Start</a><a href="funktionen.html">Funktionen</a><a href="vergleich.html">Vergleich</a><a href="pi-installieren.html">Pi installieren</a><a href="server-einrichten.html">Server einrichten</a><a href="lizenzen.html">Lizenzen</a><a href="datenschutz.html">Datenschutz</a></nav>
   <p class="pre">Tauben &amp; Co — App für iPhone und Android</p>
-  <h1>Hilfe und Datenschutz</h1>
-  <p class="stand">Stand: 11. September 2026</p>
+  <h1>Tauben &amp; Co</h1>
+  <p class="stand">Stand: 23. Oktober 2026</p>
+  <p class="sprachhinweis"><a href="#en" hreflang="en">English version below</a></p>
 
-  <h2>Was die App ist</h2>
+  <h2 class="erste">Was ist Tauben &amp; Co?</h2>
   <p>
-    <strong>Tauben &amp; Co</strong> zeigt, welche Vögel im Garten waren. Ein
-    Mikrofon hört dort den ganzen Tag zu und erkennt die Vögel an ihrer Stimme;
-    die App macht daraus eine gezeichnete Collage des Tages, eine Statistik und
-    kurze Rückblicke. Wer kein Gartenmikrofon hat, kann mit dem Handy-Mikrofon
-    zuhören — die Erkennung läuft dann auf dem Gerät.
+    <strong>Tauben &amp; Co</strong> zeigt, welche Vögel zu Hause zu hören waren. Ein
+    Mikrofon hört den ganzen Tag zu und erkennt die Vögel an ihrer Stimme. Die App macht
+    daraus eine gezeichnete Collage des Tages, eine Statistik und kleine erzählte Videos
+    als Rückblick auf die Woche und den Monat.
   </p>
   <p>
-    Die App ist privat. Sie hat keine Werbung, keine Analyse-Werkzeuge und kein
-    Nutzerkonto mit Namen.
+    Es ist ein privates Projekt, kostenlos und nicht kommerziell: keine Werbung, keine
+    Analyse-Werkzeuge, kein Nutzerkonto mit Namen. Es baut auf der Arbeit anderer auf
+    (BirdNET, BirdNET-Pi, AvianVisitors) und will diese Projekte ergänzen, nicht ersetzen.
+    Wer schon eine Station hat, kann sie einfach anschließen.
+  </p>
+
+  <h2>Vier Wege, Vögel zu hören</h2>
+  <p>Beim ersten Start fragt die App: „Wie hörst du Vögel?“ Es gibt vier Antworten. Du brauchst nur eine.</p>
+  <ul class="wege">
+    <li class="weg" id="weg-go">
+      <h3>1 · BirdNET-Go</h3>
+      <p>Du betreibst eine BirdNET-Go-Station, im Heimnetz oder unter einer eigenen Adresse.
+         Die App zeigt sie an, legt ein Widget auf den Home-Bildschirm und hört mit dem
+         Handy-Mikrofon mit. Über einen kleinen Adapter (Prototyp) bekommt sie sogar die
+         gezeichnete Collage.</p>
+      <p class="links"><a href="vergleich.html#go">Mehr dazu</a> <a href="https://github.com/tphakala/birdnet-go" rel="noopener">BirdNET-Go ↗</a></p>
+    </li>
+    <li class="weg" id="weg-avian">
+      <h3>2 · AvianVisitors</h3>
+      <p>Dein BirdNET-Pi zeigt die gezeichnete Collage von AvianVisitors. Die App öffnet diese
+         Seite, macht ein Widget daraus und hört auf Wunsch mit dem Handy mit.</p>
+      <p class="links"><a href="vergleich.html#avian">Mehr dazu</a> <a href="https://github.com/Twarner491/AvianVisitors" rel="noopener">AvianVisitors ↗</a></p>
+    </li>
+    <li class="weg" id="weg-station">
+      <h3>3 · Eigene Tauben-&amp;-Co-Station</h3>
+      <p>Ein Raspberry Pi mit Mikrofon schiebt seine Erkennungen auf einen eigenen Server.
+         Dort entstehen die Rückblick-Videos, die Meldungen, das Live-Band und die Post
+         zwischen Geräten, und alles ist von unterwegs erreichbar. Die Anleitungen für Pi und
+         Server sind in Arbeit.</p>
+      <p class="links"><a href="pi-installieren.html">Pi installieren</a> <a href="server-einrichten.html">Server einrichten</a> <a href="funktionen.html">Funktionen</a></p>
+    </li>
+    <li class="weg" id="weg-zuhoeren">
+      <h3>4 · Nur zuhören</h3>
+      <p>Kein Gerät nötig. Das Mikrofon des Handys hört zu, die Erkennung läuft auf dem
+         Handy, und es wird nichts aufgenommen oder verschickt.</p>
+      <p class="links"><a href="funktionen.html#zuhoeren">Mehr dazu</a></p>
+    </li>
+  </ul>
+  <p>Welche Funktion bei welchem Weg dabei ist, steht auf der Seite
+    <a href="funktionen.html">Funktionen</a>. Wie sich die drei Stationen unterscheiden, steht
+    im <a href="vergleich.html">Vergleich</a>.</p>
+
+  <h2>Die App</h2>
+  <p>
+    <strong>Tauben &amp; Co</strong> gibt es für iPhone und Android. Sie ist noch in einer
+    geschlossenen Testphase: über TestFlight (iPhone) und den internen Test bei Google Play
+    (Android). Einen öffentlichen Eintrag im App Store oder bei Google Play gibt es noch
+    nicht; ob und wann er kommt, ist offen. Wer mitprobieren möchte, schreibt eine kurze
+    E-Mail (Adresse unten).
   </p>
 
   <h2>Datenschutz</h2>
   <p>
     Was gespeichert wird, wie lange und warum, steht in der
-    <a href="datenschutz.html"><strong>Datenschutzerklärung</strong></a>.
+    <a href="datenschutz.html"><strong>Datenschutzerklärung</strong></a>. Die Lizenzen und
+    alle, bei denen wir uns bedanken, stehen auf der Seite <a href="lizenzen.html">Lizenzen</a>.
   </p>
 
-  <h2>Vorschläge &amp; Fehler / Suggestions &amp; bugs</h2>
+  <h2>Vorschläge &amp; Fehler</h2>
   <p>
-    Eine Station oder Software, die die App noch anbinden soll? Ein Wunsch, ein
-    Fehler? Über ein kurzes Formular auf GitHub (Konto nötig).<br>
-    <em>A station or software the app should connect to? A wish or a bug? Use
-    the short form on GitHub (account required).</em>
+    Eine Station oder Software, die die App noch anbinden soll? Ein Wunsch, ein Fehler?
+    Über ein kurzes Formular auf GitHub (Konto nötig).
   </p>
   <p>
-    <a href="https://github.com/Yannick158/taubenundco-support/issues/new/choose">Vorschlag oder Fehler melden / Open the form</a>
+    <a href="https://github.com/Yannick158/taubenundco-support/issues/new/choose">Vorschlag oder Fehler melden</a>
   </p>
   <p>
-    Bitte keine Passwörter, Adressen oder Standorte angeben — die Einträge sind
-    öffentlich. <em>Please do not post passwords, addresses or locations; entries are public.</em>
+    Bitte keine Passwörter, Adressen oder Standorte angeben, die Einträge sind öffentlich.
   </p>
 
   <h2>Fragen, Fehler, Rückmeldungen</h2>
@@ -120,15 +101,115 @@
     <a href="mailto:yannik.sauerwein@gmail.com">yannik.sauerwein@gmail.com</a>
   </p>
   <p>
-    Aus der Beta heraus geht es am schnellsten direkt: In TestFlight einen
-    Screenshot machen und „Feedback senden“ wählen; im internen Test bei Google
-    Play den Weg über die Testerseite nutzen.
+    Aus der Beta heraus geht es am schnellsten direkt: In TestFlight einen Screenshot
+    machen und „Feedback senden“ wählen; im internen Test bei Google Play den Weg über die
+    Testerseite nutzen.
   </p>
 
   <footer>
-    Diese Seite liegt bewusst außerhalb der Vogelstation und enthält keine
-    Aufnahmen, keine Fundzahlen und keine Adresse eines Standorts.
+    Diese Seite liegt bewusst außerhalb jeder Vogelstation und enthält keine Aufnahmen,
+    keine Fundzahlen und keine Adresse eines Standorts.
   </footer>
+
+</section>
+
+<section id="en" lang="en">
+  <nav class="nav" aria-label="Pages"><a class="marke" href="index.html">Tauben &amp; Co</a><a href="index.html" aria-current="page">Home</a><a href="funktionen.html">Features</a><a href="vergleich.html">Comparison</a><a href="pi-installieren.html">Install the Pi</a><a href="server-einrichten.html">Set up a server</a><a href="lizenzen.html">Licences</a><a href="datenschutz.html">Privacy</a></nav>
+  <p class="pre">Tauben &amp; Co — app for iPhone and Android</p>
+  <h1>Tauben &amp; Co</h1>
+  <p class="stand">Last updated: 23 October 2026</p>
+  <p class="sprachhinweis"><a href="#de" hreflang="de">Deutsche Fassung oben</a></p>
+
+  <h2 class="erste">What is Tauben &amp; Co?</h2>
+  <p>
+    <strong>Tauben &amp; Co</strong> shows which birds could be heard at home. A microphone
+    listens all day and recognises the birds by their voices. The app turns that into an
+    illustrated collage of the day, statistics and small narrated videos that review the
+    week and the month.
+  </p>
+  <p>
+    It is a private project, free and non-commercial: no advertising, no analytics tools, no
+    user account with a name. It builds on the work of others (BirdNET, BirdNET-Pi,
+    AvianVisitors) and wants to complement those projects, not replace them. If you already
+    have a station, you can simply connect it.
+  </p>
+
+  <h2>Four ways to hear birds</h2>
+  <p>On first launch the app asks “How do you hear birds?” There are four answers. You only need one.</p>
+  <ul class="wege">
+    <li class="weg">
+      <h3>1 · BirdNET-Go</h3>
+      <p>You run a BirdNET-Go station, on your home network or at an address of your own. The
+         app shows it, puts a widget on your Home Screen and listens along with the phone’s
+         microphone. Through a small adapter (prototype) it even gets the illustrated collage.</p>
+      <p class="links"><a href="vergleich.html#go-en">More</a> <a href="https://github.com/tphakala/birdnet-go" rel="noopener">BirdNET-Go ↗</a></p>
+    </li>
+    <li class="weg">
+      <h3>2 · AvianVisitors</h3>
+      <p>Your BirdNET-Pi shows the illustrated collage by AvianVisitors. The app opens that
+         page, turns it into a widget and, if you like, listens along with the phone.</p>
+      <p class="links"><a href="vergleich.html#avian-en">More</a> <a href="https://github.com/Twarner491/AvianVisitors" rel="noopener">AvianVisitors ↗</a></p>
+    </li>
+    <li class="weg">
+      <h3>3 · Your own Tauben &amp; Co station</h3>
+      <p>A Raspberry Pi with a microphone pushes its detections to a server of your own. That is
+         where the review videos, the notifications, the live band and the messages between
+         devices come from, and everything is reachable on the move. The guides for Pi and
+         server are in the works.</p>
+      <p class="links"><a href="pi-installieren.html#en">Install the Pi</a> <a href="server-einrichten.html#en">Set up a server</a> <a href="funktionen.html#en">Features</a></p>
+    </li>
+    <li class="weg">
+      <h3>4 · Listen only</h3>
+      <p>No device needed. The phone’s microphone listens, recognition runs on the phone, and
+         nothing is recorded or sent.</p>
+      <p class="links"><a href="funktionen.html#zuhoeren-en">More</a></p>
+    </li>
+  </ul>
+  <p>Which feature comes with which way is listed on the <a href="funktionen.html#en">Features</a>
+    page. How the three stations differ is in the <a href="vergleich.html#en">comparison</a>.</p>
+
+  <h2>The app</h2>
+  <p>
+    <strong>Tauben &amp; Co</strong> is available for iPhone and Android. It is still in a closed
+    test phase: through TestFlight (iPhone) and the internal test on Google Play (Android).
+    There is no public listing in the App Store or on Google Play yet; whether and when
+    there will be one is open. If you would like to try it, send a short e-mail (address below).
+  </p>
+
+  <h2>Privacy</h2>
+  <p>
+    What is stored, for how long and why is in the
+    <a href="datenschutz.html#en"><strong>privacy policy</strong></a>. Licences and everyone
+    we say thank you to are on the <a href="lizenzen.html#en">Licences</a> page.
+  </p>
+
+  <h2>Suggestions &amp; bugs</h2>
+  <p>
+    A station or software the app should connect to? A wish or a bug? Use the short form on
+    GitHub (account required).
+  </p>
+  <p>
+    <a href="https://github.com/Yannick158/taubenundco-support/issues/new/choose">Open the form</a>
+  </p>
+  <p>
+    Please do not post passwords, addresses or locations; entries are public.
+  </p>
+
+  <h2>Questions, bugs, feedback</h2>
+  <p>
+    <a href="mailto:yannik.sauerwein@gmail.com">yannik.sauerwein@gmail.com</a>
+  </p>
+  <p>
+    From within the beta it is quickest directly: in TestFlight take a screenshot and choose
+    “Send Feedback”; in the internal test on Google Play use the tester page.
+  </p>
+
+  <footer>
+    This page deliberately lives outside any bird station and contains no recordings, no
+    detection counts and no address of any location.
+  </footer>
+
+</section>
 
 </main>
 </body>

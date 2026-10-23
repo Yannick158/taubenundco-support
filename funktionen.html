@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="Alle Funktionen von Tauben &amp; Co, gruppiert, mit dem Hinweis, bei welchem Weg sie verfügbar sind.">
+<title>Funktionen — Tauben &amp; Co · Features</title>
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<main>
+
+<section id="de" lang="de">
+  <nav class="nav" aria-label="Seiten"><a class="marke" href="index.html">Tauben &amp; Co</a><a href="index.html">Start</a><a href="funktionen.html" aria-current="page">Funktionen</a><a href="vergleich.html">Vergleich</a><a href="pi-installieren.html">Pi installieren</a><a href="server-einrichten.html">Server einrichten</a><a href="lizenzen.html">Lizenzen</a><a href="datenschutz.html">Datenschutz</a></nav>
+  <p class="pre">Tauben &amp; Co — was die App kann</p>
+  <h1>Funktionen</h1>
+  <p class="stand">Stand: 23. Oktober 2026</p>
+  <p class="sprachhinweis"><a href="#en" hreflang="en">English version below</a></p>
+
+  <h2 class="erste">Was die App kann</h2>
+  <p>Alles, was Tauben &amp; Co heute kann, in Gruppen, mit einem Satz je Funktion. Unter jeder
+    Funktion steht, bei welchem Weg sie verfügbar ist. Als Funktion steht hier nur, was gebaut
+    ist. Was noch entsteht, ist als „in Arbeit“ gekennzeichnet.</p>
+  <div class="legende" aria-label="Legende">
+    <span><span class="b ja">✓</span> verfügbar</span>
+    <span><span class="b nein">–</span> nicht verfügbar</span>
+    <span><span class="b bald">…</span> in Arbeit</span>
+  </div>
+  <div class="hinweis">
+    <span class="kopf">Zur Tauben-&amp;-Co-Station</span>
+    <p>Die Funktionen mit dem Pi und dem Server (Videos, Meldungen, Live-Band, Post, Rufvergleich
+      und so weiter) laufen heute bei den bestehenden Stationen des Projekts. Das Paket, mit dem
+      du so einen Server selbst aufsetzt, ist in Arbeit, siehe
+      <a href="server-einrichten.html">Server einrichten</a>. Was nur ein Handy oder eine
+      BirdNET-Go- oder AvianVisitors-Station braucht, funktioniert schon heute.</p>
+  </div>
+  <p>Die vier Wege: <a href="index.html#weg-go">BirdNET-Go</a>, <a href="index.html#weg-avian">AvianVisitors</a>,
+    <a href="index.html#weg-station">Tauben-&amp;-Co-Station</a>, <a href="index.html#weg-zuhoeren">Nur zuhören</a>.</p>
+  <ul>
+    <li><a href="#collage">Collage, Widgets und Meldungen</a></li>
+    <li><a href="#videos">Videos</a></li>
+    <li><a href="#zuhoeren">Live und Erkennung am Handy</a></li>
+    <li><a href="#arten">Artkarte, Vergleich, Falsch markieren, Fotos</a></li>
+    <li><a href="#post">Post zwischen Geräten</a></li>
+    <li><a href="#standorte">Mehrere Standorte</a></li>
+    <li><a href="#sprachen">Sprachen</a></li>
+    <li><a href="#station">Station und Einstellungen</a></li>
+  </ul>
+
+  <h2 id="collage" class="gruppe-titel">Collage, Widgets und Meldungen</h2>
+  <div class="fn">
+    <h3>Collage des Tages</h3>
+    <p>Die Vögel des Tages als gezeichnete Collage, mit Zählung. Die Oberfläche stammt von AvianVisitors; die App zeigt sie an und hält sie aktuell.</p>
+    <p class="notiz">Bei BirdNET-Go über einen kleinen, nur lesenden Adapter (Prototyp, noch nicht veröffentlicht). Ohne Adapter zeigt die App das BirdNET-Go-Dashboard. Bei „Nur zuhören“ entsteht die Collage aus den Funden des Handys.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ BirdNET-Go</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ AvianVisitors</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Statistik und Verlauf</h3>
+    <p>Tagesverlauf, Lebensliste, Kalender und Artenzahlen, direkt in der Ansicht der Station.</p>
+    <p class="notiz">Bei BirdNET-Go über den Adapter.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ BirdNET-Go</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Widgets für Home-Bildschirm und Sperrbildschirm</h3>
+    <p>Die Collage des Tages als Widget (iPhone: klein, mittel, groß; Android: 2×2 bis 4×4, in der Größe änderbar) und ein Kurzstand für den Sperrbildschirm des iPhones. Die Zeitspanne ist wählbar: 1, 3, 6, 12, 24 oder 48 Stunden.</p>
+    <p class="notiz">Bei BirdNET-Go und AvianVisitors holt die App die Artenliste von deiner Station und schickt nur Artnamen und Zahlen an einen kleinen Zeichen-Dienst, der das Bild malt. Orte, Aufnahmen und die Adresse deiner Station gehen nicht mit (Datenschutz, Abschnitt 3.4).</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ BirdNET-Go</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ AvianVisitors</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Hinweis auf neue Rückblicke im Widget</h3>
+    <p>Ist eine neue Vogelwoche oder ein neuer Vogelmonat fertig, steht im Widget eine kleine Zeile; ein Tipp öffnet das Video.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Meldungen</h3>
+    <p>Du wählst: aus, nur neue Arten oder jede Erkennung. Dazu eine Meldung, wenn ein Rückblick fertig ist. „Jede Erkennung“ wird gebündelt, es gibt keinen Schwall.</p>
+    <p class="notiz">Bei BirdNET-Go ist eine lokale Abfrage geplant.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Sperrbild für E-Ink-Handys</h3>
+    <p>Eine kleine Zusatz-App für Bigme-E-Ink-Handys hält das Standby-Bild mit der aktuellen Collage frisch.</p>
+    <p class="notiz">Bisher nicht öffentlich verteilt.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>E-Ink-Bilderrahmen</h3>
+    <p>Ein eigener, flacher E-Ink-Schirm, der das Bild der Station zeigt und monatelang mit einer Akkuladung läuft.</p>
+    <p class="notiz">Das Gerät ist bestellt, die Umsetzung wartet darauf.</p>
+    <ul class="badges"><li><span class="b bald"><span class="vh">in Arbeit: </span>… Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+
+  <h2 id="videos" class="gruppe-titel">Videos</h2>
+  <div class="fn">
+    <h3>Vogelwoche</h3>
+    <p>Jeden Sonntag ein erzähltes Video über die Woche: wer da war, wer neu ist, wer nur durchgezogen ist. Mit Stimme, Untertiteln und den echten Rufen.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Vogelmonat</h3>
+    <p>Einmal im Monat ein längerer Rückblick mit Monatsbogen und Vergleich.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Artporträt</h3>
+    <p>Ein Video von etwa 55 Sekunden zu jeder Art: selten oder häufig, zu welcher Tageszeit, woran man sie erkennt, was sie frisst. Der Knopf sitzt in der Artkarte; neue Videos entstehen von selbst.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Teilen und Sichern</h3>
+    <p>Jedes Video lässt sich aus dem Player teilen oder in der Fotomediathek (iPhone) bzw. im Ordner Movies (Android) sichern.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Videos direkt auf dem Handy</h3>
+    <p>Wochenrückblicke, die das Handy selbst zusammenbaut: aus den Daten deiner Station oder aus dem, was das Handy gehört hat. Ohne eigenen Server.</p>
+    <p class="notiz">Die Bausteine entstehen gerade; in der App ist es noch nicht enthalten.</p>
+    <ul class="badges"><li><span class="b bald"><span class="vh">in Arbeit: </span>… Tauben &amp; Co Station</span></li><li><span class="b bald"><span class="vh">in Arbeit: </span>… BirdNET-Go</span></li><li><span class="b bald"><span class="vh">in Arbeit: </span>… AvianVisitors</span></li><li><span class="b bald"><span class="vh">in Arbeit: </span>… Nur zuhören</span></li></ul>
+  </div>
+
+  <h2 id="zuhoeren" class="gruppe-titel">Live und Erkennung am Handy</h2>
+  <div class="fn">
+    <h3>Zuhören mit dem Handy-Mikrofon</h3>
+    <p>Das BirdNET-Modell läuft auf dem Handy selbst. Der Ton wird in Abschnitten von drei Sekunden ausgewertet und sofort verworfen: keine Aufnahme, kein Upload. Du siehst ein laufendes Spektrogramm und die Funde als Liste, mit Zeichnung, Name, Prozent und Uhrzeit. Es läuft auch bei dunklem Bildschirm, bis du aufhörst. Die Funde bleiben auf dem Handy.</p>
+    <p class="notiz">Gibst du deine Position frei, filtert das Handy die Arten nach Region; sie verlässt das Handy nicht.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ BirdNET-Go</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ AvianVisitors</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Live-Band der Station</h3>
+    <p>Das Mikrofon der Station als laufendes Spektrogramm-Band, mit Markierungen für jeden Fund und einer Infokarte zur Art. Die Anzeige läuft absichtlich rund 22 Sekunden nach: So lange braucht die Erkennung, und so sitzt die Markierung genau auf dem Ruf.</p>
+    <p class="notiz">BirdNET-Go hat einen eigenen Live-Stream; die Einbindung ist später denkbar.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+
+  <h2 id="arten" class="gruppe-titel">Artkarte, Vergleich, Falsch markieren, Fotos</h2>
+  <div class="fn">
+    <h3>Artkarte (Atlas)</h3>
+    <p>Gezeichnete Vögel in mehreren Posen, ein Text aus der Wikipedia in der Sprache des Standorts, Kennzeichen und Links.</p>
+    <p class="notiz">Die Karte stammt aus AvianVisitors; bei BirdNET-Go über den Adapter.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ BirdNET-Go</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Fotos zur Art</h3>
+    <p>Frei lizenzierte Fotos aus iNaturalist und Wikimedia Commons, zum Durchblättern und im Vollbild. Urheber und Lizenz stehen bei jedem Bild. Dein Browser spricht dafür nie mit den Fremdseiten; der Server holt die Bilder.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Rufvergleich</h3>
+    <p>Bei jeder Aufnahme ein Knopf „vergleichen“: oben deine Aufnahme mit Spektrogramm, darunter Referenzaufnahmen derselben Art von xeno-canto zum Durchklicken. So prüfst du mit dem Ohr, ob die Erkennung richtig lag. Aufnehmende und Lizenz werden angezeigt.</p>
+    <p class="notiz">Der Betreiber des Servers braucht dafür einen kostenlosen xeno-canto-Zugang.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Zweite Meinung</h3>
+    <p>Am Server prüft ein zweites Modell (Perch v2 von Google) jede Aufnahme nach. Der Wert steht klein unter dem Prozentwert von BirdNET, zum Beispiel „Perch 87 %“. Er findet keine neuen Arten, er prüft nur nach.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Falsch markieren</h3>
+    <p>Eine ganze Art oder eine einzelne Aufnahme als falsch markieren: Sie verschwindet aus der Anzeige, aus dem Widget, aus den Meldungen und aus den Videos. Nochmal tippen holt sie zurück. Die Daten bleiben unangetastet, es ändert sich nur, was angezeigt wird.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+
+  <h2 id="post" class="gruppe-titel">Post zwischen Geräten</h2>
+  <div class="fn">
+    <h3>Postkarten</h3>
+    <p>Du verbindest dein Gerät mit dem eines anderen Menschen, zum Beispiel mit dem einer Freundin, und schickst Fotos und kurze Zeilen. Sie kommen als Postkarte an, mit einer Marke („3× gehört“). Das geht nur mit Zustimmung der anderen Seite, und jede Seite kann die Verbindung jederzeit lösen oder sperren.</p>
+    <p class="notiz">Ein Foto wird auf dem Server neu gezeichnet: ohne Aufnahmeort, Kamera und Zeitstempel. Nach 30 Tagen wird alles gelöscht, sofort beim Lösen der Verbindung. Text bleibt reiner Text, Links sind nicht anklickbar.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Verbundene und angemeldete Geräte</h3>
+    <p>Eine Übersicht, welche Geräte verbunden und angemeldet sind, mit der Möglichkeit, einzelne auszusperren und den Verbindungs-Code zu erneuern.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+
+  <h2 id="standorte" class="gruppe-titel">Mehrere Standorte</h2>
+  <div class="fn">
+    <h3>Mehrere Standorte auf einem Server</h3>
+    <p>Ein Server kann mehrere Standorte tragen, jeder mit eigener Datenbank, Sprache und eigenem Zugang. Die App zeigt die Liste und wechselt mit einem Tipp.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Mehrere Orte mit dem Handy</h3>
+    <p>Beim Zuhören legst du eigene Orte an (zum Beispiel einen Balkon und einen Park). Jeder hat seine eigenen Funde und seine eigene Collage.</p>
+    <ul class="badges"><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– AvianVisitors</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Station wechseln</h3>
+    <p>In den Einstellungen führt „Standort wechseln“ zurück zu den vier Wegen. Du kannst jederzeit von einem zum anderen umsteigen.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ BirdNET-Go</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ AvianVisitors</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Nur zuhören</span></li></ul>
+  </div>
+
+  <h2 id="sprachen" class="gruppe-titel">Sprachen</h2>
+  <div class="fn">
+    <h3>App auf Deutsch und Englisch</h3>
+    <p>Die App folgt der Sprache des Geräts. In den Einstellungen wählst du „System“, „Deutsch“ oder „English“; der Wechsel gilt sofort, auch für das Widget.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ BirdNET-Go</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ AvianVisitors</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Artnamen, Videos und Texte in der Sprache des Standorts</h3>
+    <p>Artnamen, Wikipedia-Texte und die gesprochenen Videos gibt es auf Deutsch und auf Englisch.</p>
+    <p class="notiz">Bei BirdNET-Go und AvianVisitors zeigt die Station die Namen, die sie selbst liefert.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– AvianVisitors</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Nur zuhören</span></li></ul>
+  </div>
+
+  <h2 id="station" class="gruppe-titel">Station und Einstellungen</h2>
+  <div class="fn">
+    <h3>Erkennung einstellen</h3>
+    <p>Sicherheitsschwelle, Empfindlichkeit, Überlappung und Regionalfilter lassen sich in der App ändern, aber nur mit Verwalter-Recht. Vor jeder Änderung fragt die App nach, und „Zurück zum vorigen Wert“ macht sie rückgängig. Der Pi prüft jeden Wunsch selbst gegen eine feste Liste, bevor er ihn übernimmt.</p>
+    <p class="notiz">Bei BirdNET-Go ist eine kleine Auswahl in Arbeit; bei AvianVisitors zeigt die App die Einstellungen an und verlinkt auf die Station.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b bald"><span class="vh">in Arbeit: </span>… BirdNET-Go</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Eigene Station öffnen</h3>
+    <p>Fremde Stationen erscheinen in einem eigenen Fenster der App, mit einem kleinen Menü oben (Einstellungen, Station öffnen). Fragt die Station nach Benutzer und Passwort, benutzt die App beides nur für die laufende Sitzung. Ein BirdNET-Go-Passwort wird nur gespeichert, wenn du zustimmst, und dann im Schlüsselbund bzw. Keystore.</p>
+    <p class="notiz">Unverschlüsselte Adressen (http://) akzeptiert die App nur im Heimnetz.</p>
+    <ul class="badges"><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Tauben &amp; Co Station</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ BirdNET-Go</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Aufnahmen aufbewahren oder ausdünnen</h3>
+    <p>Der Server kann alle Aufnahmen behalten oder sie gestaffelt ausdünnen: wenige gute pro Art und Minute, ältere nach einer Frist weg. Die Erkennungsliste bleibt dabei vollständig.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Der Pi hält sich am Laufen</h3>
+    <p>Ein Wächter holt den Pi nach WLAN-Ausfällen zurück. Der Lüfter läuft nach, damit der Pi nicht ständig an- und ausgeht. Ist die Karte fast voll, räumt der Pi erst auf, wenn der Server die Daten sicher hat. So hört er nicht still auf zuzuhören.</p>
+    <p class="notiz">Beim Selbstaufbau gehört das zum Installer, der noch in Arbeit ist.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Filter für menschliche Stimmen</h3>
+    <p>BirdNET-Pi schaltet standardmäßig sehr große Teile des Tons stumm, sobald irgendwo eine Stimme vermutet wird. Unser Patch stummt nur Ausschnitte, in denen eine Stimme klar zu hören ist.</p>
+    <p class="notiz">Aufnahmen können trotzdem leise Gesprächsfetzen enthalten (so steht es auch in der Datenschutzerklärung). Beim Selbstaufbau kommt der Patch mit dem Installer, der noch in Arbeit ist.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Sicherheit</h3>
+    <p>Der Pi schiebt seine Daten zum Server; niemand greift in den Pi hinein. Der Zugang zu jedem Standort läuft über ein Passwort und ein signiertes Cookie. Geräte-Token geben nur Bild und Kurzstand frei, nie Aufnahmen oder Einstellungen. Fremde Seiten bekommen in der App keine Brücke zur App.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ BirdNET-Go</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ AvianVisitors</span></li><li><span class="b nein"><span class="vh">nicht verfügbar: </span>– Nur zuhören</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Einführung</h3>
+    <p>Beim ersten Start zeigt eine kurze Tour, was wo ist. Sie blendet aus, was zu deinem Weg nicht passt. Sie lässt sich in den Einstellungen wiederholen.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ BirdNET-Go</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ AvianVisitors</span></li><li><span class="b ja"><span class="vh">verfügbar: </span>✓ Nur zuhören</span></li></ul>
+  </div>
+
+  <h2>In Arbeit</h2>
+  <ul>
+    <li>Der Installer für den Raspberry Pi und das Paket für den eigenen Server (siehe die beiden Anleitungs-Vorschauen).</li>
+    <li>Hilfe-Blätter in der App, die zu jeder der vier Karten erklären, was man wo eingibt.</li>
+    <li>Videos, die das Handy selbst baut.</li>
+    <li>Einstellungen der BirdNET-Go-Station aus der App.</li>
+    <li>Der E-Ink-Bilderrahmen.</li>
+  </ul>
+  <p>Fehlt dir etwas? <a href="https://github.com/Yannick158/taubenundco-support/issues/new/choose">Schreib einen Vorschlag</a>.</p>
+</section>
+
+<section id="en" lang="en">
+  <nav class="nav" aria-label="Pages"><a class="marke" href="index.html">Tauben &amp; Co</a><a href="index.html">Home</a><a href="funktionen.html" aria-current="page">Features</a><a href="vergleich.html">Comparison</a><a href="pi-installieren.html">Install the Pi</a><a href="server-einrichten.html">Set up a server</a><a href="lizenzen.html">Licences</a><a href="datenschutz.html">Privacy</a></nav>
+  <p class="pre">Tauben &amp; Co — what the app can do</p>
+  <h1>Features</h1>
+  <p class="stand">Last updated: 23 October 2026</p>
+  <p class="sprachhinweis"><a href="#de" hreflang="de">Deutsche Fassung oben</a></p>
+
+  <h2 class="erste">What the app can do</h2>
+  <p>Everything Tauben &amp; Co can do today, in groups, with one sentence per feature. Under
+    each feature you can see for which way it is available. Only what is built is listed as
+    a feature; what is still being made is marked “in the works”.</p>
+  <div class="legende" aria-label="Key">
+    <span><span class="b ja">✓</span> available</span>
+    <span><span class="b nein">–</span> not available</span>
+    <span><span class="b bald">…</span> in the works</span>
+  </div>
+  <div class="hinweis">
+    <span class="kopf">About the Tauben &amp; Co station</span>
+    <p>The features involving the Pi and the server (videos, notifications, live band,
+      messages, call comparison and so on) run today at the project’s existing stations. The
+      package for setting up such a server yourself is in the works, see
+      <a href="server-einrichten.html#en">Set up a server</a>. What only needs a phone or a
+      BirdNET-Go or AvianVisitors station already works today.</p>
+  </div>
+  <p>The four ways: BirdNET-Go, AvianVisitors, Tauben &amp; Co station, Listen only
+    (<a href="index.html#en">start page</a>).</p>
+  <ul>
+    <li><a href="#collage-en">Collage, widgets and notifications</a></li>
+    <li><a href="#videos-en">Videos</a></li>
+    <li><a href="#zuhoeren-en">Live listening and detection on the phone</a></li>
+    <li><a href="#arten-en">Species card, comparison, marking as wrong, photos</a></li>
+    <li><a href="#post-en">Messages between devices</a></li>
+    <li><a href="#standorte-en">Several locations</a></li>
+    <li><a href="#sprachen-en">Languages</a></li>
+    <li><a href="#station-en">Station and settings</a></li>
+  </ul>
+
+  <h2 id="collage-en" class="gruppe-titel">Collage, widgets and notifications</h2>
+  <div class="fn">
+    <h3>Collage of the day</h3>
+    <p>The birds of the day as an illustrated collage, with counts. The look comes from AvianVisitors; the app shows it and keeps it up to date.</p>
+    <p class="notiz">With BirdNET-Go via a small read-only adapter (prototype, not yet published). Without the adapter the app shows the BirdNET-Go dashboard. With “Listen only” the collage is made from what the phone heard.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b ja"><span class="vh">available: </span>✓ BirdNET-Go</span></li><li><span class="b ja"><span class="vh">available: </span>✓ AvianVisitors</span></li><li><span class="b ja"><span class="vh">available: </span>✓ Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Statistics and history</h3>
+    <p>Daily rhythm, life list, calendar and species counts, right in the station view.</p>
+    <p class="notiz">With BirdNET-Go via the adapter.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b ja"><span class="vh">available: </span>✓ BirdNET-Go</span></li><li><span class="b ja"><span class="vh">available: </span>✓ AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Widgets for the Home Screen and Lock Screen</h3>
+    <p>The collage of the day as a widget (iPhone: small, medium, large; Android: 2×2 to 4×4, resizable) and a short summary for the iPhone Lock Screen. The time span is selectable: 1, 3, 6, 12, 24 or 48 hours.</p>
+    <p class="notiz">With BirdNET-Go and AvianVisitors the app fetches the species list from your station and sends only species names and counts to a small drawing service that paints the picture. Places, recordings and your station’s address do not go with it (privacy policy, section 3.4).</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b ja"><span class="vh">available: </span>✓ BirdNET-Go</span></li><li><span class="b ja"><span class="vh">available: </span>✓ AvianVisitors</span></li><li><span class="b ja"><span class="vh">available: </span>✓ Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>New-review hint in the widget</h3>
+    <p>When a new bird week or bird month is ready, the widget shows a small line; a tap opens the video.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">not available: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">not available: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Notifications</h3>
+    <p>You choose: off, new species only, or every detection. Plus a notification when a review is ready. “Every detection” is bundled, so there is no flood.</p>
+    <p class="notiz">A local check is planned for BirdNET-Go.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">not available: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">not available: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Lock-screen picture for e-ink phones</h3>
+    <p>A small companion app for Bigme e-ink phones keeps the standby picture up to date with the current collage.</p>
+    <p class="notiz">Not distributed publicly so far.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">not available: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">not available: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>E-ink picture frame</h3>
+    <p>A separate, flat e-ink screen that shows the station’s picture and runs for months on one battery charge.</p>
+    <p class="notiz">The device has been ordered; the work is waiting for it.</p>
+    <ul class="badges"><li><span class="b bald"><span class="vh">in the works: </span>… Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">not available: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">not available: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+
+  <h2 id="videos-en" class="gruppe-titel">Videos</h2>
+  <div class="fn">
+    <h3>Bird week</h3>
+    <p>A narrated video about the week every Sunday: who visited, who is new, who was only passing through. With voice, subtitles and the actual calls.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">not available: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">not available: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Bird month</h3>
+    <p>Once a month, a longer review with the arc of the month and a comparison.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">not available: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">not available: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Species portrait</h3>
+    <p>A video of about 55 seconds for every species: rare or common, at what time of day, how to recognise it, what it eats. The button sits in the species card; new videos are made on their own.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">not available: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">not available: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Share and save</h3>
+    <p>Every video can be shared from the player or saved to the photo library (iPhone) or the Movies folder (Android).</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">not available: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">not available: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Videos made on the phone</h3>
+    <p>Weekly reviews that the phone assembles itself: from your station’s data or from what the phone heard. No server of your own needed.</p>
+    <p class="notiz">The building blocks are being made; it is not in the app yet.</p>
+    <ul class="badges"><li><span class="b bald"><span class="vh">in the works: </span>… Tauben &amp; Co Station</span></li><li><span class="b bald"><span class="vh">in the works: </span>… BirdNET-Go</span></li><li><span class="b bald"><span class="vh">in the works: </span>… AvianVisitors</span></li><li><span class="b bald"><span class="vh">in the works: </span>… Listen only</span></li></ul>
+  </div>
+
+  <h2 id="zuhoeren-en" class="gruppe-titel">Live listening and detection on the phone</h2>
+  <div class="fn">
+    <h3>Listening with the phone’s microphone</h3>
+    <p>The BirdNET model runs on the phone itself. The sound is analysed in three-second slices and discarded immediately: no recording, no upload. You see a scrolling spectrogram and the finds as a list, with drawing, name, percentage and time. It keeps running with the screen dark until you stop. The finds stay on the phone.</p>
+    <p class="notiz">If you share your position, the phone filters species by region; it never leaves the phone.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b ja"><span class="vh">available: </span>✓ BirdNET-Go</span></li><li><span class="b ja"><span class="vh">available: </span>✓ AvianVisitors</span></li><li><span class="b ja"><span class="vh">available: </span>✓ Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Live band of the station</h3>
+    <p>The station’s microphone as a scrolling spectrogram band, with a marker for every find and an info card for the species. The display deliberately runs about 22 seconds behind: that is how long detection takes, and it puts each marker exactly on its call.</p>
+    <p class="notiz">BirdNET-Go has a live stream of its own; connecting it is conceivable later.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">not available: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">not available: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+
+  <h2 id="arten-en" class="gruppe-titel">Species card, comparison, marking as wrong, photos</h2>
+  <div class="fn">
+    <h3>Species card (atlas)</h3>
+    <p>Illustrated birds in several poses, a Wikipedia text in the location’s language, identification notes and links.</p>
+    <p class="notiz">The card comes from AvianVisitors; with BirdNET-Go via the adapter.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b ja"><span class="vh">available: </span>✓ BirdNET-Go</span></li><li><span class="b ja"><span class="vh">available: </span>✓ AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Photos of the species</h3>
+    <p>Freely licensed photos from iNaturalist and Wikimedia Commons, to flick through or view full screen. Author and licence are shown with every picture. Your browser never talks to those sites; the server fetches the pictures.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">not available: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">not available: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Call comparison</h3>
+    <p>Every recording has a “compare” button: your recording with its spectrogram on top, reference recordings of the same species from xeno-canto below to click through. That way you check by ear whether the detection was right. Recordists and licences are shown.</p>
+    <p class="notiz">The server’s operator needs a free xeno-canto account for this.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">not available: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">not available: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Second opinion</h3>
+    <p>On the server a second model (Perch v2 from Google) re-checks every recording. Its value appears in small type below BirdNET’s percentage, for example “Perch 87%”. It does not find new species; it only double-checks.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">not available: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">not available: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Mark as wrong</h3>
+    <p>Mark a whole species or a single recording as wrong: it disappears from the display, the widget, the notifications and the videos. Tap again to bring it back. The data stays untouched; only what is shown changes.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">not available: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">not available: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+
+  <h2 id="post-en" class="gruppe-titel">Messages between devices</h2>
+  <div class="fn">
+    <h3>Postcards</h3>
+    <p>You connect your device with someone else’s, say a friend’s, and send pictures and short notes. They arrive as a postcard with a stamp (“heard 3×”). This only works with the other side’s consent, and either side can end or block the connection at any time.</p>
+    <p class="notiz">A photo is redrawn on the server: without location, camera or timestamp. Everything is deleted after 30 days, and at once when the connection is ended. Text stays plain text; links are not clickable.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">not available: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">not available: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Connected and signed-in devices</h3>
+    <p>An overview of which devices are connected and signed in, with the option to lock out single ones and renew the connection code.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">not available: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">not available: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+
+  <h2 id="standorte-en" class="gruppe-titel">Several locations</h2>
+  <div class="fn">
+    <h3>Several locations on one server</h3>
+    <p>One server can carry several locations, each with its own database, language and access. The app shows the list and switches with one tap.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">not available: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">not available: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Several places with the phone</h3>
+    <p>When listening you add places of your own (say a balcony and a park). Each has its own finds and its own collage.</p>
+    <ul class="badges"><li><span class="b nein"><span class="vh">not available: </span>– Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">not available: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">not available: </span>– AvianVisitors</span></li><li><span class="b ja"><span class="vh">available: </span>✓ Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Change station</h3>
+    <p>In Settings, “Change location” takes you back to the four ways. You can switch from one to another at any time.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b ja"><span class="vh">available: </span>✓ BirdNET-Go</span></li><li><span class="b ja"><span class="vh">available: </span>✓ AvianVisitors</span></li><li><span class="b ja"><span class="vh">available: </span>✓ Listen only</span></li></ul>
+  </div>
+
+  <h2 id="sprachen-en" class="gruppe-titel">Languages</h2>
+  <div class="fn">
+    <h3>App in German and English</h3>
+    <p>The app follows the device language. In Settings you choose “System”, “Deutsch” or “English”; the change applies at once, widget included.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b ja"><span class="vh">available: </span>✓ BirdNET-Go</span></li><li><span class="b ja"><span class="vh">available: </span>✓ AvianVisitors</span></li><li><span class="b ja"><span class="vh">available: </span>✓ Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Species names, videos and texts in the location’s language</h3>
+    <p>Species names, Wikipedia texts and the spoken videos come in German and in English.</p>
+    <p class="notiz">With BirdNET-Go and AvianVisitors the station shows the names it supplies itself.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">not available: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">not available: </span>– AvianVisitors</span></li><li><span class="b ja"><span class="vh">available: </span>✓ Listen only</span></li></ul>
+  </div>
+
+  <h2 id="station-en" class="gruppe-titel">Station and settings</h2>
+  <div class="fn">
+    <h3>Adjust detection</h3>
+    <p>Confidence threshold, sensitivity, overlap and range filter can be changed in the app, but only with manager rights. The app asks before every change, and “Back to previous value” undoes it. The Pi checks every request itself against a fixed list before accepting it.</p>
+    <p class="notiz">A small selection for BirdNET-Go is in the works; with AvianVisitors the app displays the settings and links to the station.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b bald"><span class="vh">in the works: </span>… BirdNET-Go</span></li><li><span class="b nein"><span class="vh">not available: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Open your own station</h3>
+    <p>Foreign stations appear in a window of their own in the app, with a small menu at the top (Settings, Open station). If the station asks for a user name and password, the app uses them for the current session only. A BirdNET-Go password is only saved if you agree, and then in the Keychain or Keystore.</p>
+    <p class="notiz">The app only accepts unencrypted addresses (http://) on the home network.</p>
+    <ul class="badges"><li><span class="b nein"><span class="vh">not available: </span>– Tauben &amp; Co Station</span></li><li><span class="b ja"><span class="vh">available: </span>✓ BirdNET-Go</span></li><li><span class="b ja"><span class="vh">available: </span>✓ AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Keep or thin out recordings</h3>
+    <p>The server can keep all recordings or thin them out in stages: a few good ones per species and minute, older ones gone after a set time. The list of detections stays complete.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">not available: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">not available: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>The Pi keeps itself running</h3>
+    <p>A watchdog brings the Pi back after Wi-Fi outages. The fan keeps running afterwards so the Pi does not keep switching on and off. When the card is nearly full, the Pi tidies up only once the server has the data safely. That way it never silently stops listening.</p>
+    <p class="notiz">In a self-built setup this belongs to the installer, which is still in the works.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">not available: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">not available: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Filter for human voices</h3>
+    <p>By default BirdNET-Pi mutes very large parts of the sound as soon as a voice is suspected anywhere. Our patch mutes only passages in which a voice is clearly audible.</p>
+    <p class="notiz">Recordings can still contain faint scraps of conversation (the privacy policy says so, too). In a self-built setup the patch comes with the installer, which is still in the works.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b nein"><span class="vh">not available: </span>– BirdNET-Go</span></li><li><span class="b nein"><span class="vh">not available: </span>– AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Security</h3>
+    <p>The Pi pushes its data to the server; nobody reaches into the Pi. Access to every location runs through a password and a signed cookie. Device tokens release only the picture and the short summary, never recordings or settings. Foreign pages get no bridge into the app.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b ja"><span class="vh">available: </span>✓ BirdNET-Go</span></li><li><span class="b ja"><span class="vh">available: </span>✓ AvianVisitors</span></li><li><span class="b nein"><span class="vh">not available: </span>– Listen only</span></li></ul>
+  </div>
+  <div class="fn">
+    <h3>Introduction</h3>
+    <p>On first launch a short tour shows what is where. It hides what does not fit your way in. You can repeat it in Settings.</p>
+    <ul class="badges"><li><span class="b ja"><span class="vh">available: </span>✓ Tauben &amp; Co Station</span></li><li><span class="b ja"><span class="vh">available: </span>✓ BirdNET-Go</span></li><li><span class="b ja"><span class="vh">available: </span>✓ AvianVisitors</span></li><li><span class="b ja"><span class="vh">available: </span>✓ Listen only</span></li></ul>
+  </div>
+
+  <h2>In the works</h2>
+  <ul>
+    <li>The installer for the Raspberry Pi and the package for your own server (see the two guide previews).</li>
+    <li>Help sheets in the app that explain, for each of the four cards, what to enter where.</li>
+    <li>Videos the phone builds by itself.</li>
+    <li>BirdNET-Go station settings from within the app.</li>
+    <li>The e-ink picture frame.</li>
+  </ul>
+  <p>Missing something? <a href="https://github.com/Yannick158/taubenundco-support/issues/new/choose">Make a suggestion</a>.</p>
+</section>
+
+</main>
+</body>
+</html>

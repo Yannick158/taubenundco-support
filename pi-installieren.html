@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="Vorschau: so soll der Raspberry Pi für Tauben &amp; Co eingerichtet werden.">
+<title>Pi installieren — Tauben &amp; Co · Install the Pi</title>
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<main>
+
+<section id="de" lang="de">
+  <nav class="nav" aria-label="Seiten"><a class="marke" href="index.html">Tauben &amp; Co</a><a href="index.html">Start</a><a href="funktionen.html">Funktionen</a><a href="vergleich.html">Vergleich</a><a href="pi-installieren.html" aria-current="page">Pi installieren</a><a href="server-einrichten.html">Server einrichten</a><a href="lizenzen.html">Lizenzen</a><a href="datenschutz.html">Datenschutz</a></nav>
+  <p class="pre">Tauben &amp; Co — Anleitung (Vorschau)</p>
+  <h1>Den Pi installieren</h1>
+  <p class="stand">Stand: 23. Oktober 2026</p>
+  <p class="sprachhinweis"><a href="#en" hreflang="en">English version below</a></p>
+
+  <div class="hinweis">
+    <span class="kopf">Vorschau · kommt bald</span>
+    <p>Der Installer für den Pi wird gerade gebaut. Diese Seite zeigt, wie der Weg
+      vorgesehen ist und was du dafür besorgen kannst. Es gibt noch keinen Download und
+      keine Befehle zum Abtippen; sobald der Installer getestet ist, wird die Seite
+      vervollständigt.</p>
+  </div>
+
+  <h2 class="erste">Worum es geht</h2>
+  <p>
+    Ein Raspberry Pi mit USB-Mikrofon hört im Garten, auf dem Balkon oder am Fenster zu,
+    erkennt die Vögel mit BirdNET und schiebt die Ergebnisse auf deinen Server
+    (<a href="server-einrichten.html">Server einrichten</a>). Der Pi richtet sich beim ersten
+    Start selbst ein; du füllst vorher nur ein kurzes Formular aus.
+  </p>
+
+  <h2>Was du brauchst</h2>
+  <ul>
+    <li><strong>Raspberry Pi.</strong> Ein Pi 4 ist das Gerät, auf dem wir es getestet haben. Ein Pi 5
+      sollte auch gehen, ist aber von uns noch nicht ausprobiert.</li>
+    <li><strong>Speicherkarte (microSD).</strong> 64 GB sind eine gute Größe. Der Pi legt Aufnahmen
+      ab und räumt nach dem Hochladen selbst auf; 32 GB genügen in der Regel auch.</li>
+    <li><strong>Netzteil.</strong> Das offizielle Netzteil für dein Modell. Ein zu schwaches
+      Netzteil führt zu merkwürdigen Aussetzern.</li>
+    <li><strong>USB-Mikrofon oder USB-Soundkarte mit Mikrofon.</strong> Wichtig: Der Frequenzgang
+      sollte bis mindestens 16 kHz reichen. Sehr billige Mikrofone schneiden bei 8 kHz ab,
+      dann fehlen die hohen Sänger, etwa Goldhähnchen.</li>
+    <li><strong>Netzwerk.</strong> Ein Kabel ist am zuverlässigsten. Mit WLAN nimm 2,4 GHz; 5 GHz
+      funktioniert bei schwachem Empfang oft nicht. Der Pi sollte nicht am Rand der
+      WLAN-Reichweite hängen.</li>
+    <li><strong>Optional:</strong> ein Gehäuse mit Lüfter, ein wetterfestes Gehäuse für draußen,
+      ein Windschutz für das Mikrofon.</li>
+    <li><strong>Ein Computer</strong> (Mac, Windows oder Linux) mit SD-Kartenleser und dem
+      kostenlosen Raspberry Pi Imager.</li>
+    <li><strong>Deinen Server</strong> mit Adresse und Koppelcode (siehe Schritt 2).</li>
+  </ul>
+
+  <h2>Die Schritte</h2>
+  <ol class="schritte">
+    <li>
+      <h3>Server bereithalten</h3>
+      <p>Der Pi schiebt seine Daten auf deinen Server. Der muss laufen, bevor der Pi startet.
+        Die Anleitung dazu: <a href="server-einrichten.html">Server einrichten</a>.</p>
+    </li>
+    <li>
+      <h3>Server-Adresse und Koppelcode holen</h3>
+      <p>Auf dem Server legst du einen Standort an. Er gibt dir einen Koppelcode aus: sechs
+        Zeichen, einmal verwendbar und 24 Stunden gültig. Die Adresse deines Servers brauchst
+        du auch.</p>
+    </li>
+    <li>
+      <h3>Den Assistenten ausfüllen</h3>
+      <p>Ein Formular im Browser fragt nach:</p>
+      <ul>
+        <li>Server-Adresse und Koppelcode</li>
+        <li>Name des Standorts und ein Kurzname</li>
+        <li>ungefähre Position (auf zwei Nachkommastellen gerundet)</li>
+        <li>Zeitzone und Sprache (Deutsch oder Englisch; sie bestimmt Artnamen und Videos)</li>
+        <li>WLAN-Name und Passwort, oder „Kabel“</li>
+        <li>Art des Mikrofons (USB), den Rest erkennt der Pi selbst</li>
+        <li>Speicher: alle Aufnahmen behalten oder gestaffelt ausdünnen</li>
+      </ul>
+      <p>So ist der Assistent vorgesehen: Er läuft nur in deinem Browser, nichts davon wird
+        verschickt, auch das WLAN-Passwort nicht. Am Ende gibt er ein ZIP-Archiv aus. Ein
+        Passwort für den Pi musst du nicht erfinden; es entsteht zufällig und wird dir einmal
+        angezeigt.</p>
+    </li>
+    <li>
+      <h3>Die Karte schreiben</h3>
+      <p>Im Raspberry Pi Imager wählst du „Raspberry Pi OS Lite (64-bit)“ und deine Karte. Die
+        Anpassungen des Imagers lässt du aus, weil dein ZIP alles mitbringt. Dann schreiben
+        lassen.</p>
+    </li>
+    <li>
+      <h3>Das ZIP auf die Karte legen</h3>
+      <p>Karte noch einmal herausnehmen und wieder einstecken. Es erscheint ein Laufwerk
+        namens <code>bootfs</code>. Entpacke das ZIP dorthin und wirf die Karte sauber aus.</p>
+    </li>
+    <li>
+      <h3>Einstecken und warten</h3>
+      <p>Karte in den Pi, Mikrofon und Netz anschließen, Strom dran. Der erste Start dauert
+        bis zu einer Stunde, weil sich der Pi die Erkennungssoftware selbst holt und einrichtet.
+        <strong>Während dieser Zeit nicht ausschalten.</strong> Dazu braucht der Pi
+        Internet.</p>
+    </li>
+    <li>
+      <h3>Prüfen</h3>
+      <p>Auf dem Server erscheint eine Meldung, dass sich der Pi gemeldet hat, mit Uhrzeit,
+        Version und erkanntem Mikrofon. Kurz darauf kommen die ersten Erkennungen an und
+        die App kann den Standort zeigen.</p>
+    </li>
+  </ol>
+
+  <h2>Wenn etwas nicht klappt</h2>
+  <p>
+    Der Pi hat keinen Bildschirm, deshalb schreibt er Protokolle auf die Karte. Steck sie
+    zur Fehlersuche wieder in den Computer; auf <code>bootfs</code> liegen:
+  </p>
+  <ul>
+    <li><code>vogel-einrichtung.log</code>: was die Einrichtung getan hat, Schritt für Schritt.</li>
+    <li><code>vogel-netz.txt</code>: gesehene WLAN-Netze und der Funkstatus, wenn der Pi kein Netz fand.</li>
+    <li>Für den Fall, dass der Koppelcode abgelaufen ist, ist eine weitere Datei mit einer
+      Anleitung vorgesehen. Einen neuen Code holst du auf dem Server.</li>
+  </ul>
+  <p>
+    Zu den häufigsten Stolpersteinen zählen ein 5-GHz-WLAN, ein schwacher Empfang, ein
+    Mikrofon, das bei 8 kHz abschneidet, und Strom, der mitten in der Installation
+    weggenommen wird. Hilft das nicht, melde dich über das
+    <a href="https://github.com/Yannick158/taubenundco-support/issues/new/choose">Formular</a>
+    und hänge die beiden Dateien an (vorher nach Passwörtern und Adressen durchsehen).
+  </p>
+
+  <h2>Später</h2>
+  <p>
+    Für später ist ein fertiges Abbild vorgesehen, das du direkt im Raspberry Pi Imager
+    wählst. Der erste Start dauert dann nur wenige Minuten statt einer Stunde.
+  </p>
+
+</section>
+
+<section id="en" lang="en">
+  <nav class="nav" aria-label="Pages"><a class="marke" href="index.html">Tauben &amp; Co</a><a href="index.html">Home</a><a href="funktionen.html">Features</a><a href="vergleich.html">Comparison</a><a href="pi-installieren.html" aria-current="page">Install the Pi</a><a href="server-einrichten.html">Set up a server</a><a href="lizenzen.html">Licences</a><a href="datenschutz.html">Privacy</a></nav>
+  <p class="pre">Tauben &amp; Co — guide (preview)</p>
+  <h1>Install the Pi</h1>
+  <p class="stand">Last updated: 23 October 2026</p>
+  <p class="sprachhinweis"><a href="#de" hreflang="de">Deutsche Fassung oben</a></p>
+
+  <div class="hinweis">
+    <span class="kopf">Preview · coming soon</span>
+    <p>The installer for the Pi is being built right now. This page shows how the way is
+      meant to work and what you can get ready. There is no download yet and no commands to
+      type; once the installer has been tested, the page will be completed.</p>
+  </div>
+
+  <h2 class="erste">What it is about</h2>
+  <p>
+    A Raspberry Pi with a USB microphone listens in the garden, on the balcony or at the
+    window, recognises the birds with BirdNET and pushes the results to your server
+    (<a href="server-einrichten.html#en">Set up a server</a>). The Pi sets itself up on first
+    start; beforehand you only fill in a short form.
+  </p>
+
+  <h2>What you need</h2>
+  <ul>
+    <li><strong>Raspberry Pi.</strong> A Pi 4 is the device we tested on. A Pi 5 should work as
+      well but we have not tried it yet.</li>
+    <li><strong>Memory card (microSD).</strong> 64 GB is a good size. The Pi stores recordings and
+      tidies up by itself after uploading; 32 GB is usually enough, too.</li>
+    <li><strong>Power supply.</strong> The official one for your model. A power supply that is too
+      weak causes odd dropouts.</li>
+    <li><strong>USB microphone or USB sound card with a microphone.</strong> Important: its
+      frequency response should reach at least 16 kHz. Very cheap microphones cut off at
+      8 kHz, and then the high singers, such as goldcrests, are missing.</li>
+    <li><strong>Network.</strong> A cable is the most reliable. With Wi-Fi use 2.4 GHz; 5 GHz often
+      fails with weak reception. The Pi should not hang at the edge of your Wi-Fi range.</li>
+    <li><strong>Optional:</strong> a case with a fan, a weatherproof housing for outdoors, a wind
+      shield for the microphone.</li>
+    <li><strong>A computer</strong> (Mac, Windows or Linux) with an SD card reader and the free
+      Raspberry Pi Imager.</li>
+    <li><strong>Your server</strong> with its address and a pairing code (see step 2).</li>
+  </ul>
+
+  <h2>The steps</h2>
+  <ol class="schritte">
+    <li>
+      <h3>Have the server ready</h3>
+      <p>The Pi pushes its data to your server. It has to be running before the Pi starts.
+        The guide: <a href="server-einrichten.html#en">Set up a server</a>.</p>
+    </li>
+    <li>
+      <h3>Get the server address and pairing code</h3>
+      <p>On the server you add a location. It gives you a pairing code: six characters, usable
+        once and valid for 24 hours. You also need your server’s address.</p>
+    </li>
+    <li>
+      <h3>Fill in the assistant</h3>
+      <p>A form in your browser asks for:</p>
+      <ul>
+        <li>server address and pairing code</li>
+        <li>name of the location and a short name</li>
+        <li>approximate position (rounded to two decimals)</li>
+        <li>time zone and language (German or English; it decides species names and videos)</li>
+        <li>Wi-Fi name and password, or “cable”</li>
+        <li>type of microphone (USB); the Pi works out the rest itself</li>
+        <li>storage: keep all recordings or thin them out in stages</li>
+      </ul>
+      <p>This is how the assistant is meant to work: it runs only in your browser, nothing of it
+        is sent anywhere, not even the Wi-Fi password. At the end it produces a ZIP archive.
+        You do not have to invent a password for the Pi; one is generated at random and shown
+        to you once.</p>
+    </li>
+    <li>
+      <h3>Write the card</h3>
+      <p>In Raspberry Pi Imager choose “Raspberry Pi OS Lite (64-bit)” and your card. Leave the
+        Imager’s customisation options off, because your ZIP brings everything with it. Then
+        write.</p>
+    </li>
+    <li>
+      <h3>Put the ZIP on the card</h3>
+      <p>Take the card out once more and put it back in. A drive called <code>bootfs</code>
+        appears. Unpack the ZIP there and eject the card properly.</p>
+    </li>
+    <li>
+      <h3>Plug in and wait</h3>
+      <p>Card into the Pi, connect microphone and network, switch on the power. The first start
+        takes up to an hour, because the Pi fetches and sets up the detection software itself.
+        <strong>Do not switch it off during that time.</strong> The Pi needs internet for this.</p>
+    </li>
+    <li>
+      <h3>Check</h3>
+      <p>On the server a message appears saying that the Pi has reported in, with the time, the
+        version and the microphone it found. Shortly afterwards the first detections arrive and
+        the app can show the location.</p>
+    </li>
+  </ol>
+
+  <h2>If something does not work</h2>
+  <p>
+    The Pi has no screen, so it writes logs onto the card. For troubleshooting put it back in
+    your computer; on <code>bootfs</code> you will find:
+  </p>
+  <ul>
+    <li><code>vogel-einrichtung.log</code>: what the setup did, step by step.</li>
+    <li><code>vogel-netz.txt</code>: the Wi-Fi networks seen and the radio status, if the Pi found no network.</li>
+    <li>For the case that the pairing code has expired, a further file with instructions is
+      planned. You get a new code on the server.</li>
+  </ul>
+  <p>
+    The most common stumbling blocks are a 5 GHz Wi-Fi, weak reception, a microphone that cuts
+    off at 8 kHz, and power being removed in the middle of the installation. If that does not
+    help, get in touch through the
+    <a href="https://github.com/Yannick158/taubenundco-support/issues/new/choose">form</a> and
+    attach the two files (check them for passwords and addresses first).
+  </p>
+
+  <h2>Later</h2>
+  <p>
+    A ready-made image that you choose straight in Raspberry Pi Imager is planned for later.
+    The first start then takes a few minutes instead of an hour.
+  </p>
+
+</section>
+
+</main>
+</body>
+</html>

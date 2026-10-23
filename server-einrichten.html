@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="Vorschau: so soll der eigene Server für Tauben &amp; Co eingerichtet werden.">
+<title>Server einrichten — Tauben &amp; Co · Set up a server</title>
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<main>
+
+<section id="de" lang="de">
+  <nav class="nav" aria-label="Seiten"><a class="marke" href="index.html">Tauben &amp; Co</a><a href="index.html">Start</a><a href="funktionen.html">Funktionen</a><a href="vergleich.html">Vergleich</a><a href="pi-installieren.html">Pi installieren</a><a href="server-einrichten.html" aria-current="page">Server einrichten</a><a href="lizenzen.html">Lizenzen</a><a href="datenschutz.html">Datenschutz</a></nav>
+  <p class="pre">Tauben &amp; Co — Anleitung (Vorschau)</p>
+  <h1>Einen eigenen Server einrichten</h1>
+  <p class="stand">Stand: 23. Oktober 2026</p>
+  <p class="sprachhinweis"><a href="#en" hreflang="en">English version below</a></p>
+
+  <div class="hinweis">
+    <span class="kopf">Vorschau · kommt bald</span>
+    <p>Das Paket für den eigenen Server wird gerade gebaut. Diese Seite zeigt, was
+      vorgesehen ist und was du vorbereiten kannst. Es gibt noch keinen Download und keine
+      Befehle zum Abtippen; sobald das Paket getestet ist, wird die Seite vervollständigt.</p>
+  </div>
+
+  <h2 class="erste">Wozu ein eigener Server?</h2>
+  <p>
+    Der Pi schiebt seine Erkennungen und Aufnahmen auf einen Server. Dort liegen die Daten
+    sicher, dort entstehen die Rückblick-Videos, dort werden Meldungen verschickt, und von dort
+    holt sich die App alles, auch von unterwegs. Du musst dafür kein Loch in dein Heimnetz
+    machen: Der Pi geht nach draußen, niemand geht hinein. Ein Server kann mehrere Standorte
+    tragen.
+  </p>
+
+  <h2>Was du brauchst</h2>
+  <ul>
+    <li><strong>Einen kleinen Server.</strong> Ein gemieteter virtueller Server oder ein Rechner
+      zu Hause mit erreichbarer IP-Adresse. Für Daten und Videos sind etwa 2 GB Arbeitsspeicher
+      und ein Prozessorkern ein Anfang; für die Videos ist mehr besser. Plane Speicherplatz für
+      die Aufnahmen ein (ein einzelner Standort erzeugt grob ein Gigabyte pro Tag, wenn nichts
+      ausgedünnt wird).</li>
+    <li><strong>Eine öffentliche IPv4- oder IPv6-Adresse</strong> und die Möglichkeit, die Ports 80
+      und 443 (Webseite) sowie einen weiteren Port für den Pi (vorgesehen: 2200) freizugeben.</li>
+    <li><strong>Eine Domain</strong> oder Unterdomain, die auf den Server zeigt, am besten mit
+      Platzhalter-Eintrag, damit jeder Standort eine eigene Adresse bekommt.</li>
+    <li><strong>Docker mit Docker Compose</strong> auf dem Server.</li>
+    <li><strong>Eine E-Mail-Adresse</strong> für das Zertifikat (Let’s Encrypt).</li>
+    <li>Etwas Erfahrung mit Linux auf der Kommandozeile. Das Paket soll die Arbeit klein
+      halten, ersetzt aber nicht den Umgang mit einem Server.</li>
+  </ul>
+
+  <h2>Die Schritte</h2>
+  <ol class="schritte">
+    <li>
+      <h3>Server und Domain vorbereiten</h3>
+      <p>Server mieten oder bereitstellen, Docker installieren, die Domain auf die
+        IP-Adresse zeigen lassen. Die Absicherung des Rechners selbst (Updates, Firewall,
+        Anmeldung nur per Schlüssel) bleibt deine Sache.</p>
+    </li>
+    <li>
+      <h3>Das Paket holen</h3>
+      <p>Das Serverpaket <em>tauben-server</em> kommt als Release auf GitHub. Es ist ein
+        Docker-Compose-Paket: Webserver mit automatischem Zertifikat, die Webseite der
+        Station, ein Wächter für die Anmeldung, ein Dienst für die Verbindung vom Pi und ein
+        Arbeitsdienst für die regelmäßigen Aufgaben.</p>
+    </li>
+    <li>
+      <h3>Einrichten</h3>
+      <p>Ein Einrichtungsbefehl fragt nach der Domain und deiner E-Mail-Adresse, erzeugt die
+        Schlüssel (Anmeldung, Browser-Meldungen) und prüft am Ende, ob der Server von außen
+        erreichbar ist. Er legt auch die Beschreibung an, an der die App erkennt, dass hier
+        ein Tauben-&amp;-Co-Server läuft.</p>
+    </li>
+    <li>
+      <h3>Standort anlegen</h3>
+      <p>Du legst einen Standort an (Name, Kurzname, Sprache, ungefähre Position) und setzt sein
+        Passwort. Dabei bekommst du den Koppelcode für den Pi:
+        <a href="pi-installieren.html">Pi installieren</a>.</p>
+    </li>
+    <li>
+      <h3>Pi koppeln</h3>
+      <p>Der Pi meldet sich mit dem Koppelcode an, erzeugt seine Schlüssel selbst und hinterlegt
+        nur den öffentlichen Teil auf dem Server. Danach zeigt der Server, dass sich der Pi
+        gemeldet hat.</p>
+    </li>
+    <li>
+      <h3>App verbinden</h3>
+      <p>In der App wählst du „Tauben &amp; Co Station“, trägst die Adresse deines Servers ein,
+        wählst den Standort und gibst sein Passwort ein.</p>
+    </li>
+  </ol>
+
+  <h2>Betrieb</h2>
+  <ul>
+    <li><strong>Updates:</strong> Das Paket bekommt neue Versionen als Release; ein Update-Befehl holt sie.</li>
+    <li><strong>Sicherung:</strong> Die Daten liegen in Docker-Volumes. Ein Befehl zum Sichern ist vorgesehen; zusätzlich empfehlen wir eine Sicherung des ganzen Servers.</li>
+    <li><strong>Videos:</strong> Sind ein zuschaltbarer Teil. Sie brauchen Rechenzeit, auf sehr kleinen Servern dauern sie.</li>
+    <li><strong>Optional:</strong> Die zweite Meinung (Perch) und die automatische Erzeugung fehlender Zeichnungen (dafür braucht es einen eigenen Schlüssel von dir) sind abschaltbar.</li>
+  </ul>
+
+  <h2>Was der Server speichert</h2>
+  <p>
+    Pro Standort die Erkennungen (Art, Zeitpunkt, Trefferwert), die Aufnahmen vom Pi samt
+    Spektrogrammen, die Falsch-Markierungen, die erzeugten Videos, die Geräte, die du mit
+    der App angemeldet hast (nur als Prüfsumme des Tokens), und Nachrichten zwischen
+    verbundenen Geräten (30 Tage). Aufnahmen können leise Gesprächsfetzen enthalten.
+    Betreiber dieses Servers bist du; für ihn gelten deine eigenen Pflichten. Was die
+    <em>App</em> mit deinem Server austauscht, steht in der
+    <a href="datenschutz.html">Datenschutzerklärung</a>, Abschnitt 3.6.
+  </p>
+
+  <h2>Was noch nicht dabei ist</h2>
+  <ul>
+    <li>Meldungen direkt auf das Handy (Apple und Google verlangen dafür eigene Schlüssel
+      und einen Vermittler): Zunächst gibt es Browser-Meldungen; die App holt neue Funde
+      beim Öffnen und im Hintergrund selbst ab.</li>
+    <li>Ein Weg, auf dem du die Verbindung ganz ohne Befehle einrichtest.</li>
+  </ul>
+
+</section>
+
+<section id="en" lang="en">
+  <nav class="nav" aria-label="Pages"><a class="marke" href="index.html">Tauben &amp; Co</a><a href="index.html">Home</a><a href="funktionen.html">Features</a><a href="vergleich.html">Comparison</a><a href="pi-installieren.html">Install the Pi</a><a href="server-einrichten.html" aria-current="page">Set up a server</a><a href="lizenzen.html">Licences</a><a href="datenschutz.html">Privacy</a></nav>
+  <p class="pre">Tauben &amp; Co — guide (preview)</p>
+  <h1>Set up a server of your own</h1>
+  <p class="stand">Last updated: 23 October 2026</p>
+  <p class="sprachhinweis"><a href="#de" hreflang="de">Deutsche Fassung oben</a></p>
+
+  <div class="hinweis">
+    <span class="kopf">Preview · coming soon</span>
+    <p>The package for your own server is being built right now. This page shows what is
+      planned and what you can prepare. There is no download yet and no commands to type;
+      once the package has been tested, the page will be completed.</p>
+  </div>
+
+  <h2 class="erste">Why a server of your own?</h2>
+  <p>
+    The Pi pushes its detections and recordings to a server. That is where the data is kept
+    safe, where the review videos are made, where notifications are sent from, and where the
+    app gets everything, also when you are out. You do not have to punch a hole into your home
+    network: the Pi reaches out, nobody reaches in. One server can carry several locations.
+  </p>
+
+  <h2>What you need</h2>
+  <ul>
+    <li><strong>A small server.</strong> A rented virtual server or a computer at home with a
+      reachable IP address. For data and videos about 2 GB of memory and one processor core
+      are a start; for the videos more is better. Plan storage for the recordings (a single
+      location produces roughly a gigabyte a day if nothing is thinned out).</li>
+    <li><strong>A public IPv4 or IPv6 address</strong> and the ability to open ports 80 and 443
+      (website) plus one more port for the Pi (planned: 2200).</li>
+    <li><strong>A domain</strong> or subdomain pointing at the server, ideally with a wildcard
+      record so that every location gets an address of its own.</li>
+    <li><strong>Docker with Docker Compose</strong> on the server.</li>
+    <li><strong>An e-mail address</strong> for the certificate (Let’s Encrypt).</li>
+    <li>Some experience with Linux on the command line. The package is meant to keep the work
+      small, but it does not replace knowing your way around a server.</li>
+  </ul>
+
+  <h2>The steps</h2>
+  <ol class="schritte">
+    <li>
+      <h3>Prepare server and domain</h3>
+      <p>Rent or provide the server, install Docker, point the domain at the IP address.
+        Securing the machine itself (updates, firewall, key-only login) remains your job.</p>
+    </li>
+    <li>
+      <h3>Get the package</h3>
+      <p>The server package <em>tauben-server</em> will come as a release on GitHub. It is a
+        Docker Compose package: a web server with automatic certificate, the station’s
+        website, a gatekeeper for sign-in, a service for the connection from the Pi and a
+        worker for the regular jobs.</p>
+    </li>
+    <li>
+      <h3>Set up</h3>
+      <p>A setup command asks for the domain and your e-mail address, generates the keys
+        (sign-in, browser notifications) and finally checks that the server is reachable from
+        outside. It also creates the description by which the app recognises that a
+        Tauben &amp; Co server is running here.</p>
+    </li>
+    <li>
+      <h3>Add a location</h3>
+      <p>You add a location (name, short name, language, approximate position) and set its
+        password. In doing so you get the pairing code for the Pi:
+        <a href="pi-installieren.html#en">Install the Pi</a>.</p>
+    </li>
+    <li>
+      <h3>Pair the Pi</h3>
+      <p>The Pi reports in with the pairing code, generates its keys itself and leaves only
+        the public part on the server. Afterwards the server shows that the Pi has reported in.</p>
+    </li>
+    <li>
+      <h3>Connect the app</h3>
+      <p>In the app you choose “Tauben &amp; Co station”, enter your server’s address, choose the
+        location and enter its password.</p>
+    </li>
+  </ol>
+
+  <h2>Operation</h2>
+  <ul>
+    <li><strong>Updates:</strong> new versions of the package come as releases; an update command fetches them.</li>
+    <li><strong>Backup:</strong> the data lives in Docker volumes. A backup command is planned; we also recommend a backup of the whole server.</li>
+    <li><strong>Videos:</strong> an optional part. They take processing time and on very small servers they are slow.</li>
+    <li><strong>Optional:</strong> the second opinion (Perch) and the automatic creation of missing drawings (that needs a key of your own) can be switched off.</li>
+  </ul>
+
+  <h2>What the server stores</h2>
+  <p>
+    Per location: the detections (species, time, confidence), the recordings from the Pi
+    together with spectrograms, the wrong-markings, the videos made, the devices you have signed
+    in with the app (only as a checksum of the token) and messages between connected devices
+    (30 days). Recordings can contain faint scraps of conversation. You are the operator of this
+    server, and your own duties apply to it. What the <em>app</em> exchanges with your server is
+    in the <a href="datenschutz.html#en">privacy policy</a>, section 3.6.
+  </p>
+
+  <h2>What is not included yet</h2>
+  <ul>
+    <li>Notifications straight to the phone (Apple and Google require keys of their own and an
+      intermediary for this): at first there are browser notifications; the app itself fetches
+      new finds when you open it and in the background.</li>
+    <li>A way to set up the connection entirely without commands.</li>
+  </ul>
+
+</section>
+
+</main>
+</body>
+</html>

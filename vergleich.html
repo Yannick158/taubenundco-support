@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="Wie sich BirdNET-Go, BirdNET-Pi mit AvianVisitors und Tauben &amp; Co ergänzen.">
+<title>Vergleich — Tauben &amp; Co · Comparison</title>
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<main>
+
+<section id="de" lang="de">
+  <nav class="nav" aria-label="Seiten"><a class="marke" href="index.html">Tauben &amp; Co</a><a href="index.html">Start</a><a href="funktionen.html">Funktionen</a><a href="vergleich.html" aria-current="page">Vergleich</a><a href="pi-installieren.html">Pi installieren</a><a href="server-einrichten.html">Server einrichten</a><a href="lizenzen.html">Lizenzen</a><a href="datenschutz.html">Datenschutz</a></nav>
+  <p class="pre">Tauben &amp; Co — BirdNET-Go, AvianVisitors und die eigene Station</p>
+  <h1>Vergleich</h1>
+  <p class="stand">Stand: 23. Oktober 2026</p>
+  <p class="sprachhinweis"><a href="#en" hreflang="en">English version below</a></p>
+
+  <h2 class="erste">Ergänzung, kein Ersatz</h2>
+  <p>
+    BirdNET-Go und BirdNET-Pi mit AvianVisitors sind eigene, gute Projekte von anderen
+    Menschen. Tauben &amp; Co ersetzt keines davon. Es ist die App, die sie unterwegs und auf dem
+    Handy zeigt, und es ist ein Satz Zusätze für eine eigene Station mit Server. Die Tabelle
+    soll ehrlich zeigen, was jedes Projekt kann. Stand der Angaben: Oktober 2026.
+  </p>
+
+  <h2>Auf einen Blick</h2>
+  <div class="tabelle">
+  <table class="stapel">
+    <thead><tr><th></th><th>BirdNET-Go</th><th>BirdNET-Pi + AvianVisitors</th><th>Tauben &amp; Co Station</th></tr></thead>
+    <tbody>
+    <tr><th>Was es ist</th>
+      <td data-l="BirdNET-Go">Eine Station zum Selbsthosten (Raspberry Pi, Linux, Windows, macOS, Docker) mit sehr ausgebauter Weboberfläche.</td>
+      <td data-l="BirdNET-Pi + AvianVisitors">BirdNET-Pi erkennt am Raspberry Pi; AvianVisitors gibt ihm die gezeichnete Collage, Statistik und den Atlas.</td>
+      <td data-l="Tauben &amp; Co Station">Ein Pi mit der BirdNET-Pi/AvianVisitors-Software, der seine Daten auf einen eigenen Server schiebt, plus die App.</td></tr>
+    <tr><th>Erkennung</th>
+      <td data-l="BirdNET-Go">Am Gerät, mit BirdNET und weiteren Modellen (zum Beispiel Perch v2).</td>
+      <td data-l="BirdNET-Pi + AvianVisitors">Am Pi, mit BirdNET.</td>
+      <td data-l="Tauben &amp; Co Station">Am Pi, mit BirdNET; am Server prüft Perch jede Aufnahme nach.</td></tr>
+    <tr><th>Stärken</th>
+      <td data-l="BirdNET-Go">Viel Funktionsumfang: Live-Spektrogramm, Benachrichtigungen über Telegram, ntfy, Pushover und mehr, MQTT und Webhooks, Anbindung an BirdWeather, viele Sprachen.</td>
+      <td data-l="BirdNET-Pi + AvianVisitors">Eine gezeichnete, sehr eigene Oberfläche: Die Collage ist AvianVisitors’ eigene Idee und Arbeit.</td>
+      <td data-l="Tauben &amp; Co Station">Rückblick-Videos, Live-Band, Rufvergleich, Falsch-Liste, Post zwischen Geräten, mehrere Standorte, Widgets.</td></tr>
+    <tr><th>Von unterwegs</th>
+      <td data-l="BirdNET-Go">Selbst zu lösen, etwa mit VPN oder Reverse-Proxy.</td>
+      <td data-l="BirdNET-Pi + AvianVisitors">Im Heimnetz; von außen selbst zu lösen.</td>
+      <td data-l="Tauben &amp; Co Station">Über den eigenen Server. Es muss kein Zugang ins Heimnetz geöffnet werden, weil der Pi seine Daten selbst hinschiebt.</td></tr>
+    <tr><th>Handy</th>
+      <td data-l="BirdNET-Go">Weboberfläche (PWA) im Browser. Eine eigene App des Projekts gibt es nach unserem Kenntnisstand nicht.</td>
+      <td data-l="BirdNET-Pi + AvianVisitors">Webseite im Browser; keine eigene App.</td>
+      <td data-l="Tauben &amp; Co Station">Die App ist Teil davon. Sie kann aber auch die beiden anderen Stationen anzeigen.</td></tr>
+    <tr><th>Aufwand</th>
+      <td data-l="BirdNET-Go">Docker- oder Linux-Kenntnisse.</td>
+      <td data-l="BirdNET-Pi + AvianVisitors">Eine BirdNET-Pi-Installation.</td>
+      <td data-l="Tauben &amp; Co Station">Pi und eigener Server. Der Installer ist in Arbeit.</td></tr>
+    <tr><th>Lizenz</th>
+      <td data-l="BirdNET-Go">CC BY-NC-SA 4.0, nicht kommerziell.</td>
+      <td data-l="BirdNET-Pi + AvianVisitors">CC BY-NC-SA 4.0, nicht kommerziell.</td>
+      <td data-l="Tauben &amp; Co Station">Kostenlos und nicht kommerziell; siehe <a href="lizenzen.html">Lizenzen</a>.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Wie sie zusammenpassen</h2>
+  <p>
+    Die App verbindet die Projekte, statt eines gegen das andere zu stellen. Du suchst dir
+    den Weg, der zu deiner Station passt:
+  </p>
+  <ul>
+    <li><strong>Du hast BirdNET-Go.</strong> Die App zeigt die Station, legt ein Widget auf den
+      Home-Bildschirm und hört mit dem Handy mit. Mit dem Adapter (Prototyp, nur lesend,
+      noch nicht veröffentlicht) kommt die gezeichnete Collage von AvianVisitors dazu.</li>
+    <li><strong>Du hast BirdNET-Pi mit AvianVisitors.</strong> Die App öffnet die Seite deiner
+      Station, macht ein Widget daraus und hört auf Wunsch mit dem Handy mit.</li>
+    <li><strong>Du willst Videos, Meldungen und Zugriff von unterwegs.</strong> Dafür gibt es die
+      Tauben-&amp;-Co-Station mit eigenem Server.</li>
+    <li><strong>Du hast nichts davon.</strong> Dann hörst du nur mit dem Handy zu.</li>
+  </ul>
+
+  <h2 id="go">BirdNET-Go</h2>
+  <p>
+    Von tphakala und vielen Mitwirkenden: eine Station zum Selbsthosten mit umfangreicher
+    Oberfläche. Die App zeigt deine Station direkt, ohne dass etwas über uns läuft. Der
+    Adapter, der AvianVisitors’ Collage auf BirdNET-Go setzt, liest nur über die öffentliche
+    API und schreibt nie in BirdNET-Go.
+  </p>
+  <p>Projekt: <a href="https://github.com/tphakala/birdnet-go" rel="noopener">github.com/tphakala/birdnet-go</a></p>
+
+  <h2 id="avian">BirdNET-Pi und AvianVisitors</h2>
+  <p>
+    BirdNET-Pi (im Fork von Nachtzuster, ursprünglich von mcguirepr89) erkennt am Raspberry Pi.
+    AvianVisitors von Teddy Warner ist die gezeichnete Oberfläche dazu: Collage, Statistik,
+    Atlas und viele der Vogelzeichnungen. Wir bauen darauf auf und halten Namensnennung und
+    Lizenz ein; ein Dank an dieser Stelle.
+  </p>
+  <p>Projekte: <a href="https://github.com/Twarner491/AvianVisitors" rel="noopener">github.com/Twarner491/AvianVisitors</a> · <a href="https://github.com/Nachtzuster/BirdNET-Pi" rel="noopener">github.com/Nachtzuster/BirdNET-Pi</a></p>
+
+  <h2 id="tauben">Tauben &amp; Co Station</h2>
+  <p>
+    Das ist der Weg mit den meisten Zusätzen und dem meisten Aufwand: ein Pi, ein eigener
+    Server und die App. Alle Funktionen stehen auf der Seite <a href="funktionen.html">Funktionen</a>.
+    Die Anleitungen sind noch Vorschauen: <a href="pi-installieren.html">Pi installieren</a>,
+    <a href="server-einrichten.html">Server einrichten</a>.
+  </p>
+
+  <h2>Danke</h2>
+  <p>
+    An Teddy Warner für AvianVisitors, an tphakala für BirdNET-Go, an Nachtzuster und
+    mcguirepr89 für BirdNET-Pi und an das K. Lisa Yang Center for Conservation Bioacoustics
+    (Cornell Lab of Ornithology) und die TU Chemnitz für BirdNET. Alle Lizenzen und Links
+    stehen auf der Seite <a href="lizenzen.html">Lizenzen</a>.
+  </p>
+  <p>Stimmt an einer Angabe hier etwas nicht? Dann bitte kurz
+    <a href="https://github.com/Yannick158/taubenundco-support/issues/new/choose">melden</a>, wir korrigieren es.</p>
+
+</section>
+
+<section id="en" lang="en">
+  <nav class="nav" aria-label="Pages"><a class="marke" href="index.html">Tauben &amp; Co</a><a href="index.html">Home</a><a href="funktionen.html">Features</a><a href="vergleich.html" aria-current="page">Comparison</a><a href="pi-installieren.html">Install the Pi</a><a href="server-einrichten.html">Set up a server</a><a href="lizenzen.html">Licences</a><a href="datenschutz.html">Privacy</a></nav>
+  <p class="pre">Tauben &amp; Co — BirdNET-Go, AvianVisitors and your own station</p>
+  <h1>Comparison</h1>
+  <p class="stand">Last updated: 23 October 2026</p>
+  <p class="sprachhinweis"><a href="#de" hreflang="de">Deutsche Fassung oben</a></p>
+
+  <h2 class="erste">A complement, not a replacement</h2>
+  <p>
+    BirdNET-Go and BirdNET-Pi with AvianVisitors are good projects of their own, made by other
+    people. Tauben &amp; Co replaces none of them. It is the app that shows them on the move and on
+    the phone, and it is a set of extras for a station of your own with a server. The table
+    tries to be honest about what each project can do. Information as of October 2026.
+  </p>
+
+  <h2>At a glance</h2>
+  <div class="tabelle">
+  <table class="stapel">
+    <thead><tr><th></th><th>BirdNET-Go</th><th>BirdNET-Pi + AvianVisitors</th><th>Tauben &amp; Co station</th></tr></thead>
+    <tbody>
+    <tr><th>What it is</th>
+      <td data-l="BirdNET-Go">A self-hosted station (Raspberry Pi, Linux, Windows, macOS, Docker) with a very extensive web interface.</td>
+      <td data-l="BirdNET-Pi + AvianVisitors">BirdNET-Pi detects on the Raspberry Pi; AvianVisitors gives it the illustrated collage, statistics and the atlas.</td>
+      <td data-l="Tauben &amp; Co station">A Pi running the BirdNET-Pi/AvianVisitors software that pushes its data to a server of your own, plus the app.</td></tr>
+    <tr><th>Detection</th>
+      <td data-l="BirdNET-Go">On the device, with BirdNET and further models (for example Perch v2).</td>
+      <td data-l="BirdNET-Pi + AvianVisitors">On the Pi, with BirdNET.</td>
+      <td data-l="Tauben &amp; Co station">On the Pi, with BirdNET; on the server Perch re-checks every recording.</td></tr>
+    <tr><th>Strengths</th>
+      <td data-l="BirdNET-Go">A lot of functionality: live spectrogram, notifications via Telegram, ntfy, Pushover and more, MQTT and webhooks, BirdWeather connection, many languages.</td>
+      <td data-l="BirdNET-Pi + AvianVisitors">An illustrated interface with a character of its own: the collage is AvianVisitors’ own idea and work.</td>
+      <td data-l="Tauben &amp; Co station">Review videos, live band, call comparison, wrong list, messages between devices, several locations, widgets.</td></tr>
+    <tr><th>On the move</th>
+      <td data-l="BirdNET-Go">You solve it yourself, for example with a VPN or reverse proxy.</td>
+      <td data-l="BirdNET-Pi + AvianVisitors">On the home network; remote access you solve yourself.</td>
+      <td data-l="Tauben &amp; Co station">Through your own server. No way into your home network has to be opened, because the Pi pushes its data out itself.</td></tr>
+    <tr><th>Phone</th>
+      <td data-l="BirdNET-Go">Web interface (PWA) in the browser. As far as we know the project has no app of its own.</td>
+      <td data-l="BirdNET-Pi + AvianVisitors">Website in the browser; no app of its own.</td>
+      <td data-l="Tauben &amp; Co station">The app is part of it. It can also show the other two stations.</td></tr>
+    <tr><th>Effort</th>
+      <td data-l="BirdNET-Go">Docker or Linux skills.</td>
+      <td data-l="BirdNET-Pi + AvianVisitors">A BirdNET-Pi installation.</td>
+      <td data-l="Tauben &amp; Co station">A Pi and a server of your own. The installer is in the works.</td></tr>
+    <tr><th>Licence</th>
+      <td data-l="BirdNET-Go">CC BY-NC-SA 4.0, non-commercial.</td>
+      <td data-l="BirdNET-Pi + AvianVisitors">CC BY-NC-SA 4.0, non-commercial.</td>
+      <td data-l="Tauben &amp; Co station">Free and non-commercial; see <a href="lizenzen.html#en">Licences</a>.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>How they fit together</h2>
+  <p>
+    The app connects the projects instead of setting one against another. Pick the way that
+    fits your station:
+  </p>
+  <ul>
+    <li><strong>You have BirdNET-Go.</strong> The app shows the station, puts a widget on your Home
+      Screen and listens along with the phone. With the adapter (prototype, read-only, not yet
+      published) AvianVisitors’ illustrated collage comes on top.</li>
+    <li><strong>You have BirdNET-Pi with AvianVisitors.</strong> The app opens your station’s page,
+      turns it into a widget and, if you like, listens along with the phone.</li>
+    <li><strong>You want videos, notifications and access on the move.</strong> That is what the
+      Tauben &amp; Co station with a server of your own is for.</li>
+    <li><strong>You have none of that.</strong> Then you simply listen with the phone.</li>
+  </ul>
+
+  <h2 id="go-en">BirdNET-Go</h2>
+  <p>
+    By tphakala and many contributors: a self-hosted station with an extensive interface. The
+    app shows your station directly, with nothing passing through us. The adapter that puts
+    AvianVisitors’ collage on BirdNET-Go only reads through the public API and never writes to
+    BirdNET-Go.
+  </p>
+  <p>Project: <a href="https://github.com/tphakala/birdnet-go" rel="noopener">github.com/tphakala/birdnet-go</a></p>
+
+  <h2 id="avian-en">BirdNET-Pi and AvianVisitors</h2>
+  <p>
+    BirdNET-Pi (the Nachtzuster fork, originally by mcguirepr89) detects on the Raspberry Pi.
+    AvianVisitors by Teddy Warner is the illustrated interface for it: collage, statistics,
+    atlas and many of the bird drawings. We build on it and keep to the credit and licence
+    terms; thank you.
+  </p>
+  <p>Projects: <a href="https://github.com/Twarner491/AvianVisitors" rel="noopener">github.com/Twarner491/AvianVisitors</a> · <a href="https://github.com/Nachtzuster/BirdNET-Pi" rel="noopener">github.com/Nachtzuster/BirdNET-Pi</a></p>
+
+  <h2 id="tauben-en">Tauben &amp; Co station</h2>
+  <p>
+    This is the way with the most extras and the most effort: a Pi, a server of your own and
+    the app. All features are on the <a href="funktionen.html#en">Features</a> page. The guides
+    are still previews: <a href="pi-installieren.html#en">Install the Pi</a>,
+    <a href="server-einrichten.html#en">Set up a server</a>.
+  </p>
+
+  <h2>Thank you</h2>
+  <p>
+    To Teddy Warner for AvianVisitors, to tphakala for BirdNET-Go, to Nachtzuster and
+    mcguirepr89 for BirdNET-Pi, and to the K. Lisa Yang Center for Conservation Bioacoustics
+    (Cornell Lab of Ornithology) and TU Chemnitz for BirdNET. All licences and links are on
+    the <a href="lizenzen.html#en">Licences</a> page.
+  </p>
+  <p>If anything here is wrong, please
+    <a href="https://github.com/Yannick158/taubenundco-support/issues/new/choose">tell us</a> and we will correct it.</p>
+
+</section>
+
+</main>
+</body>
+</html>
