@@ -17,21 +17,21 @@ deshalb diese Seite über GitHub Pages.
 | `server-einrichten.html` | Vorschau der Server-Anleitung (Paket noch in Arbeit) |
 | `lizenzen.html` | Nennungen und Lizenzen, kostenlos und nicht kommerziell |
 | `datenschutz.html` | Datenschutzerklärung (Play: Datenschutz-URL) |
+| `impressum.html` | Impressum nach § 18 Abs. 1 MStV (Handarbeit, wird vom Generator nie überschrieben) |
 | `stil.css` | gemeinsames Stylesheet der neuen Seiten |
 | `.github/ISSUE_TEMPLATE/` | Issue-Formulare: Anbindung vorschlagen, Wunsch, Fehler |
 | `.nojekyll` | GitHub Pages soll die Dateien unverändert ausliefern |
 
-Die Quelle von `datenschutz.html` liegt im App-Projekt unter
-`app/server/srv/avian/oeffentlich/app/datenschutz.html`. Änderungen gehören
-dorthin und werden von hier aus nur kopiert.
+`datenschutz.html` und `impressum.html` sind Handarbeit und werden direkt in
+diesem Repo gepflegt. Die Vogelanzeige leitet `/app/datenschutz.html` auf diese
+Seite um; es gibt also nur eine Fassung der Datenschutzerklärung.
 
 Kein Skript, keine fremden Schriften, kein externer Aufruf. Keine Daten aus der
 Station: keine Aufnahmen, keine Fundzahlen, keine Standortadressen.
 
 Alle Seiten sind zweisprachig (`<section id="de">`, `<section id="en">`) und haben
-oben dieselbe Navigation. Die Seiten außer `datenschutz.html` entstehen aus
+oben dieselbe Navigation. Die Seiten außer `datenschutz.html` und `impressum.html` entstehen aus
 `app/github/support-quellen/bauen.py` im App-Projekt (nicht in diesem Repo);
-die Funktionsliste steht dort in `inhalt_funktionen.py`. In `datenschutz.html`
-steht die Navigation zwischen `<!-- nav:start -->` und `<!-- nav:end -->`: Sie
-gehört nur in diese Kopie, nicht in die Quelle am Server. Nach jedem Kopieren der
-Quelle `python3 nav-einfuegen.py datenschutz.html` aus `support-quellen/` laufen lassen.
+die Funktionsliste steht dort in `inhalt_funktionen.py`. Die Navigation in
+`datenschutz.html` erneuert `nav-einfuegen.py` aus demselben Ordner. Die Seiten
+enthalten keine HTML-Kommentare.

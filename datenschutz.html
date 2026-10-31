@@ -5,21 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Datenschutz — Tauben &amp; Co · Privacy policy</title>
-<!--
-  Datenschutzerklaerung fuer die App "Tauben & Co".
-  Pflichtangabe in der Google Play Console (Mikrofon + Standort) und
-  sinnvoll fuer TestFlight. Inhalt aus docs/ARCHITEKTUR.md §7 und §10;
-  Stand 23.10.2026 um eigene Stationen, Collage/Widget und Drive-Archiv
-  erweitert (docs/STAND-DATENSCHUTZ.md). Deutsch zuerst, darunter dieselbe
-  Erklaerung auf Englisch (Abschnitte #de und #en, eine Datei, ein Aufruf).
-
-  Liegt oeffentlich VOR dem Anmelde-Tor unter /app/datenschutz.html
-  (Caddy-Ausnahme @datenschutz, siehe server/deploy-datenschutz.sh).
-  Deshalb: keine Zahlen, keine Artnamen, kein Standort in dieser Datei.
-
-  Stil: Papier/Tinte aus docs/DESIGN.md §3, alles inline, keine fremden
-  Schriften, kein Skript, kein externer Aufruf.
--->
 <style>
   :root {
     --paper:  #FCFCFB;
@@ -168,8 +153,7 @@
   }
   section { scroll-margin-top: 16px; }
 </style>
-<!-- nav-css:start -->
-<style>
+<style id="nav-css">
   .nav { display:flex; flex-wrap:wrap; gap:2px 2px; margin:0 0 22px; padding:0 0 10px;
     border-bottom:1px solid var(--hairline); font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:11.5px; letter-spacing:0; }
   .nav a { display:inline-block; padding:6px 8px; border-radius:999px; text-decoration:none; color:var(--ink2); border:1px solid transparent; }
@@ -177,22 +161,21 @@
   .nav a[aria-current="page"] { background:var(--paper2); color:var(--ink); border-color:var(--hairline); }
   .nav .marke { font-weight:700; color:var(--ink); padding-left:0; }
 </style>
-<!-- nav-css:end -->
 </head>
 <body>
 <main>
 
 <section id="de" lang="de">
 
-<!-- nav:start -->
-<nav class="nav" aria-label="Seiten"><a class="marke" href="index.html">Tauben &amp; Co</a><a href="index.html">Start</a><a href="funktionen.html">Funktionen</a><a href="vergleich.html">Vergleich</a><a href="pi-installieren.html">Pi installieren</a><a href="server-einrichten.html">Server einrichten</a><a href="lizenzen.html">Lizenzen</a><a href="datenschutz.html" aria-current="page">Datenschutz</a></nav>
-<!-- nav:end -->
+<nav class="nav" aria-label="Seiten"><a class="marke" href="index.html">Tauben &amp; Co</a><a href="index.html">Start</a><a href="funktionen.html">Funktionen</a><a href="vergleich.html">Vergleich</a><a href="pi-installieren.html">Pi installieren</a><a href="server-einrichten.html">Server einrichten</a><a href="lizenzen.html">Lizenzen</a><a href="datenschutz.html" aria-current="page">Datenschutz</a><a href="impressum.html">Impressum</a></nav>
+
+
 
 
 
   <p class="pre">Tauben &amp; Co — App für iPhone und Android</p>
   <h1>Datenschutzerklärung</h1>
-  <p class="stand">Stand: 25. Oktober 2026</p>
+  <p class="stand">Stand: 31. Oktober 2026</p>
   <p class="sprachhinweis"><a href="#en" hreflang="en">English version below</a></p>
 
   <h2>1. Verantwortlicher</h2>
@@ -201,16 +184,16 @@
     E-Mail: <a href="mailto:yannik.sauerwein@gmail.com">yannik.sauerwein@gmail.com</a>
   </p>
   <p>
-    Die App wird privat und ohne kommerzielles Interesse betrieben. Anfragen zum
-    Datenschutz und zur Löschung gehen an die E-Mail-Adresse oben; eine Anschrift
-    teile ich auf Wunsch mit.
+    Die App wird privat und ohne kommerzielles Interesse betrieben. Meine Anschrift
+    steht im <a href="impressum.html">Impressum</a>. Anfragen zum Datenschutz und zur
+    Löschung gehen an die E-Mail-Adresse oben.
   </p>
   <p>
     Diese Erklärung gilt für die App <strong>„Tauben &amp; Co“</strong>
-    (<code>de.taubenundco.app</code>) und für die Webseite
-    <strong>taubenundco.de</strong>, die die App anzeigt. Verbinden Sie die App mit
-    einer Station, die jemand anderes betreibt (Abschnitt 3.6), gilt sie nur für die
-    App — nicht für die Station selbst.
+    (<code>de.taubenundco.app</code>), für die Webseite
+    <strong>taubenundco.de</strong>, die die App anzeigt, und für diese Hilfeseite
+    (Abschnitt 3.12). Verbinden Sie die App mit einer Station, die jemand anderes
+    betreibt (Abschnitt 3.6), gilt sie nur für die App — nicht für die Station selbst.
   </p>
 
   <h2>2. Kurz gesagt</h2>
@@ -250,9 +233,21 @@
       Zusatzdaten — und nach 30 Tagen gelöscht.
     </p>
     <p>
+      Auf den <strong>Stationen, die ich betreibe</strong>, speichert der Server
+      Erkennungen und kurze Tonausschnitte der Vögel. <strong>Stimmen</strong> in diesen
+      Ausschnitten schaltet eine Stimmprüfung stumm, die ich seit Ende Oktober 2026 auf
+      diesen Stationen einführe (Abschnitte 3.8 und 3.9).
+    </p>
+    <p>
       Ein <strong>Archiv auf Google Drive</strong> gibt es nur für Stationen, die ich
       selbst betreibe, und nur, wenn ich es ausdrücklich eingeschaltet habe.
       Standardmäßig ist es aus.
+    </p>
+    <p>
+      Ab Version 1.4 baut Ihr <strong>Handy die Rückblick-Videos selbst</strong>. Wenn
+      Sie einen <strong>eigenen Gemini-Schlüssel</strong> eintragen, schreibt Gemini das
+      Drehbuch; die Anfrage geht dann direkt vom Handy an Google, nie mit Ton und ohne
+      Ortsangaben (Abschnitt 3.11).
     </p>
   </div>
 
@@ -303,24 +298,35 @@
       <td><strong>Geräte-Token</strong> (Zufallswert) und eine
           <strong>Gerätekennung</strong></td>
       <td>damit Widget und Hintergrundabruf ohne Passwort nachsehen können</td>
-      <td>bis Sie das Gerät in den Einstellungen aussperren oder die App
-          löschen</td>
+      <td>bis Sie sich abmelden oder das Gerät in den Einstellungen aussperren;
+          meldet sich ein Gerät 180 Tage lang weder über die App noch über das Widget
+          beim Server, entfernt der Server den Eintrag</td>
     </tr>
     <tr>
-      <td><strong>Gerätename</strong> (zum Beispiel „iPhone von Anna“)</td>
+      <td><strong>Gerätebezeichnung</strong>: die Bezeichnung, die das System liefert,
+          zum Beispiel „iPhone“ oder „Pixel 8“ (nicht Ihr Name)</td>
       <td>damit Sie in der Geräteliste erkennen, welches Gerät Sie aussperren</td>
       <td>wie der Geräte-Token</td>
     </tr>
     <tr>
-      <td><strong>Push-Token</strong> von Apple oder Google</td>
-      <td>Zustellung der Meldungen; nur wenn Sie Meldungen einschalten</td>
+      <td><strong>Push-Token</strong> von Apple (iPhone)</td>
+      <td>Zustellung der Meldungen; nur wenn Sie Meldungen einschalten. Den Weg
+          über Google (Android) gibt es derzeit nicht, siehe Abschnitt 5</td>
       <td>wie der Geräte-Token</td>
     </tr>
     <tr>
-      <td><strong>Server-Protokolle</strong>: IP-Adresse, Zeitpunkt, aufgerufene
-          Adresse</td>
+      <td><strong>Zugriffsprotokolle des Webservers</strong>: IP-Adresse, Zeitpunkt,
+          aufgerufene Adresse, Browserkennung</td>
       <td>Betrieb und Abwehr von Angriffen</td>
-      <td>kurzfristig, dann automatisch gelöscht</td>
+      <td>höchstens 14 Tage, dann automatisch gelöscht</td>
+    </tr>
+    <tr>
+      <td><strong>System- und Sicherheitsprotokolle</strong> des Servers, zum Beispiel
+          Anmeldungen am Server und von der Firewall abgewiesene Verbindungen; sie
+          können IP-Adressen enthalten</td>
+      <td>Abwehr von Angriffen und Fehlersuche</td>
+      <td>werden nach Alter oder Größe automatisch gelöscht, meist nach einigen Wochen;
+          eine feste Höchstfrist gibt es für sie noch nicht</td>
     </tr>
   </table>
   <p>
@@ -329,8 +335,14 @@
     verschlüsselten Einstellungen (Android).
   </p>
   <p>
+    Löschen Sie die App, ohne sich vorher abzumelden, erfährt der Server davon nichts:
+    Der Eintrag bleibt dann, bis die 180 Tage um sind. Melden Sie sich deshalb vorher
+    ab (Einstellungen → Konto → Abmelden). Das entfernt Geräte-Token,
+    Gerätebezeichnung und Push-Token am Server sofort.
+  </p>
+  <p>
     Diese Tabelle gilt für Tauben-&amp;-Co-Stationen. Bei einer fremden Station
-    (Abschnitt 3.6) gehen Sitzungs-Cookie, Geräte-Token, Gerätename und Push-Token
+    (Abschnitt 3.6) gehen Sitzungs-Cookie, Geräte-Token, Gerätebezeichnung und Push-Token
     gar nicht erst zustande.
   </p>
 
@@ -355,7 +367,7 @@
     die Artenliste von Ihrer Station und schickt sie — nur die Namen und
     Zahlen — an uns, damit das Bild im gewohnten Stil entsteht.
     <strong>Keine Orte, keine Aufnahmen, keine Stationsadresse, kein Stationsname,
-    kein Gerätename und keine Kennung</strong> gehen dabei mit.
+    keine Gerätebezeichnung und keine Kennung</strong> gehen dabei mit.
   </p>
   <p>
     Die Liste steht nur für die Dauer der Anfrage in einer Arbeitsdatei, die noch
@@ -367,7 +379,8 @@
     Einzelne Vogelzeichnungen (zum Beispiel in der Liste der Funde) lädt die App
     ebenfalls von unserem Server. Die Anfrage enthält nur den wissenschaftlichen
     Artnamen. Wie bei jedem Abruf sieht der Server dabei die IP-Adresse und die
-    aufgerufene Adresse in den kurzlebigen Server-Protokollen (Abschnitt 3.2).
+    aufgerufene Adresse; sie stehen in den Zugriffsprotokollen (höchstens 14 Tage,
+    Abschnitt 3.2).
   </p>
   <p>
     Wenn Sie eine BirdNET-Go-Station als Collage anzeigen, holt die App die
@@ -501,8 +514,10 @@
     einen Ordner im Google Drive des Betreibers: die Datenbank mit den Erkennungen
     (Art, Zeitpunkt, Trefferwert), die Falsch-Markierungen, die
     Wochenrückblick-Videos und die Tonaufnahmen der Vögel vom Mikrofon der Station.
-    Die Aufnahmen können leise Gesprächsfetzen enthalten, weil der Filter für
-    menschliche Stimmen nur Ausschnitte mit klar hörbarer Stimme stummschaltet.
+    Wo die Stimmprüfung läuft (Abschnitt 3.9), sind die Ausschnitte vor dem Speichern auf
+    Stimmen geprüft und an diesen Stellen stummgeschaltet. Sehr leise Stimmen kann die
+    Prüfung übersehen, und ältere Ausschnitte stammen zum Teil aus der Zeit vor der Prüfung;
+    deshalb können sie Gesprächsfetzen enthalten.
   </p>
   <p>
     Der Ordner wird nicht freigegeben. Das Kopierprogramm (rclone) hat nur Zugriff
@@ -514,6 +529,223 @@
     Stationen.
   </p>
 
+  <h3>3.8 Stationen, die ich betreibe: Server und Webseite</h3>
+  <p>
+    Dieser Abschnitt betrifft die Tauben-&amp;-Co-Stationen, die ich selbst betreibe: den
+    Server und die Webseite taubenundco.de mit einem eigenen Zugang je Standort. Er betrifft
+    nicht Ihre eigene Station (Abschnitt 3.6). Ein Raspberry Pi mit Mikrofon erkennt dort
+    Vögel und schiebt die Ergebnisse auf den Server. Der Zugang zu einem Standort läuft über
+    ein gemeinsames Passwort; wer es kennt, sieht und hört, was dieser Standort zeigt.
+  </p>
+  <table>
+    <tr><th>Was</th><th>Wozu</th><th>Wie lange</th></tr>
+    <tr>
+      <td><strong>Erkennungen</strong>: Art, Zeitpunkt, Trefferwert</td>
+      <td>Anzeige, Statistik, Meldungen, Videos</td>
+      <td>ohne feste Frist</td>
+    </tr>
+    <tr>
+      <td><strong>Kurze Tonausschnitte</strong> (wenige Sekunden um eine Erkennung) mit
+          Spektrogramm; wo die Stimmprüfung läuft, sind Stimmen stummgeschaltet
+          (Abschnitt 3.9)</td>
+      <td>Nachhören, Rufvergleich, Nachprüfung durch ein zweites Erkennungsmodell auf
+          dem Server</td>
+      <td><strong>30 Tage</strong>. Von jeder Art bleiben die zehn jüngsten Ausschnitte und
+          der mit dem höchsten Trefferwert dauerhaft. Von mehreren Ausschnitten derselben Art
+          in derselben Minute bleiben nur die drei mit dem höchsten Trefferwert. Diese Fristen
+          gelten für Stationen, die noch aufnehmen</td>
+    </tr>
+    <tr>
+      <td><strong>Live-Band</strong>: ein laufendes Spektrogramm-Bild vom Mikrofon der Station,
+          rund 22 Sekunden verzögert, dazu die Tonausschnitte der erkannten Vögel; kein
+          durchgehender Ton. Wo die Stimmprüfung läuft, sind Stellen mit Stimme still und grau</td>
+      <td>Live-Ansicht für angemeldete Nutzer</td>
+      <td>nur im Arbeitsspeicher des Servers: Bilder höchstens fünf Minuten,
+          Tonausschnitte höchstens 15 Minuten</td>
+    </tr>
+    <tr>
+      <td><strong>Wochen-, Monats- und Artvideos</strong>, aus den Erkennungen gebaut</td>
+      <td>Rückblick; die Stimme ist maschinell erzeugt</td>
+      <td>ohne feste Frist</td>
+    </tr>
+  </table>
+  <p>
+    <strong>Demo-Zugang.</strong> Testern und Prüfern kann ich einen Zugang geben, mit dem
+    sie eine Station nur ansehen und anhören können. Er hört eine kleine feste Auswahl von
+    Beispielausschnitten, in denen Stimmen nachträglich stummgeschaltet wurden, und darüber
+    hinaus höchstens Aufnahmen, die nach der Einführung der Stimmprüfung (Abschnitt 3.9) an
+    dieser Station entstanden sind. Ältere Aufnahmen sind für ihn gesperrt.
+  </p>
+  <p>
+    Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO für die Anzeige an die Berechtigten, lit. f
+    für die Tonausschnitte und ihre Prüfung (Abschnitt 6).
+  </p>
+
+  <h3>3.9 Menschen in Hörweite einer Station</h3>
+  <p>
+    Das Mikrofon einer Station soll Vögel hören, es hört aber auch alles andere in der
+    Umgebung. Nachbarn, Gäste und Passanten können deshalb gelegentlich in einem Ausschnitt
+    zu hören sein. Dagegen gibt es eine Stimmprüfung auf der Station. Ich führe sie seit Ende
+    Oktober 2026 auf den Stationen ein, die ich betreibe. Wo sie läuft, geschieht
+    Folgendes:
+  </p>
+  <ul>
+    <li>Die Erkennung wertet den Ton weiter vollständig aus, damit auch Vögel neben einem
+        Gespräch erkannt werden. <strong>Gespeichert, an den Server übertragen oder im
+        Live-Band gezeigt</strong> wird der Ton aber erst, nachdem die Station geprüft hat,
+        ob jemand spricht. Dafür nutzt sie einen Sprachdetektor (Silero VAD) und die Klasse
+        „Menschliche Stimme“ des BirdNET-Modells.</li>
+    <li>Die Sekunden mit Stimme werden <strong>stummgeschaltet</strong>, mit einem kurzen
+        Rand davor und danach, und im Spektrogramm grau abgedeckt. Es wird nichts
+        verstanden oder mitgeschrieben, und niemand wird erkannt. Die Prüfung läuft ganz auf
+        der Station.</li>
+    <li>Die Rohaufnahme von 15 Sekunden wird nach der Auswertung gelöscht, nach etwa
+        20 Sekunden.</li>
+  </ul>
+  <p>
+    <strong>Grenzen.</strong> Sehr leise oder geflüsterte Stimmen kann die Prüfung
+    übersehen. Umgekehrt werden gelegentlich auch Vogelrufe stummgeschaltet, die einer
+    Stimme ähneln. Ausschnitte aus der Zeit vor der Einführung der Prüfung können noch
+    Stimmen enthalten.
+  </p>
+  <p>
+    <strong>Rechtsgrundlage</strong> ist Art. 6 Abs. 1 lit. f DSGVO: mein Interesse an der
+    Vogelbeobachtung. Die Stimmprüfung und die kurzen Fristen sollen Ihre Interessen
+    schützen. Waren Sie in Hörweite einer Station und möchten nicht aufgenommen sein, schreiben
+    Sie mir an die Adresse in Abschnitt 1. Ich lösche dann die betreffenden Ausschnitte
+    (Widerspruch nach Art. 21, Löschung nach Art. 17 DSGVO).
+  </p>
+
+  <h3>3.10 Web-Push und Speicher im Browser</h3>
+  <p>
+    Auf der Webseite einer Station gibt es neben dem Menü eine Glocke. Schalten Sie sie ein,
+    fragt Ihr Browser, ob die Seite Mitteilungen senden darf. Sagen Sie ja, entsteht ein
+    Abo:
+  </p>
+  <table>
+    <tr><th>Was</th><th>Wozu</th><th>Wie lange</th></tr>
+    <tr>
+      <td><strong>Abo des Browsers</strong>: eine Endpunkt-Adresse beim Push-Dienst Ihres
+          Browsers (je nach Browser Google, Mozilla oder Apple) samt Schlüsseln, dazu Ihre
+          Wahl (neue Arten oder jede Erkennung)</td>
+      <td>Zustellung der Mitteilungen an diesen Browser</td>
+      <td>bis Sie die Glocke ausschalten oder der Push-Dienst meldet, dass das Abo ungültig
+          ist</td>
+    </tr>
+  </table>
+  <p>
+    Der Server legt das Abo in einer Datei je Standort ab und schickt die Mitteilungen über
+    den Push-Dienst Ihres Browsers. Eine Mitteilung enthält nur, was auch auf dem Bildschirm
+    steht (etwa „Neue Art: Buchfink“). Das Bild der Art holt Ihr Browser selbst von unserem
+    Server.
+  </p>
+  <p>
+    Außerdem speichert die Webseite in Ihrem Browser nur, was für die Anmeldung und Ihre
+    Einstellungen nötig ist: das Sitzungs-Cookie (Abschnitt 3.2), die Wahl der Glocke im
+    lokalen Speicher des Browsers und, wenn Sie Mitteilungen einschalten, einen Service
+    Worker, der sie entgegennimmt. Es gibt keine Analyse- und keine Werbe-Cookies. Rechtsgrundlage
+    für die Mitteilungen ist Art. 6 Abs. 1 lit. a DSGVO (Sie schalten sie ein), für die
+    Speicherung im Browser § 25 Abs. 2 Nr. 2 TDDDG (für den von Ihnen gewünschten Dienst
+    unbedingt erforderlich).
+  </p>
+  <p>
+    <strong>Passwort vergessen.</strong> Die Anmeldeseite bietet einen Weg, das Passwort
+    zurückzusetzen. Die dort eingegebene E-Mail-Adresse wird nur mit der hinterlegten
+    Adresse des Betreibers verglichen und nicht gespeichert. Stimmt sie überein, schickt der
+    Server über den E-Mail-Dienst Brevo (Abschnitt 5) einen Link zum Zurücksetzen, der
+    30 Minuten gilt, und zwar immer an die hinterlegte Adresse des Betreibers, nie an eine
+    andere. Die Mail enthält nur diesen Link, keine Angaben über die Person, die ihn
+    angefordert hat.
+  </p>
+  <p>
+    <strong>Schutz vor Durchprobieren.</strong> Bei Fehlversuchen an der Anmeldeseite und bei
+    Anfragen zum Zurücksetzen speichert der Server einen Hashwert Ihrer IP-Adresse mit dem
+    Zeitpunkt. Ein täglicher Aufräumlauf löscht diese Einträge, sobald sie älter als
+    24 Stunden sind. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (Schutz der Anmeldung vor
+    Missbrauch).
+  </p>
+
+  <h3>3.11 Neu ab Version 1.4: Videos, Vorlesen und Mitteilungen auf dem Handy</h3>
+  <p>
+    Die folgenden Funktionen gibt es ab Version 1.4 der App für iPhone und Android. Sie laufen
+    auf Ihrem Handy. Was dabei ins Netz geht, steht hier.
+  </p>
+  <p>
+    <strong>Rückblick-Videos auf dem Handy.</strong> Bei einer BirdNET-Go- oder
+    AvianVisitors-Station und bei „Nur zuhören“ baut das Handy den Wochenrückblick selbst:
+    wenn Sie „Jetzt erstellen“ antippen oder, falls eingeschaltet, nachts von selbst. Beim
+    Einrichten fragt die App, ob jede Woche ein Video entstehen soll. Sagen Sie „Ja“, ist der
+    Nachtlauf an (ab Werk nur, während das Handy lädt); bei „Später“ bleibt er aus. Ändern
+    lässt sich das in den Einstellungen unter „Rückblicke“. Die Daten kommen direkt von Ihrer Station (Abschnitt 3.6) beziehungsweise aus den Funden auf
+    dem Handy. Die Videos bleiben auf Ihrem Handy; die App behält die letzten acht. An uns geht
+    dabei nichts außer den Abrufen von Vogelzeichnungen wie in Abschnitt 3.4. Bei den Stationen,
+    die ich betreibe, entstehen die Videos weiter am Server (Abschnitt 3.8).
+  </p>
+  <p>
+    <strong>Stimme der Videos.</strong> Die Videos sprechen mit einer maschinell erzeugten
+    Stimme (Supertonic 3, Lizenz auf der Seite <a href="lizenzen.html">Lizenzen</a>). Beim
+    ersten Mal lädt die App die Stimme einmal von Hugging Face herunter (huggingface.co und
+    die Download-Server des Dienstes; Hugging Face Inc., USA): mehr als 100 MB, standardmäßig
+    nur im WLAN, über Mobilfunk nur nach Rückfrage. Das gilt für iPhone und Android. Die App
+    lädt dabei eine fest eingetragene Fassung und prüft jede Datei anhand ihrer Prüfsumme.
+    Hugging Face sieht dabei die IP-Adresse Ihres Geräts und die abgerufenen Dateien; wir
+    erhalten diese Daten nicht und können die dortige Speicherung nicht beeinflussen (siehe
+    die Datenschutzhinweise des Dienstes). Danach arbeitet die Stimme ganz auf dem Gerät.
+    Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO; die Übermittlung in die USA geschieht auf
+    Ihre Veranlassung, wenn Sie die Funktion starten.
+  </p>
+  <p>
+    <strong>Wikipedia.</strong> Für den Text der Videos holt die App Auszüge zu den Arten der
+    Woche bei Wikipedia (de.wikipedia.org oder en.wikipedia.org, Wikimedia Foundation, USA),
+    direkt vom Handy und nur über den wissenschaftlichen Artnamen. Wikipedia sieht dabei die
+    IP-Adresse Ihres Geräts und die aufgerufene Adresse. Die Auszüge merkt sich die App bis zu
+    30 Tage auf dem Gerät.
+  </p>
+  <p>
+    <strong>Eigener Gemini-Schlüssel (freiwillig).</strong> Standardmäßig schreiben feste
+    Vorlagen auf dem Handy das Drehbuch; dann geht nichts an Google. Tragen Sie in den
+    Einstellungen einen eigenen Gemini-Schlüssel ein, schickt die App für jedes Video eine
+    Anfrage direkt an Google (generativelanguage.googleapis.com, Google LLC, USA), ohne Umweg
+    über Tauben &amp; Co. Sie enthält die Artnamen Ihrer Woche, wann sie zu hören waren
+    (Wochentage, Tageszeiten und Daten in Worten), die Zahl der Arten und Sätze aus Wikipedia.
+    <strong>Nie Ton</strong>, nie Koordinaten, keinen Stations- oder Ortsnamen und keine
+    Erkennungszahlen. Wir sehen weder Ihren Schlüssel noch die Anfrage. Der Schlüssel liegt nur
+    im geschützten Speicher des Geräts (Schlüsselbund beziehungsweise Keystore), wird nicht mit
+    einer Cloud abgeglichen, lässt sich nicht auf ein anderes Gerät übertragen und lässt sich
+    in den Einstellungen löschen. Im kostenlosen Kontingent darf Google die Eingaben zur
+    Verbesserung seiner Produkte nutzen, im bezahlten nicht. Vertragspartner von Google sind Sie selbst: Die Kosten
+    und die Bedingungen Ihres Google-Kontos tragen Sie. Die App weist Sie vor dem Speichern
+    darauf hin und empfiehlt, bei Google ein Ausgabelimit zu setzen. Rechtsgrundlage ist
+    Art. 6 Abs. 1 lit. a DSGVO: Sie tragen den Schlüssel freiwillig ein.
+  </p>
+  <p>
+    <strong>Artnamen vorlesen.</strong> Auf Wunsch sagt das Handy beim Zuhören den Namen der
+    erkannten Art an. Das erledigt die Sprachausgabe des Betriebssystems. Dabei geht nichts an
+    uns, und die App selbst sendet dafür nichts ins Netz. Ob die Sprachausgabe des Systems eine
+    Stimme aus dem Netz verwendet, hängt von Ihrem Gerät und der dort gewählten Stimme ab.
+  </p>
+  <p>
+    <strong>Mitteilungen bei BirdNET-Go und AvianVisitors.</strong> Schalten Sie bei einer
+    solchen Station Mitteilungen ein, fragt das Handy die Station selbst ab: beim Start der
+    App, beim Wechsel in den Vordergrund und im Hintergrund in Abständen, die das
+    Betriebssystem bestimmt. Die Mitteilungen entstehen auf dem Gerät. Es gibt keinen Server
+    von mir dazwischen, keinen Push-Token und keine Weitergabe an uns. Das klappt nur, wenn
+    das Handy die Station erreicht, zum Beispiel im Heimnetz oder über VPN. Was die Station
+    dabei sieht, bestimmt, wer sie betreibt (Abschnitt 3.6). Die Erlaubnis für Mitteilungen
+    fragt das System erst, wenn Sie das einschalten.
+  </p>
+
+  <h3>3.12 Diese Hilfeseite (GitHub Pages)</h3>
+  <p>
+    Diese Hilfeseite liegt bei GitHub Pages (GitHub Inc., USA), nicht auf meinem Server.
+    GitHub verarbeitet beim Aufruf Ihre IP-Adresse und die üblichen Verbindungsdaten, um die
+    Seite auszuliefern; ich erhalte davon nichts. Die Seite setzt keine Cookies und lädt keine
+    Skripte, Schriften oder Bilder von anderen Anbietern. Die Formulare für Vorschläge und
+    Fehler liegen ebenfalls bei GitHub, brauchen ein GitHub-Konto, und Ihre Einträge sind
+    öffentlich: Bitte geben Sie dort keine Passwörter, Adressen oder Standorte an.
+    Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (Bereitstellung der Hilfeseite).
+  </p>
+
   <h2>4. Berechtigungen und warum</h2>
   <ul>
     <li><strong>Mikrofon</strong> — nur für „Zuhören“ (Abschnitt 3.3). Ohne
@@ -521,7 +753,8 @@
     <li><strong>Standort</strong> — freiwillig, einmalig, nur beim Antippen von
         „Meine Position verwenden“. Verlässt das Gerät nicht.</li>
     <li><strong>Meldungen</strong> — freiwillig, nur wenn Sie Meldungen
-        einschalten.</li>
+        einschalten. Bei einer eigenen Station erzeugt die App die Mitteilungen selbst
+        (Abschnitt 3.11).</li>
     <li><strong>Lokales Netzwerk</strong> (iPhone) — nur, damit die App die
         Station erreicht, die Sie selbst eintragen (Abschnitt 3.6). Ohne Freigabe
         funktionieren Stationen im Heimnetz nicht; alles andere schon.</li>
@@ -541,13 +774,26 @@
     </tr>
     <tr>
       <td><strong>Google</strong> (Firebase Cloud Messaging)</td>
-      <td>Zustellung der Meldungen auf Android-Geräten — nur wenn Meldungen
-          eingeschaltet sind</td>
+      <td>Zustellung der Meldungen auf Android-Geräten — <strong>derzeit nicht
+          aktiv</strong>: Die aktuelle Android-App enthält diesen Dienst nicht. Der
+          Eintrag bleibt, falls dieser Weg später dazukommt</td>
+    </tr>
+    <tr>
+      <td><strong>Push-Dienste der Browser</strong> (je nach Browser Google, Mozilla oder
+          Apple)</td>
+      <td>Zustellung der Web-Push-Mitteilungen der Glocke — nur wenn Sie sie
+          einschalten (Abschnitt 3.10)</td>
     </tr>
     <tr>
       <td><strong>Hetzner Online GmbH</strong> (Gallusstraße 25, 91710 Gunzenhausen)</td>
       <td>betreibt den Server, auf dem die Vogelanzeige läuft; Standort des
           Servers: Deutschland</td>
+    </tr>
+    <tr>
+      <td><strong>Brevo SAS</strong> (17 rue Salneuve, 75017 Paris, Frankreich)</td>
+      <td>Versand der Mail zum Zurücksetzen des Passworts an die hinterlegte Adresse des
+          Betreibers (Abschnitt 3.10); die Mail enthält nur den Link, keine Angaben über
+          Sie</td>
     </tr>
     <tr>
       <td><strong>Google</strong> (Google Drive; Google Ireland Limited
@@ -557,14 +803,28 @@
           privates Konto des Betreibers, ohne Freigabe</td>
     </tr>
     <tr>
-      <td><strong>GitHub Inc.</strong> (raw.githubusercontent.com, USA)</td>
+      <td><strong>GitHub Inc.</strong> (raw.githubusercontent.com und GitHub Pages,
+          USA)</td>
       <td>Bildset der Collage bei BirdNET-Go-Stationen — nur bei dieser Ansicht,
-          nur Dateiname der Art</td>
+          nur Dateiname der Art; außerdem Hosting dieser Hilfeseite und ihrer
+          Formulare (Abschnitt 3.12)</td>
     </tr>
     <tr>
-      <td><strong>Wikimedia Foundation</strong> (en.wikipedia.org, USA)</td>
-      <td>Artbeschreibung beim Öffnen einer Artkarte — nur wissenschaftlicher
-          Artname</td>
+      <td><strong>Wikimedia Foundation</strong> (en.wikipedia.org und de.wikipedia.org,
+          USA)</td>
+      <td>Artbeschreibung beim Öffnen einer Artkarte und Textquelle der
+          Rückblick-Videos ab Version 1.4 — nur wissenschaftlicher Artname</td>
+    </tr>
+    <tr>
+      <td><strong>Hugging Face Inc.</strong> (huggingface.co, USA)</td>
+      <td>einmaliger Download der Stimme für die Rückblick-Videos ab Version 1.4
+          (Abschnitt 3.11)</td>
+    </tr>
+    <tr>
+      <td><strong>Google</strong> (Gemini-API; Google LLC, USA)</td>
+      <td>Drehbuch der Rückblick-Videos — <strong>nur, wenn Sie einen eigenen
+          Gemini-Schlüssel eintragen</strong>; die Anfrage geht direkt von Ihrem
+          Handy an Google (Abschnitt 3.11)</td>
     </tr>
   </table>
   <p>
@@ -572,7 +832,7 @@
     Art: Buchfink“). Die Station, die Sie selbst eintragen, ist kein Empfänger
     unserer Daten: Die App spricht mit ihr direkt (Abschnitt 3.6). Außer den
     Genannten geht nichts an Dritte; die Abrufe bei GitHub und Wikipedia
-    beschreibt Abschnitt 3.4. <strong>Kein Verkauf von Daten, keine Werbenetzwerke, keine
+    beschreiben die Abschnitte 3.4 und 3.11. <strong>Kein Verkauf von Daten, keine Werbenetzwerke, keine
     Analyse-Bibliotheken.</strong>
   </p>
 
@@ -580,28 +840,51 @@
   <ul>
     <li><strong>Art. 6 Abs. 1 lit. b DSGVO</strong> (Erfüllung) — Anmeldung,
         Sitzungs-Cookie, Geräte-Token sowie das Anzeigen Ihrer Station und das
-        Zeichnen des Collage-Bildes: ohne sie funktioniert die App nicht.</li>
+        Zeichnen des Collage-Bildes: ohne sie funktioniert die App nicht. Ebenso die
+        Funktionen aus Abschnitt 3.11, die Sie selbst starten (Videos, Download der
+        Stimme, Wikipedia-Abruf).</li>
     <li><strong>Art. 6 Abs. 1 lit. a DSGVO</strong> (Einwilligung) — Mikrofon,
         Standort, Meldungen und lokales Netzwerk; Sie erteilen sie im Systemdialog
-        und können sie jederzeit widerrufen. Ebenso das Speichern eines
+        und können sie jederzeit widerrufen. Ebenso die Web-Push-Mitteilungen der Glocke, ein
+        eigener Gemini-Schlüssel und das Speichern eines
         BirdNET-Go-Passworts: Es geschieht nur mit Ihrer Zustimmung.</li>
     <li><strong>Art. 6 Abs. 1 lit. f DSGVO</strong> (berechtigtes Interesse) —
-        kurzlebige Server-Protokolle zum sicheren Betrieb sowie das Archiv auf
+        Server-Protokolle zum sicheren Betrieb, der Schutz der Anmeldeseite vor
+        Durchprobieren (Abschnitt 3.10), Erkennungen und Tonausschnitte der
+        Stationen, die ich betreibe, samt Stimmprüfung (Abschnitte 3.8 und 3.9), diese
+        Hilfeseite (Abschnitt 3.12) sowie das Archiv auf
         Google Drive (Datensicherung der Aufnahmen und Auswertungen meiner eigenen
         Stationen, bewusst eingeschaltet, ohne Weitergabe und ohne
         Freigabe-Link).</li>
+    <li><strong>§ 25 Abs. 2 Nr. 2 TDDDG</strong> — Sitzungs-Cookie, lokaler Speicher und
+        Service Worker im Browser: für den von Ihnen gewünschten Dienst unbedingt
+        erforderlich.</li>
   </ul>
 
   <h2>7. Speicherdauer</h2>
   <ul>
     <li>Sitzungs-Cookie: höchstens 90 Tage.</li>
-    <li>Geräte-Token, Gerätename, Push-Token: bis das Gerät ausgesperrt oder die
-        App gelöscht wird.</li>
+    <li>Geräte-Token, Gerätebezeichnung, Push-Token: bis Sie sich abmelden oder das
+        Gerät aussperren; ein Gerät, das sich 180 Tage nicht meldet, wird entfernt. Code,
+        Verbindungen und Nachrichten eines entfernten Geräts folgen spätestens am nächsten
+        Tag.</li>
     <li>Daten auf dem Gerät (Funde, gerundete Position, Einstellungen, Adresse
         Ihrer Station): bis Sie die Station wechseln oder die App löschen.</li>
     <li>BirdNET-Go-Passwort (nur falls gespeichert): bis Sie sich abmelden oder
         die App löschen; es liegt nie bei uns.</li>
-    <li>Server-Protokolle: kurzfristig, automatische Löschung.</li>
+    <li>Zugriffsprotokolle des Webservers: höchstens 14 Tage, dann automatische Löschung.
+        System- und Sicherheitsprotokolle des Servers: siehe Abschnitt 3.2.</li>
+    <li>Hashwert der IP-Adresse bei Fehlversuchen und Anfragen zum Zurücksetzen: bis zum
+        nächsten täglichen Aufräumlauf nach 24 Stunden.</li>
+    <li>Erkennungen der Stationen, die ich betreibe: ohne feste Frist. Tonausschnitte:
+        30 Tage, von jeder Art bleiben einige dauerhaft (Abschnitt 3.8). Live-Band: nur im
+        Arbeitsspeicher, höchstens 15 Minuten.</li>
+    <li>Web-Push-Abo: bis Sie die Glocke ausschalten oder der Push-Dienst es als
+        ungültig meldet.</li>
+    <li>Rückblick-Videos auf dem Handy (ab Version 1.4): die letzten acht, bis Sie sie
+        löschen oder die App löschen. Wikipedia-Auszüge: bis zu 30 Tage auf dem Gerät.
+        Heruntergeladene Stimme: bis Sie die App löschen. Gemini-Schlüssel (nur falls
+        eingetragen): bis Sie ihn löschen, sich abmelden oder die App löschen.</li>
     <li>Collage-Anfragen (Artnamen und Zählungen): werden nicht gespeichert.</li>
     <li>Fotos und Zeilen zwischen verbundenen Geräten: 30 Tage, dann automatische
         Löschung; sofort beim Lösen der Verbindung oder beim Löschen der Nachricht.</li>
@@ -618,17 +901,30 @@
     (Art. 20) und <strong>Widerspruch</strong> (Art. 21 DSGVO). Außerdem können Sie
     sich bei einer <strong>Datenschutz-Aufsichtsbehörde</strong> beschweren.
   </p>
+  <p>
+    Zuständig für mich ist die <strong>Berliner Beauftragte für Datenschutz und
+    Informationsfreiheit</strong> (BlnBDI), Alt-Moabit 59–61, 10555 Berlin,
+    <a href="https://www.datenschutz-berlin.de" rel="noopener">www.datenschutz-berlin.de</a>.
+    Sie können sich auch an eine andere Aufsichtsbehörde wenden, etwa an die an Ihrem
+    Wohnort.
+  </p>
   <h3>Löschen — der schnelle Weg</h3>
   <ul>
-    <li><strong>In der App:</strong> Einstellungen → Geräte → dieses Gerät
-        aussperren. Geräte-Token, Gerätename und Push-Token auf dem Server
-        werden damit ungültig und entfernt.</li>
+    <li><strong>In der App:</strong> Einstellungen → Konto → Abmelden. Das entfernt
+        Geräte-Token, Gerätebezeichnung und Push-Token dieses Geräts auf dem Server, bei
+        allen Servern, mit denen es verbunden war. Code, Verbindungen und Nachrichten
+        dieses Geräts löscht der Server spätestens am folgenden Tag.</li>
+    <li><strong>Ein anderes Gerät aussperren:</strong> Einstellungen → Geräte → das
+        Gerät aussperren (etwa ein verlorenes). Geräte-Token, Gerätebezeichnung und
+        Push-Token werden damit ungültig und entfernt.</li>
     <li><strong>Eigene Station:</strong> in den Einstellungen die Station wechseln
         beziehungsweise abmelden — Adresse und ein gespeichertes Passwort
         verschwinden vom Gerät. Bei uns lag dazu nichts.</li>
     <li><strong>Auf dem Gerät:</strong> App löschen — alle lokalen Daten
-        verschwinden mit.</li>
-    <li><strong>Schriftlich:</strong> formlos an die Kontaktadresse in Abschnitt 1.</li>
+        verschwinden mit. Den Eintrag am Server entfernt das nicht; melden Sie sich
+        vorher ab (siehe oben).</li>
+    <li><strong>Schriftlich:</strong> formlos an die Kontaktadresse in Abschnitt 1.
+        Das gilt auch für Aufnahmen von Stimmen Dritter (Abschnitt 3.9).</li>
   </ul>
 
   <h2>9. Kinder</h2>
@@ -652,7 +948,18 @@
     jeweils der Stand.
   </p>
   <p>
-    Zuletzt geändert am 23. Oktober 2026: eigene Stationen (BirdNET-Go,
+    Zuletzt geändert am 31. Oktober 2026: Verweis auf das Impressum; Stationsdaten,
+    Stimmen Dritter in Hörweite, Web-Push und Speicher im Browser; diese Hilfeseite bei
+    GitHub Pages; Frist für die Zugriffsprotokolle des Webservers (höchstens 14 Tage), Hinweis
+    auf die übrigen Server-Protokolle und Ablauf der Geräte-Token (180 Tage); Passwort-Reset
+    über Brevo und Schutz vor Durchprobieren (24 Stunden); zuständige Aufsichtsbehörde;
+    Gerätebezeichnung statt Gerätename; Firebase derzeit nicht aktiv;
+    neu ab Version 1.4: Rückblick-Videos auf dem Handy mit Stimme von Hugging Face,
+    Wikipedia-Abruf, optionaler Gemini-Schlüssel, Artnamen vorlesen und Mitteilungen bei
+    BirdNET-Go und AvianVisitors.
+  </p>
+  <p>
+    Davor am 23. Oktober 2026: eigene Stationen (BirdNET-Go,
     AvianVisitors, eigener Server) mit direkter Verbindung, lokalem Netzwerk und
     optionalem BirdNET-Go-Passwort; Collage-Bild und Widget für diese Stationen;
     das optionale Archiv auf Google Drive; englische Fassung.
@@ -662,15 +969,15 @@
 
 <section id="en" lang="en">
 
-<!-- nav:start -->
-<nav class="nav" aria-label="Pages"><a class="marke" href="index.html">Tauben &amp; Co</a><a href="index.html">Home</a><a href="funktionen.html">Features</a><a href="vergleich.html">Comparison</a><a href="pi-installieren.html">Install the Pi</a><a href="server-einrichten.html">Set up a server</a><a href="lizenzen.html">Licences</a><a href="datenschutz.html" aria-current="page">Privacy</a></nav>
-<!-- nav:end -->
+<nav class="nav" aria-label="Pages"><a class="marke" href="index.html">Tauben &amp; Co</a><a href="index.html">Home</a><a href="funktionen.html">Features</a><a href="vergleich.html">Comparison</a><a href="pi-installieren.html">Install the Pi</a><a href="server-einrichten.html">Set up a server</a><a href="lizenzen.html">Licences</a><a href="datenschutz.html" aria-current="page">Privacy</a><a href="impressum.html">Legal notice</a></nav>
+
+
 
 
 
   <p class="pre">Tauben &amp; Co — app for iPhone and Android</p>
   <h1>Privacy policy</h1>
-  <p class="stand">Last updated: 25 October 2026</p>
+  <p class="stand">Last updated: 31 October 2026</p>
   <p class="sprachhinweis"><a href="#de" hreflang="de">Deutsche Fassung oben</a></p>
 
   <h2>1. Controller</h2>
@@ -679,15 +986,16 @@
     Email: <a href="mailto:yannik.sauerwein@gmail.com">yannik.sauerwein@gmail.com</a>
   </p>
   <p>
-    The app is run privately and with no commercial interest. Questions about data
-    protection and deletion go to the email address above; I will give you a postal
-    address on request.
+    The app is run privately and with no commercial interest. My postal address is in
+    the <a href="impressum.html#en">legal notice</a>. Questions about data protection
+    and deletion go to the email address above.
   </p>
   <p>
     This policy covers the app <strong>“Tauben &amp; Co”</strong>
-    (<code>de.taubenundco.app</code>) and the website <strong>taubenundco.de</strong>
-    that the app displays. If you connect the app to a station that someone else
-    runs (section 3.6), it covers only the app — not the station itself.
+    (<code>de.taubenundco.app</code>), the website <strong>taubenundco.de</strong>
+    that the app displays, and this help site (section 3.12). If you connect the app to
+    a station that someone else runs (section 3.6), it covers only the app — not the
+    station itself.
   </p>
 
   <h2>2. In short</h2>
@@ -727,8 +1035,20 @@
       data — and are deleted after 30 days.
     </p>
     <p>
+      On the <strong>stations that I run</strong>, the server stores detections and short
+      clips of the birds’ sound. <strong>Voices</strong> in those clips are muted by a voice
+      check that I have been introducing on these stations since the end of October 2026
+      (sections 3.8 and 3.9).
+    </p>
+    <p>
       An <strong>archive on Google Drive</strong> exists only for stations that I run
       myself, and only if I have explicitly turned it on. It is off by default.
+    </p>
+    <p>
+      From version 1.4, your <strong>phone builds the review videos itself</strong>. If
+      you enter a <strong>Gemini key of your own</strong>, Gemini writes the script; the
+      request then goes straight from the phone to Google, never with sound and without
+      any place information (section 3.11).
     </p>
   </div>
 
@@ -780,22 +1100,35 @@
           ID</strong></td>
       <td>so the widget and background refresh can look things up without a
           password</td>
-      <td>until you lock the device out in the settings or delete the app</td>
+      <td>until you sign out or lock the device out in the settings; if a device does not
+          contact the server for 180 days, neither through the app nor through the widget,
+          the server removes the entry</td>
     </tr>
     <tr>
-      <td><strong>Device name</strong> (for example “Anna’s iPhone”)</td>
+      <td><strong>Device label</strong>: the label the system supplies, for example
+          “iPhone” or “Pixel 8” (not your name)</td>
       <td>so you can tell in the device list which device you are locking out</td>
       <td>same as the device token</td>
     </tr>
     <tr>
-      <td><strong>Push token</strong> from Apple or Google</td>
-      <td>delivery of notifications; only if you turn notifications on</td>
+      <td><strong>Push token</strong> from Apple (iPhone)</td>
+      <td>delivery of notifications; only if you turn notifications on. The route via
+          Google (Android) does not exist at present, see section 5</td>
       <td>same as the device token</td>
     </tr>
     <tr>
-      <td><strong>Server logs</strong>: IP address, time, requested address</td>
+      <td><strong>Web server access logs</strong>: IP address, time, requested address,
+          browser identifier</td>
       <td>operation and defence against attacks</td>
-      <td>short-term, then deleted automatically</td>
+      <td>14 days at most, then deleted automatically</td>
+    </tr>
+    <tr>
+      <td><strong>System and security logs</strong> of the server, for example sign-ins to
+          the server and connections rejected by the firewall; they can contain IP
+          addresses</td>
+      <td>defence against attacks and troubleshooting</td>
+      <td>deleted automatically by age or size, usually after a few weeks; there is no
+          fixed maximum period for them yet</td>
     </tr>
   </table>
   <p>
@@ -804,8 +1137,14 @@
     settings (Android).
   </p>
   <p>
+    If you delete the app without signing out first, the server does not learn of it: the
+    entry then stays until the 180 days are up. So please sign out beforehand (Settings →
+    Account → Sign out). That removes the device token, device label and push token on the
+    server at once.
+  </p>
+  <p>
     This table applies to Tauben &amp; Co stations. With a station of someone else
-    (section 3.6), the session cookie, device token, device name and push token are
+    (section 3.6), the session cookie, device token, device label and push token are
     never created in the first place.
   </p>
 
@@ -829,7 +1168,7 @@
     AvianVisitors station: the app fetches the species list from your station and
     sends it to us — just the names and numbers — so that the picture can be drawn
     in the usual style. <strong>No places, no recordings, no station address, no
-    station name, no device name and no ID</strong> go with it.
+    station name, no device label and no ID</strong> go with it.
   </p>
   <p>
     The list sits in a working file only for the duration of the request, and that
@@ -841,7 +1180,7 @@
     The app also loads individual bird drawings (for example in the list of
     detections) from our server. The request contains only the scientific species
     name. As with any request, the server sees the IP address and the requested
-    address in its short-lived server logs (section 3.2).
+    address; they are kept in the access logs (14 days at most, section 3.2).
   </p>
   <p>
     When you show a BirdNET-Go station as a collage, the app loads the bird
@@ -968,8 +1307,10 @@
     every night into a folder in the operator’s own Google Drive: the database of
     detections (species, time, confidence), the false-detection marks, the weekly
     review videos and the sound recordings of the birds from the station’s
-    microphone. The recordings can contain quiet fragments of conversation, because
-    the filter for human voices only mutes clips with a clearly audible voice.
+    microphone. Where the voice check runs (section 3.9), the clips are checked for voices
+    before they are saved and muted at those places. The check can miss very quiet voices,
+    and some older clips date from before the check; so the clips can contain fragments of
+    conversation.
   </p>
   <p>
     The folder is not shared. The copy tool (rclone) can only access files it
@@ -980,6 +1321,218 @@
     and evaluations of my own stations.
   </p>
 
+  <h3>3.8 Stations that I run: server and website</h3>
+  <p>
+    This section concerns the Tauben &amp; Co stations that I run myself: the server and the
+    website taubenundco.de with a separate access for each location. It does not concern your
+    own station (section 3.6). A Raspberry Pi with a microphone detects birds there and pushes
+    the results to the server. Access to a location works with a shared password; whoever
+    knows it can see and hear what that location shows.
+  </p>
+  <table>
+    <tr><th>What</th><th>Why</th><th>How long</th></tr>
+    <tr>
+      <td><strong>Detections</strong>: species, time, confidence</td>
+      <td>display, statistics, notifications, videos</td>
+      <td>no fixed period</td>
+    </tr>
+    <tr>
+      <td><strong>Short sound clips</strong> (a few seconds around a detection) with a
+          spectrogram; where the voice check runs, voices are muted (section 3.9)</td>
+      <td>listening back, call comparison, a second check by another detection model on
+          the server</td>
+      <td><strong>30 days</strong>. For each species the ten most recent clips and the one
+          with the highest confidence stay for good. Of several clips of the same species in
+          the same minute, only the three with the highest confidence are kept. These periods
+          apply to stations that are still recording</td>
+    </tr>
+    <tr>
+      <td><strong>Live band</strong>: a running spectrogram picture from the station’s
+          microphone, about 22 seconds delayed, plus the sound clips of the detected birds;
+          no continuous sound. Where the voice check runs, places with a voice are silent and
+          grey</td>
+      <td>live view for signed-in users</td>
+      <td>only in the server’s memory: pictures for five minutes at most, sound clips for
+          15 minutes at most</td>
+    </tr>
+    <tr>
+      <td><strong>Weekly, monthly and species videos</strong>, built from the
+          detections</td>
+      <td>review; the voice is machine-generated</td>
+      <td>no fixed period</td>
+    </tr>
+  </table>
+  <p>
+    <strong>Demo access.</strong> I can give testers and reviewers an access that lets them
+    only view and listen to a station. It plays a small fixed selection of sample clips in
+    which voices were muted afterwards, and beyond that at most recordings made after the
+    voice check (section 3.9) was introduced at that station. Older recordings are blocked
+    for it.
+  </p>
+  <p>
+    Legal basis: Art. 6(1)(b) GDPR for showing the data to those entitled to it, point (f)
+    for the sound clips and their check (section 6).
+  </p>
+
+  <h3>3.9 People within earshot of a station</h3>
+  <p>
+    A station’s microphone is meant to hear birds, but it also hears everything else around
+    it. Neighbours, guests and passers-by can therefore occasionally be audible in a clip.
+    Against this there is a voice check on the station. I have been introducing it on the
+    stations that I run since the end of October 2026. Where it runs, the following
+    happens:
+  </p>
+  <ul>
+    <li>Detection keeps analysing all of the sound, so that birds next to a conversation are
+        still recognised. But sound is only <strong>saved, transmitted to the server or shown
+        in the live band</strong> after the station has checked whether someone is speaking.
+        For that it uses a voice detector (Silero VAD) and the “human vocal” class of the
+        BirdNET model.</li>
+    <li>The seconds with a voice are <strong>muted</strong>, with a short margin before and
+        after, and covered in grey in the spectrogram. Nothing is understood or written down,
+        and nobody is identified. The check runs entirely on the station.</li>
+    <li>The raw 15-second recording is deleted after analysis, after about 20 seconds.</li>
+  </ul>
+  <p>
+    <strong>Limits.</strong> The check can miss very quiet or whispered voices. Conversely,
+    bird calls that resemble a voice are now and then muted as well. Clips from the time before
+    the check was introduced can still contain voices.
+  </p>
+  <p>
+    <strong>Legal basis</strong> is Art. 6(1)(f) GDPR: my interest in watching birds. The
+    voice check and the short retention periods are meant to protect your interests. If you
+    were within earshot of a station and do not want to be recorded, write to me at the
+    address in section 1. I will then delete the clips concerned (objection under Art. 21,
+    erasure under Art. 17 GDPR).
+  </p>
+
+  <h3>3.10 Web push and storage in the browser</h3>
+  <p>
+    On a station’s website there is a bell next to the menu. When you switch it on, your
+    browser asks whether the site may send notifications. If you say yes, a subscription is
+    created:
+  </p>
+  <table>
+    <tr><th>What</th><th>Why</th><th>How long</th></tr>
+    <tr>
+      <td><strong>Browser subscription</strong>: an endpoint address at your browser’s push
+          service (Google, Mozilla or Apple, depending on the browser) with its keys, plus
+          your choice (new species or every detection)</td>
+      <td>delivery of notifications to this browser</td>
+      <td>until you switch the bell off or the push service reports the subscription as
+          invalid</td>
+    </tr>
+  </table>
+  <p>
+    The server keeps the subscription in a file for each location and sends the notifications
+    through your browser’s push service. A notification contains only what is on the screen
+    anyway (such as “New species: Chaffinch”). Your browser fetches the picture of the species
+    itself from our server.
+  </p>
+  <p>
+    The website also stores in your browser only what is needed for signing in and for your
+    settings: the session cookie (section 3.2), your choice for the bell in the browser’s
+    local storage and, if you turn notifications on, a service worker that receives them.
+    There are no analytics or advertising cookies. The legal basis for the notifications is
+    Art. 6(1)(a) GDPR (you switch them on); for the storage in the browser it is
+    section 25(2) no. 2 TDDDG (strictly necessary for the service you asked for).
+  </p>
+  <p>
+    <strong>Forgotten password.</strong> The sign-in page offers a way to reset the password.
+    The email address entered there is only compared with the operator’s stored address and
+    is not saved. If it matches, the server sends a reset link valid for 30 minutes through the
+    email service Brevo (section 5), always to the operator’s stored address and never to any
+    other. The email contains only this link, no information about the person who requested
+    it.
+  </p>
+  <p>
+    <strong>Protection against guessing.</strong> For failed sign-in attempts and reset
+    requests the server stores a hash of your IP address together with the time. A daily
+    clean-up run deletes these entries once they are older than 24 hours. The legal basis is
+    Art. 6(1)(f) GDPR (protecting the sign-in against abuse).
+  </p>
+
+  <h3>3.11 New from version 1.4: videos, reading aloud and notifications on the phone</h3>
+  <p>
+    The following features come with version 1.4 of the app for iPhone and Android. They run
+    on your phone. What goes onto the network is described here.
+  </p>
+  <p>
+    <strong>Review videos on the phone.</strong> With a BirdNET-Go or AvianVisitors station,
+    and with “Listen only”, the phone builds the weekly review itself: when you tap “Create
+    now” or, if switched on, by itself at night. During setup the app asks whether a video
+    should be made every week. If you say “Yes”, the overnight run is on (by default only
+    while the phone is charging); with “Later” it stays off. You can change this in the
+    settings under “Reviews”. The data comes straight from your station
+    (section 3.6) or from the finds on the phone. The videos stay on your phone; the app keeps
+    the last eight. Nothing goes to us apart from the requests for bird drawings as in
+    section 3.4. With the stations that I run, the videos are still made on the server
+    (section 3.8).
+  </p>
+  <p>
+    <strong>The videos’ voice.</strong> The videos speak with a machine-generated voice
+    (Supertonic 3, licence on the <a href="lizenzen.html#en">Licences</a> page). The first
+    time, the app downloads the voice once from Hugging Face (huggingface.co and the service’s
+    download servers; Hugging Face Inc., USA): more than 100 MB, on Wi-Fi only by default, over
+    mobile data only after asking. This applies to iPhone and Android. The app downloads a
+    fixed version and checks every file against its checksum. Hugging Face
+    sees your device’s IP address and the files requested; we do not receive that data and
+    cannot influence how it is stored there (see the service’s privacy notice). After that
+    the voice works entirely on the device. The legal basis is Art. 6(1)(b) GDPR; the transfer
+    to the USA happens at your request, when you start the feature.
+  </p>
+  <p>
+    <strong>Wikipedia.</strong> For the text of the videos the app fetches excerpts about the
+    week’s species from Wikipedia (de.wikipedia.org or en.wikipedia.org, Wikimedia Foundation,
+    USA), straight from the phone and only by scientific species name. Wikipedia sees your
+    device’s IP address and the address requested. The app keeps the excerpts on the device
+    for up to 30 days.
+  </p>
+  <p>
+    <strong>A Gemini key of your own (optional).</strong> By default, fixed templates on the
+    phone write the script; nothing then goes to Google. If you enter a Gemini key of your own
+    in the settings, the app sends one request per video straight to Google
+    (generativelanguage.googleapis.com, Google LLC, USA), without going through Tauben &amp; Co.
+    It contains the species names of your week, when they were heard (weekdays, times of day
+    and dates in words), the number of species and sentences from Wikipedia.
+    <strong>Never sound</strong>, never coordinates, no station or place name and no
+    detection counts. We see neither your key nor the request. The key sits only in the
+    device’s protected storage (Keychain or Keystore), is not synced with any cloud, cannot be
+    moved to another device and can be deleted in the settings. On the free tier Google may use
+    the inputs to improve its products; on the paid tier it may not. You yourself are Google’s
+    contracting party: you bear the costs and the terms of your Google account. Before saving
+    the key, the app points this out and recommends setting a spending limit at Google. The
+    legal basis is Art. 6(1)(a) GDPR: you enter the key voluntarily.
+  </p>
+  <p>
+    <strong>Reading species names aloud.</strong> If you wish, the phone says the name of the
+    detected species while you listen. The operating system’s speech output does this.
+    Nothing goes to us, and the app itself sends nothing onto the network for it. Whether the
+    system’s speech output uses a voice from the network depends on your device and the voice
+    chosen there.
+  </p>
+  <p>
+    <strong>Notifications for BirdNET-Go and AvianVisitors.</strong> If you turn on
+    notifications for such a station, the phone queries the station itself: when the app
+    starts, when it comes to the foreground, and in the background at intervals that the
+    operating system decides. The notifications are created on the device. There is no server
+    of mine in between, no push token and no passing on to us. This only works if the phone can
+    reach the station, for example on the home network or over a VPN. What the station sees is
+    up to whoever runs it (section 3.6). The system only asks for permission for notifications
+    when you turn this on.
+  </p>
+
+  <h3>3.12 This help site (GitHub Pages)</h3>
+  <p>
+    This help site is hosted by GitHub Pages (GitHub Inc., USA), not on my server. When you
+    open it, GitHub processes your IP address and the usual connection data to deliver the
+    page; I receive none of that. The site sets no cookies and loads no scripts, fonts or
+    images from other providers. The forms for suggestions and bugs are at GitHub as well,
+    need a GitHub account, and your entries are public: please do not post passwords,
+    addresses or locations there. The legal basis is Art. 6(1)(f) GDPR (providing the help
+    site).
+  </p>
+
   <h2>4. Permissions and why</h2>
   <ul>
     <li><strong>Microphone</strong> — only for “Listen” (section 3.3). Without it
@@ -987,7 +1540,8 @@
     <li><strong>Location</strong> — voluntary, one-off, only when you tap “Use my
         position”. Never leaves the device.</li>
     <li><strong>Notifications</strong> — voluntary, only if you turn notifications
-        on.</li>
+        on. With a station of your own the app creates the notifications itself
+        (section 3.11).</li>
     <li><strong>Local network</strong> (iPhone) — only so the app can reach the
         station you enter yourself (section 3.6). Without it, stations on your home
         network do not work; everything else does.</li>
@@ -1006,14 +1560,27 @@
     </tr>
     <tr>
       <td><strong>Google</strong> (Firebase Cloud Messaging)</td>
-      <td>delivery of notifications on Android devices — only if notifications are
-          turned on</td>
+      <td>delivery of notifications on Android devices — <strong>not active at
+          present</strong>: the current Android app does not contain this service. The
+          entry stays in case this route is added later</td>
+    </tr>
+    <tr>
+      <td><strong>Browsers’ push services</strong> (Google, Mozilla or Apple, depending on
+          the browser)</td>
+      <td>delivery of the web push notifications of the bell — only if you switch it on
+          (section 3.10)</td>
     </tr>
     <tr>
       <td><strong>Hetzner Online GmbH</strong> (Gallusstraße 25, 91710 Gunzenhausen,
           Germany)</td>
       <td>runs the server on which the bird display runs; server location:
           Germany</td>
+    </tr>
+    <tr>
+      <td><strong>Brevo SAS</strong> (17 rue Salneuve, 75017 Paris, France)</td>
+      <td>sending the password reset email to the operator’s stored address
+          (section 3.10); the email contains only the link, no information about
+          you</td>
     </tr>
     <tr>
       <td><strong>Google</strong> (Google Drive; Google Ireland Limited or Google
@@ -1023,14 +1590,28 @@
           account of the operator, not shared</td>
     </tr>
     <tr>
-      <td><strong>GitHub Inc.</strong> (raw.githubusercontent.com, USA)</td>
+      <td><strong>GitHub Inc.</strong> (raw.githubusercontent.com and GitHub Pages,
+          USA)</td>
       <td>image set of the collage for BirdNET-Go stations — only in that view,
-          only the species’ file name</td>
+          only the species’ file name; also hosting of this help site and its forms
+          (section 3.12)</td>
     </tr>
     <tr>
-      <td><strong>Wikimedia Foundation</strong> (en.wikipedia.org, USA)</td>
-      <td>species description when a species card is opened — only the scientific
-          species name</td>
+      <td><strong>Wikimedia Foundation</strong> (en.wikipedia.org and de.wikipedia.org,
+          USA)</td>
+      <td>species description when a species card is opened, and text source of the review
+          videos from version 1.4 — only the scientific species name</td>
+    </tr>
+    <tr>
+      <td><strong>Hugging Face Inc.</strong> (huggingface.co, USA)</td>
+      <td>one-off download of the voice for the review videos from version 1.4
+          (section 3.11)</td>
+    </tr>
+    <tr>
+      <td><strong>Google</strong> (Gemini API; Google LLC, USA)</td>
+      <td>script of the review videos — <strong>only if you enter a Gemini key of your
+          own</strong>; the request goes straight from your phone to Google
+          (section 3.11)</td>
     </tr>
   </table>
   <p>
@@ -1038,7 +1619,7 @@
     species: Chaffinch”). The station you enter yourself is not a recipient of our
     data: the app talks to it directly (section 3.6). Apart from those named,
     nothing goes to third parties; the requests to GitHub and Wikipedia are
-    described in section 3.4. <strong>No sale of data, no advertising networks, no analytics
+    described in sections 3.4 and 3.11. <strong>No sale of data, no advertising networks, no analytics
     libraries.</strong>
   </p>
 
@@ -1046,27 +1627,49 @@
   <ul>
     <li><strong>Art. 6(1)(b) GDPR</strong> (performance) — sign-in, session cookie,
         device token, as well as showing your station and drawing the collage
-        picture: without them the app does not work.</li>
+        picture: without them the app does not work. The same goes for the features in
+        section 3.11 that you start yourself (videos, downloading the voice, Wikipedia
+        requests).</li>
     <li><strong>Art. 6(1)(a) GDPR</strong> (consent) — microphone, location,
         notifications and local network; you give it in the system dialog and can
-        withdraw it at any time. The same goes for saving a BirdNET-Go password: it
+        withdraw it at any time. The same goes for the web push notifications of the bell,
+        a Gemini key of your own and saving a BirdNET-Go password: it
         only happens with your agreement.</li>
-    <li><strong>Art. 6(1)(f) GDPR</strong> (legitimate interest) — short-lived
-        server logs for secure operation, and the archive on Google Drive (backup
+    <li><strong>Art. 6(1)(f) GDPR</strong> (legitimate interest) — server logs for
+        secure operation, protecting the sign-in page against guessing (section 3.10),
+        detections and sound clips of the stations that I
+        run including the voice check (sections 3.8 and 3.9), this help site (section 3.12),
+        and the archive on Google Drive (backup
         of the recordings and evaluations of my own stations, deliberately turned
         on, with no onward transfer and no share link).</li>
+    <li><strong>Section 25(2) no. 2 TDDDG</strong> — session cookie, local storage and
+        service worker in the browser: strictly necessary for the service you asked
+        for.</li>
   </ul>
 
   <h2>7. Retention</h2>
   <ul>
     <li>Session cookie: 90 days at most.</li>
-    <li>Device token, device name, push token: until the device is locked out or the
-        app is deleted.</li>
+    <li>Device token, device label, push token: until you sign out or lock the device
+        out; a device that does not report for 180 days is removed. The code, connections
+        and messages of a removed device follow at the latest on the next day.</li>
     <li>Data on the device (detections, rounded position, settings, address of your
         station): until you change the station or delete the app.</li>
     <li>BirdNET-Go password (only if saved): until you sign out or delete the app;
         it is never with us.</li>
-    <li>Server logs: short-term, deleted automatically.</li>
+    <li>Web server access logs: 14 days at most, then deleted automatically. System and
+        security logs of the server: see section 3.2.</li>
+    <li>Hash of the IP address for failed attempts and reset requests: until the next daily
+        clean-up run after 24 hours.</li>
+    <li>Detections of the stations that I run: no fixed period. Sound clips: 30 days, some
+        of each species stay for good (section 3.8). Live band: only in memory, 15 minutes at
+        most.</li>
+    <li>Web push subscription: until you switch the bell off or the push service reports it
+        as invalid.</li>
+    <li>Review videos on the phone (from version 1.4): the last eight, until you delete them
+        or delete the app. Wikipedia excerpts: up to 30 days on the device. Downloaded
+        voice: until you delete the app. Gemini key (only if entered): until you delete
+        it, sign out or delete the app.</li>
     <li>Collage requests (species names and counts): not stored.</li>
     <li>Pictures and notes between connected devices: 30 days, then deleted
         automatically; immediately when the connection is ended or the message is
@@ -1083,18 +1686,31 @@
     (Art. 20) and <strong>objection</strong> (Art. 21 GDPR). You can also complain
     to a <strong>data protection supervisory authority</strong>.
   </p>
+  <p>
+    The authority responsible for me is the <strong>Berlin Commissioner for Data Protection
+    and Freedom of Information</strong> (Berliner Beauftragte für Datenschutz und
+    Informationsfreiheit, BlnBDI), Alt-Moabit 59–61, 10555 Berlin, Germany,
+    <a href="https://www.datenschutz-berlin.de" rel="noopener">www.datenschutz-berlin.de</a>.
+    You can also turn to another supervisory authority, for example the one where you
+    live.
+  </p>
   <h3>Deleting — the quick way</h3>
   <ul>
-    <li><strong>In the app:</strong> Settings → Devices → lock this device out.
-        Device token, device name and push token on the server become invalid and
+    <li><strong>In the app:</strong> Settings → Account → Sign out. That removes the device
+        token, device label and push token of this device on the server, on every server it
+        was connected to. The server deletes this device’s code, connections and messages at
+        the latest on the following day.</li>
+    <li><strong>Locking out another device:</strong> Settings → Devices → lock the device out
+        (a lost one, say). Its device token, device label and push token become invalid and
         are removed.</li>
     <li><strong>Your own station:</strong> change the station or sign out in the
         settings — the address and a saved password disappear from the device. We
         never held them.</li>
     <li><strong>On the device:</strong> delete the app — all local data goes with
-        it.</li>
+        it. That does not remove the entry on the server; sign out first (see
+        above).</li>
     <li><strong>In writing:</strong> informally to the contact address in section
-        1.</li>
+        1. This also applies to recordings of third parties’ voices (section 3.9).</li>
   </ul>
 
   <h2>9. Children</h2>
@@ -1117,7 +1733,18 @@
     top always shows when.
   </p>
   <p>
-    Last changed on 23 October 2026: stations of your own (BirdNET-Go,
+    Last changed on 31 October 2026: reference to the legal notice; station data, third
+    parties’ voices within earshot, web push and storage in the browser; this help site at
+    GitHub Pages; retention of the web server access logs (14 days at most), a note on the
+    other server logs and expiry of device tokens (180 days); password reset via Brevo and
+    protection against guessing (24 hours); responsible supervisory authority; device label
+    instead of device name; Firebase not active at present; new from
+    version 1.4: review videos on the phone with a voice from Hugging Face, Wikipedia requests,
+    an optional Gemini key, reading species names aloud, and notifications for BirdNET-Go and
+    AvianVisitors.
+  </p>
+  <p>
+    Before that, on 23 October 2026: stations of your own (BirdNET-Go,
     AvianVisitors, own server) with a direct connection, local network access and an
     optional BirdNET-Go password; collage picture and widget for these stations; the
     optional archive on Google Drive; English version.

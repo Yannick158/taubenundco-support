@@ -12,10 +12,10 @@
 <main>
 
 <section id="de" lang="de">
-  <nav class="nav" aria-label="Seiten"><a class="marke" href="index.html">Tauben &amp; Co</a><a href="index.html">Start</a><a href="funktionen.html">Funktionen</a><a href="vergleich.html" aria-current="page">Vergleich</a><a href="pi-installieren.html">Pi installieren</a><a href="server-einrichten.html">Server einrichten</a><a href="lizenzen.html">Lizenzen</a><a href="datenschutz.html">Datenschutz</a></nav>
+  <nav class="nav" aria-label="Seiten"><a class="marke" href="index.html">Tauben &amp; Co</a><a href="index.html">Start</a><a href="funktionen.html">Funktionen</a><a href="vergleich.html" aria-current="page">Vergleich</a><a href="pi-installieren.html">Pi installieren</a><a href="server-einrichten.html">Server einrichten</a><a href="lizenzen.html">Lizenzen</a><a href="datenschutz.html">Datenschutz</a><a href="impressum.html">Impressum</a></nav>
   <p class="pre">Tauben &amp; Co — BirdNET-Go, AvianVisitors und die eigene Station</p>
   <h1>Vergleich</h1>
-  <p class="stand">Stand: 23. Oktober 2026</p>
+  <p class="stand">Stand: 31. Oktober 2026</p>
   <p class="sprachhinweis"><a href="#en" hreflang="en">English version below</a></p>
 
   <h2 class="erste">Ergänzung, kein Ersatz</h2>
@@ -69,9 +69,10 @@
     den Weg, der zu deiner Station passt:
   </p>
   <ul>
-    <li><strong>Du hast BirdNET-Go.</strong> Die App zeigt die Station, legt ein Widget auf den
-      Home-Bildschirm und hört mit dem Handy mit. Mit dem Adapter (Prototyp, nur lesend,
-      noch nicht veröffentlicht) kommt die gezeichnete Collage von AvianVisitors dazu.</li>
+    <li><strong>Du hast BirdNET-Go.</strong> Die App zeigt die Station im Stil der gezeichneten
+      Collage von AvianVisitors, legt ein Widget auf den Home-Bildschirm und hört mit dem Handy
+      mit. Dafür ist kein Adapter nötig. Mitteilungen und Videos auf dem Handy kommen ab
+      Version 1.4.</li>
     <li><strong>Du hast BirdNET-Pi mit AvianVisitors.</strong> Die App öffnet die Seite deiner
       Station, macht ein Widget daraus und hört auf Wunsch mit dem Handy mit.</li>
     <li><strong>Du willst Videos, Meldungen und Zugriff von unterwegs.</strong> Dafür gibt es die
@@ -82,9 +83,11 @@
   <h2 id="go">BirdNET-Go</h2>
   <p>
     Von tphakala und vielen Mitwirkenden: eine Station zum Selbsthosten mit umfangreicher
-    Oberfläche. Die App zeigt deine Station direkt, ohne dass etwas über uns läuft. Der
-    Adapter, der AvianVisitors’ Collage auf BirdNET-Go setzt, liest nur über die öffentliche
-    API und schreibt nie in BirdNET-Go.
+    Oberfläche. Die App zeigt deine Station direkt, ohne dass etwas über uns läuft. Sie holt die
+    Erkennungen über die API der Station und baut daraus selbst die Collage im Stil von
+    AvianVisitors (Collage, Statistik, Atlas). Ein eigener Adapter ist dafür nicht mehr nötig.
+    Mitteilungen bei neuen Arten und Rückblick-Videos aus den Daten der Station kommen ab
+    Version 1.4; auch dann fragt das Handy die Station selbst, ohne Server dazwischen.
   </p>
   <p>Projekt: <a href="https://github.com/tphakala/birdnet-go" rel="noopener">github.com/tphakala/birdnet-go</a></p>
 
@@ -118,10 +121,10 @@
 </section>
 
 <section id="en" lang="en">
-  <nav class="nav" aria-label="Pages"><a class="marke" href="index.html">Tauben &amp; Co</a><a href="index.html">Home</a><a href="funktionen.html">Features</a><a href="vergleich.html" aria-current="page">Comparison</a><a href="pi-installieren.html">Install the Pi</a><a href="server-einrichten.html">Set up a server</a><a href="lizenzen.html">Licences</a><a href="datenschutz.html">Privacy</a></nav>
+  <nav class="nav" aria-label="Pages"><a class="marke" href="index.html">Tauben &amp; Co</a><a href="index.html">Home</a><a href="funktionen.html">Features</a><a href="vergleich.html" aria-current="page">Comparison</a><a href="pi-installieren.html">Install the Pi</a><a href="server-einrichten.html">Set up a server</a><a href="lizenzen.html">Licences</a><a href="datenschutz.html">Privacy</a><a href="impressum.html">Legal notice</a></nav>
   <p class="pre">Tauben &amp; Co — BirdNET-Go, AvianVisitors and your own station</p>
   <h1>Comparison</h1>
-  <p class="stand">Last updated: 23 October 2026</p>
+  <p class="stand">Last updated: 31 October 2026</p>
   <p class="sprachhinweis"><a href="#de" hreflang="de">Deutsche Fassung oben</a></p>
 
   <h2 class="erste">A complement, not a replacement</h2>
@@ -175,9 +178,10 @@
     fits your station:
   </p>
   <ul>
-    <li><strong>You have BirdNET-Go.</strong> The app shows the station, puts a widget on your Home
-      Screen and listens along with the phone. With the adapter (prototype, read-only, not yet
-      published) AvianVisitors’ illustrated collage comes on top.</li>
+    <li><strong>You have BirdNET-Go.</strong> The app shows the station in the style of
+      AvianVisitors’ illustrated collage, puts a widget on your Home Screen and listens along
+      with the phone. No adapter is needed for this. Notifications and videos on the phone come
+      with version 1.4.</li>
     <li><strong>You have BirdNET-Pi with AvianVisitors.</strong> The app opens your station’s page,
       turns it into a widget and, if you like, listens along with the phone.</li>
     <li><strong>You want videos, notifications and access on the move.</strong> That is what the
@@ -188,9 +192,11 @@
   <h2 id="go-en">BirdNET-Go</h2>
   <p>
     By tphakala and many contributors: a self-hosted station with an extensive interface. The
-    app shows your station directly, with nothing passing through us. The adapter that puts
-    AvianVisitors’ collage on BirdNET-Go only reads through the public API and never writes to
-    BirdNET-Go.
+    app shows your station directly, with nothing passing through us. It fetches the detections
+    through the station’s API and builds the collage itself in the style of AvianVisitors
+    (collage, statistics, atlas). A separate adapter is no longer needed for that.
+    Notifications for new species and review videos made from the station’s data come with
+    version 1.4; even then the phone asks the station itself, with no server in between.
   </p>
   <p>Project: <a href="https://github.com/tphakala/birdnet-go" rel="noopener">github.com/tphakala/birdnet-go</a></p>
 
