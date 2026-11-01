@@ -16,6 +16,7 @@ deshalb diese Seite über GitHub Pages.
 | `pi-installieren.html` | Vorschau der Pi-Anleitung (Installer noch in Arbeit) |
 | `server-einrichten.html` | Vorschau der Server-Anleitung (Paket noch in Arbeit) |
 | `lizenzen.html` | Nennungen und Lizenzen, kostenlos und nicht kommerziell |
+| `nutzungsbedingungen.html` | Nutzungsbedingungen, mit den Nutzungsbeschränkungen der Videostimme (OpenRAIL-M); Wortlaut aus `app/docs/NUTZUNGSBEDINGUNGEN-1.4.md` |
 | `datenschutz.html` | Datenschutzerklärung (Play: Datenschutz-URL) |
 | `impressum.html` | Impressum nach § 18 Abs. 1 MStV (Handarbeit, wird vom Generator nie überschrieben) |
 | `stil.css` | gemeinsames Stylesheet der neuen Seiten |
@@ -32,6 +33,7 @@ Station: keine Aufnahmen, keine Fundzahlen, keine Standortadressen.
 Alle Seiten sind zweisprachig (`<section id="de">`, `<section id="en">`) und haben
 oben dieselbe Navigation. Die Seiten außer `datenschutz.html` und `impressum.html` entstehen aus
 `app/github/support-quellen/bauen.py` im App-Projekt (nicht in diesem Repo);
-die Funktionsliste steht dort in `inhalt_funktionen.py`. Die Navigation in
-`datenschutz.html` erneuert `nav-einfuegen.py` aus demselben Ordner. Die Seiten
+die Funktionsliste steht dort in `inhalt_funktionen.py`, die Nutzungsbedingungen
+liest `inhalt_nutzungsbedingungen.py` aus `app/docs/NUTZUNGSBEDINGUNGEN-1.4.md`. Die Navigation in
+`datenschutz.html` und `impressum.html` erneuert `nav-einfuegen.py` aus demselben Ordner. Die Seiten
 enthalten keine HTML-Kommentare.

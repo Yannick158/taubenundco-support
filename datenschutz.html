@@ -167,7 +167,7 @@
 
 <section id="de" lang="de">
 
-<nav class="nav" aria-label="Seiten"><a class="marke" href="index.html">Tauben &amp; Co</a><a href="index.html">Start</a><a href="funktionen.html">Funktionen</a><a href="vergleich.html">Vergleich</a><a href="pi-installieren.html">Pi installieren</a><a href="server-einrichten.html">Server einrichten</a><a href="lizenzen.html">Lizenzen</a><a href="datenschutz.html" aria-current="page">Datenschutz</a><a href="impressum.html">Impressum</a></nav>
+<nav class="nav" aria-label="Seiten"><a class="marke" href="index.html">Tauben &amp; Co</a><a href="index.html">Start</a><a href="funktionen.html">Funktionen</a><a href="vergleich.html">Vergleich</a><a href="pi-installieren.html">Pi installieren</a><a href="server-einrichten.html">Server einrichten</a><a href="lizenzen.html">Lizenzen</a><a href="nutzungsbedingungen.html">Nutzungsbedingungen</a><a href="datenschutz.html" aria-current="page">Datenschutz</a><a href="impressum.html">Impressum</a></nav>
 
 
 
@@ -175,7 +175,7 @@
 
   <p class="pre">Tauben &amp; Co — App für iPhone und Android</p>
   <h1>Datenschutzerklärung</h1>
-  <p class="stand">Stand: 31. Oktober 2026</p>
+  <p class="stand">Stand: 1. November 2026</p>
   <p class="sprachhinweis"><a href="#en" hreflang="en">English version below</a></p>
 
   <h2>1. Verantwortlicher</h2>
@@ -200,7 +200,7 @@
   <div class="kasten">
     <p>
       Die App ist ein privates Vogeltagebuch. Sie hat <strong>keine Werbung, keine
-      Analyse-Werkzeuge und keine Weitergabe an Dritte zu Werbezwecken</strong>.
+      eigenen Analyse-Werkzeuge und keine Weitergabe an Dritte zu Werbezwecken</strong>.
     </p>
     <p>
       Bei Tauben-&amp;-Co-Stationen gibt es <strong>kein Nutzerkonto mit Namen</strong>:
@@ -244,10 +244,11 @@
       Standardmäßig ist es aus.
     </p>
     <p>
-      Ab Version 1.4 baut Ihr <strong>Handy die Rückblick-Videos selbst</strong>. Wenn
-      Sie einen <strong>eigenen Gemini-Schlüssel</strong> eintragen, schreibt Gemini das
-      Drehbuch; die Anfrage geht dann direkt vom Handy an Google, nie mit Ton und ohne
-      Ortsangaben (Abschnitt 3.11).
+      Ab Version 1.4 baut Ihr <strong>Handy die Rückblick-Videos selbst</strong>. Mit einem
+      <strong>eigenen Gemini-Schlüssel</strong> schreibt Gemini das Drehbuch und zeichnet auf
+      Wunsch fehlende Vogelarten; die Anfragen gehen dann direkt vom Handy an Google, nie mit
+      Ton und ohne Ortsangaben. Die KI des Geräts (Apple Intelligence, Gemini Nano) können Sie
+      stattdessen einschalten; sie arbeitet auf dem Handy (Abschnitt 3.11).
     </p>
   </div>
 
@@ -665,7 +666,7 @@
     Missbrauch).
   </p>
 
-  <h3>3.11 Neu ab Version 1.4: Videos, Vorlesen und Mitteilungen auf dem Handy</h3>
+  <h3>3.11 Neu ab Version 1.4: Videos, Zeichnungen, Vorlesen und Mitteilungen auf dem Handy</h3>
   <p>
     Die folgenden Funktionen gibt es ab Version 1.4 der App für iPhone und Android. Sie laufen
     auf Ihrem Handy. Was dabei ins Netz geht, steht hier.
@@ -678,7 +679,8 @@
     Nachtlauf an (ab Werk nur, während das Handy lädt); bei „Später“ bleibt er aus. Ändern
     lässt sich das in den Einstellungen unter „Rückblicke“. Die Daten kommen direkt von Ihrer Station (Abschnitt 3.6) beziehungsweise aus den Funden auf
     dem Handy. Die Videos bleiben auf Ihrem Handy; die App behält die letzten acht. An uns geht
-    dabei nichts außer den Abrufen von Vogelzeichnungen wie in Abschnitt 3.4. Bei den Stationen,
+    dabei nichts außer den Abrufen von Vogelzeichnungen wie in Abschnitt 3.4 und dem Abruf des
+    Katalogs der Vogelzeichnungen (siehe unten). Bei den Stationen,
     die ich betreibe, entstehen die Videos weiter am Server (Abschnitt 3.8).
   </p>
   <p>
@@ -704,19 +706,96 @@
   <p>
     <strong>Eigener Gemini-Schlüssel (freiwillig).</strong> Standardmäßig schreiben feste
     Vorlagen auf dem Handy das Drehbuch; dann geht nichts an Google. Tragen Sie in den
-    Einstellungen einen eigenen Gemini-Schlüssel ein, schickt die App für jedes Video eine
+    Einstellungen einen eigenen Gemini-Schlüssel ein, prüft die App ihn einmal mit einer
+    Probeanfrage, die nur einen festen Text enthält. Danach schickt sie für jedes Video eine
     Anfrage direkt an Google (generativelanguage.googleapis.com, Google LLC, USA), ohne Umweg
-    über Tauben &amp; Co. Sie enthält die Artnamen Ihrer Woche, wann sie zu hören waren
-    (Wochentage, Tageszeiten und Daten in Worten), die Zahl der Arten und Sätze aus Wikipedia.
+    über Tauben &amp; Co; nur bei einer Störung wiederholt sie die Anfrage höchstens zweimal.
+    Die Anfrage enthält die Artnamen Ihrer Woche, wann sie zu hören waren (Wochentage,
+    Tageszeiten und Daten in Worten), die Zahl der Arten und Sätze aus Wikipedia.
     <strong>Nie Ton</strong>, nie Koordinaten, keinen Stations- oder Ortsnamen und keine
-    Erkennungszahlen. Wir sehen weder Ihren Schlüssel noch die Anfrage. Der Schlüssel liegt nur
-    im geschützten Speicher des Geräts (Schlüsselbund beziehungsweise Keystore), wird nicht mit
-    einer Cloud abgeglichen, lässt sich nicht auf ein anderes Gerät übertragen und lässt sich
-    in den Einstellungen löschen. Im kostenlosen Kontingent darf Google die Eingaben zur
-    Verbesserung seiner Produkte nutzen, im bezahlten nicht. Vertragspartner von Google sind Sie selbst: Die Kosten
-    und die Bedingungen Ihres Google-Kontos tragen Sie. Die App weist Sie vor dem Speichern
-    darauf hin und empfiehlt, bei Google ein Ausgabelimit zu setzen. Rechtsgrundlage ist
-    Art. 6 Abs. 1 lit. a DSGVO: Sie tragen den Schlüssel freiwillig ein.
+    Erkennungszahlen. Was beim Zeichnen an Google geht, steht unten bei den
+    Vogelzeichnungen. Wir sehen
+    weder Ihren Schlüssel noch die Anfragen. Der Schlüssel liegt nur im geschützten Speicher
+    des Geräts (Schlüsselbund beziehungsweise Keystore), wird nicht mit einer Cloud
+    abgeglichen, lässt sich nicht auf ein anderes Gerät übertragen und lässt sich in den
+    Einstellungen löschen.
+  </p>
+  <p>
+    <strong>Gemini auch nachts.</strong> Sobald ein Schlüssel gespeichert ist, ist „Auch nachts
+    mit Gemini“ ab Werk eingeschaltet. Dann gehen die Anfragen für Videos und, falls Sie „Neue
+    Arten selbst zeichnen“ einschalten, für Zeichnungen auch nachts und im Hintergrund an
+    Google, ohne dass Sie etwas antippen. Schalten Sie es unter „Rückblicke“ aus, nutzt die App
+    Gemini nur, solange Sie sie selbst bedienen; die App merkt sich diese Wahl.
+  </p>
+  <p>
+    <strong>Deckel.</strong> Die App zählt Ihre Gemini-Anfragen und bremst sie mit Deckeln je
+    Tag, Woche und Monat. Die Zähler liegen nur auf dem Gerät. Ist ein Deckel erreicht, geht
+    keine weitere Anfrage hinaus.
+  </p>
+  <p>
+    Im kostenlosen Kontingent darf Google die Eingaben zur Verbesserung seiner Produkte nutzen,
+    im bezahlten nicht. Vertragspartner von Google sind Sie selbst: Die Kosten und die
+    Bedingungen Ihres Google-Kontos tragen Sie (siehe auch die
+    <a href="nutzungsbedingungen.html#de-p10">Nutzungsbedingungen, § 10</a>). Die App weist Sie
+    vor dem Speichern darauf hin und empfiehlt, bei Google ein Ausgabelimit zu setzen.
+    Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO: Sie tragen den Schlüssel freiwillig ein.
+  </p>
+  <p>
+    <strong>KI auf dem Gerät (freiwillig, ab Werk aus).</strong> Statt Gemini kann die KI Ihres
+    Geräts das Drehbuch schreiben, wenn Sie unter „Rückblicke“ die „Geräte-KI“ einschalten. Auf
+    dem iPhone ist das Apple Intelligence (ab iOS 26, wo Apple es anbietet). Das Sprachmodell
+    gehört zum Betriebssystem und arbeitet auf dem Gerät; die App schickt dafür nichts ins Netz.
+  </p>
+  <p>
+    Auf Android ist es Gemini Nano, wo das Gerät es anbietet. Die App erreicht es über die
+    Bibliothek ML Kit von Google. Das Modell lädt das Betriebssystem, nicht die App, und das
+    Drehbuch entsteht auf dem Handy; der Text der Woche verlässt das Gerät nicht. ML Kit kann
+    aber Nutzungsdaten der Bibliothek an Google melden (firebaselogging.googleapis.com, Google
+    LLC, USA): Paketname und Version der App, Version der Bibliothek, Spracheinstellung des
+    Geräts und eine zufällige Kennung dieser Installation. Keine Artnamen, keine Texte, keinen
+    Schlüssel, keine Station. Die App fragt ML Kit erst, wenn Sie die Geräte-KI antippen. Einen
+    zweiten Teil von ML Kit nutzt die App beim Zeichnen (siehe „Vogelzeichnungen“). Wie lange
+    Google diese Daten speichert, steht in den Datenschutzhinweisen von Google.
+  </p>
+  <p>
+    <strong>Vogelzeichnungen mit eigenem Schlüssel (freiwillig).</strong> Bei einer BirdNET-Go-
+    oder AvianVisitors-Station und bei „Nur zuhören“ zeigt die Seite „Vogelzeichnungen“, welche
+    Arten noch keine Zeichnung haben. Mit Ihrem Gemini-Schlüssel kann das Handy sie zeichnen
+    lassen: auf Antippen von „Zeichnung erzeugen“ oder, wenn Sie „Neue Arten selbst zeichnen“
+    einschalten (ab Werk aus), von selbst für Arten, die in den letzten sieben Tagen erkannt
+    wurden. Dafür holt die App zuerst Vorlagen: ein Foto der Art aus Wikipedia
+    (en.wikipedia.org und upload.wikimedia.org, Wikimedia Foundation, USA; die Anfrage enthält
+    nur den Artnamen), bei manchen Gattungen zusätzlich das Foto einer Vergleichsart, und eine
+    Stilvorlage von unserem Server (die Anfrage enthält nur den Namen der Vorlage-Art). Die
+    Fotos rechnet die App neu und verkleinert sie; Aufnahmeort und andere Zusatzdaten fallen
+    dabei weg.
+  </p>
+  <p>
+    An Google (generativelanguage.googleapis.com, Google LLC, USA) gehen dann nur der
+    wissenschaftliche und der englische Artname, die Haltung (sitzend oder fliegend), eine
+    kurze Zeichennotiz zur Art aus der App und diese Bilder. <strong>Kein Ort, keine
+    Koordinaten, kein Stationsname, keine Stationsadresse, keine Zeiten, keine Zählungen,
+    keine Gerätedaten und nie Ton.</strong> Google erfährt dabei, welche Art Sie zeichnen
+    lassen; bei der Automatik sind das Arten, die kürzlich erkannt wurden. Wo und wann, erfährt
+    Google nicht. Das Freistellen des Vogels geschieht auf dem Handy. Auf Android nutzt die App
+    dafür auch die Bibliothek ML Kit von Google (Subject Segmentation): Erst wenn Sie zum ersten
+    Mal selbst zeichnen lassen, lädt Google Play-Dienste das Modell herunter. ML Kit kann dabei
+    Nutzungsdaten der Bibliothek an Google melden (Paketname und Version der App, Version der
+    Bibliothek, Spracheinstellung, zufällige Kennung), aber keine Bilder und keine Inhalte. Die
+    Zeichnungen bleiben auf Ihrem Gerät, bis Sie sie löschen; an uns geht nichts davon. Für die
+    Kosten, den Schalter „Auch nachts mit Gemini“ und die Rechtsgrundlage gilt der Absatz zum
+    Gemini-Schlüssel oben.
+  </p>
+  <p>
+    <strong>Katalog der Vogelzeichnungen.</strong> Damit die App weiß, welche Zeichnungen es in
+    unserer Bildbibliothek gibt und wer sie gezeichnet hat, lädt sie bei einer BirdNET-Go- oder
+    AvianVisitors-Station und bei „Nur zuhören“ höchstens einmal am Tag den öffentlichen Katalog
+    von taubenundco.de, außerdem beim Öffnen der Lizenzseite. Die Anfrage enthält keine
+    Standortdaten, keine Station, keine Artnamen und keine Kennung, nur den Stand des zuletzt
+    geladenen Katalogs, damit unveränderte Daten nicht erneut kommen. Wie bei jedem Abruf sieht
+    der Server die IP-Adresse und die aufgerufene Adresse; sie stehen in den
+    Zugriffsprotokollen (höchstens 14 Tage, Abschnitt 3.2). Den Katalog speichert die App im
+    Zwischenspeicher des Geräts.
   </p>
   <p>
     <strong>Artnamen vorlesen.</strong> Auf Wunsch sagt das Handy beim Zuhören den Namen der
@@ -733,6 +812,12 @@
     das Handy die Station erreicht, zum Beispiel im Heimnetz oder über VPN. Was die Station
     dabei sieht, bestimmt, wer sie betreibt (Abschnitt 3.6). Die Erlaubnis für Mitteilungen
     fragt das System erst, wenn Sie das einschalten.
+  </p>
+  <p>
+    <strong>Seite „Neu in dieser Version“.</strong> Wer die App aktualisiert und eine
+    BirdNET-Go- oder AvianVisitors-Station oder „Nur zuhören“ nutzt, sieht einmal eine Seite mit
+    den Neuerungen. Ihr Inhalt steckt in der App. Dabei wird nichts übertragen; dass Sie die
+    Seite gesehen haben, merkt sich nur das Gerät.
   </p>
 
   <h3>3.12 Diese Hilfeseite (GitHub Pages)</h3>
@@ -758,6 +843,11 @@
     <li><strong>Lokales Netzwerk</strong> (iPhone) — nur, damit die App die
         Station erreicht, die Sie selbst eintragen (Abschnitt 3.6). Ohne Freigabe
         funktionieren Stationen im Heimnetz nicht; alles andere schon.</li>
+    <li><strong>Fotos hinzufügen</strong> (iPhone) bzw. <strong>Speicher</strong>
+        (nur Android 8 und 9) — nur, wenn Sie einen Rückblick mit „Sichern“ ablegen.
+        Die App legt dann das Video im Fotoalbum bzw. im Ordner „Movies“ ab; sie
+        liest keine Fotos oder anderen Dateien. Ab Android 10 ist dafür keine
+        Freigabe nötig.</li>
   </ul>
   <p>
     Jede Freigabe können Sie jederzeit in den Einstellungen Ihres Geräts wieder
@@ -810,10 +900,10 @@
           Formulare (Abschnitt 3.12)</td>
     </tr>
     <tr>
-      <td><strong>Wikimedia Foundation</strong> (en.wikipedia.org und de.wikipedia.org,
-          USA)</td>
-      <td>Artbeschreibung beim Öffnen einer Artkarte und Textquelle der
-          Rückblick-Videos ab Version 1.4 — nur wissenschaftlicher Artname</td>
+      <td><strong>Wikimedia Foundation</strong> (en.wikipedia.org, de.wikipedia.org und
+          upload.wikimedia.org, USA)</td>
+      <td>Artbeschreibung beim Öffnen einer Artkarte, Textquelle der Rückblick-Videos und
+          Fotovorlage für Vogelzeichnungen ab Version 1.4 — nur Artname</td>
     </tr>
     <tr>
       <td><strong>Hugging Face Inc.</strong> (huggingface.co, USA)</td>
@@ -822,18 +912,28 @@
     </tr>
     <tr>
       <td><strong>Google</strong> (Gemini-API; Google LLC, USA)</td>
-      <td>Drehbuch der Rückblick-Videos — <strong>nur, wenn Sie einen eigenen
-          Gemini-Schlüssel eintragen</strong>; die Anfrage geht direkt von Ihrem
+      <td>Drehbuch der Rückblick-Videos und Vogelzeichnungen — <strong>nur, wenn Sie einen
+          eigenen Gemini-Schlüssel eintragen</strong>; die Anfragen gehen direkt von Ihrem
           Handy an Google (Abschnitt 3.11)</td>
+    </tr>
+    <tr>
+      <td><strong>Google</strong> (ML Kit; Google LLC, USA)</td>
+      <td>Nutzungsdaten der Bibliothek, über die Android-Geräte Gemini Nano erreichen und selbst
+          gezeichnete Vögel freistellen — <strong>nur, wenn Sie die Geräte-KI antippen bzw. zum
+          ersten Mal selbst zeichnen lassen</strong>; das Freistell-Modell laden Google Play-Dienste
+          herunter; keine Inhalte (Abschnitt 3.11)</td>
     </tr>
   </table>
   <p>
     Eine Meldung enthält nur, was ohnehin auf dem Bildschirm steht (etwa „Neue
     Art: Buchfink“). Die Station, die Sie selbst eintragen, ist kein Empfänger
     unserer Daten: Die App spricht mit ihr direkt (Abschnitt 3.6). Außer den
-    Genannten geht nichts an Dritte; die Abrufe bei GitHub und Wikipedia
-    beschreiben die Abschnitte 3.4 und 3.11. <strong>Kein Verkauf von Daten, keine Werbenetzwerke, keine
-    Analyse-Bibliotheken.</strong>
+    Genannten sendet die App nichts an Dritte; die Abrufe bei GitHub und Wikipedia
+    beschreiben die Abschnitte 3.4 und 3.11. Was Dienste des Betriebssystems tun, etwa die
+    Sprachausgabe oder das Laden von Modellen für die Geräte-KI, steuert die App nicht
+    (Abschnitt 3.11). <strong>Kein Verkauf von Daten, keine Werbenetzwerke, keine eigenen
+    Analyse-Bibliotheken.</strong> Die Nutzungsmeldungen von ML Kit (nur Android) beschreibt
+    Abschnitt 3.11.
   </p>
 
   <h2>6. Rechtsgrundlagen</h2>
@@ -846,8 +946,8 @@
     <li><strong>Art. 6 Abs. 1 lit. a DSGVO</strong> (Einwilligung) — Mikrofon,
         Standort, Meldungen und lokales Netzwerk; Sie erteilen sie im Systemdialog
         und können sie jederzeit widerrufen. Ebenso die Web-Push-Mitteilungen der Glocke, ein
-        eigener Gemini-Schlüssel und das Speichern eines
-        BirdNET-Go-Passworts: Es geschieht nur mit Ihrer Zustimmung.</li>
+        eigener Gemini-Schlüssel samt Drehbuch und Vogelzeichnungen, die Geräte-KI und das
+        Speichern eines BirdNET-Go-Passworts: Es geschieht nur mit Ihrer Zustimmung.</li>
     <li><strong>Art. 6 Abs. 1 lit. f DSGVO</strong> (berechtigtes Interesse) —
         Server-Protokolle zum sicheren Betrieb, der Schutz der Anmeldeseite vor
         Durchprobieren (Abschnitt 3.10), Erkennungen und Tonausschnitte der
@@ -879,12 +979,14 @@
     <li>Erkennungen der Stationen, die ich betreibe: ohne feste Frist. Tonausschnitte:
         30 Tage, von jeder Art bleiben einige dauerhaft (Abschnitt 3.8). Live-Band: nur im
         Arbeitsspeicher, höchstens 15 Minuten.</li>
-    <li>Web-Push-Abo: bis Sie die Glocke ausschalten oder der Push-Dienst es als
-        ungültig meldet.</li>
     <li>Rückblick-Videos auf dem Handy (ab Version 1.4): die letzten acht, bis Sie sie
         löschen oder die App löschen. Wikipedia-Auszüge: bis zu 30 Tage auf dem Gerät.
-        Heruntergeladene Stimme: bis Sie die App löschen. Gemini-Schlüssel (nur falls
-        eingetragen): bis Sie ihn löschen, sich abmelden oder die App löschen.</li>
+        Heruntergeladene Stimme: bis Sie sie in den Einstellungen entfernen oder die App
+        löschen. Gemini-Schlüssel (nur falls eingetragen): bis Sie ihn löschen, sich abmelden
+        oder die App löschen. Mit Ihrem Schlüssel gezeichnete Vogelbilder: bis Sie sie löschen
+        oder die App löschen; Fotovorlagen dafür bis zu sieben Tage. Katalog der
+        Vogelzeichnungen: im Zwischenspeicher, bis der nächste Stand ihn ersetzt oder das
+        System den Zwischenspeicher leert.</li>
     <li>Collage-Anfragen (Artnamen und Zählungen): werden nicht gespeichert.</li>
     <li>Fotos und Zeilen zwischen verbundenen Geräten: 30 Tage, dann automatische
         Löschung; sofort beim Lösen der Verbindung oder beim Löschen der Nachricht.</li>
@@ -932,6 +1034,10 @@
     Die App richtet sich nicht gezielt an Kinder und erhebt wissentlich keine
     Daten von Kindern.
   </p>
+  <p>
+    Tauben &amp; Co ist für Menschen ab 16 Jahren gedacht. Die App fragt kein Alter ab. Jüngere
+    nutzen sie bitte nur zusammen mit ihren Eltern.
+  </p>
 
   <h2>10. Sicherheit</h2>
   <p>
@@ -948,7 +1054,14 @@
     jeweils der Stand.
   </p>
   <p>
-    Zuletzt geändert am 31. Oktober 2026: Verweis auf das Impressum; Stationsdaten,
+    Zuletzt geändert am 1. November 2026: Vogelzeichnungen mit eigenem
+    Gemini-Schlüssel und Katalog der Bildbibliothek; „Auch nachts mit Gemini“ ab Werk
+    eingeschaltet, sobald ein Schlüssel gespeichert ist; Deckel für Gemini-Anfragen; KI auf dem
+    Gerät (Apple Intelligence, Gemini Nano mit ML Kit); Seite „Neu in dieser Version“;
+    Altersangabe ab 16 Jahren; Verweis auf die Nutzungsbedingungen.
+  </p>
+  <p>
+    Davor am 31. Oktober 2026: Verweis auf das Impressum; Stationsdaten,
     Stimmen Dritter in Hörweite, Web-Push und Speicher im Browser; diese Hilfeseite bei
     GitHub Pages; Frist für die Zugriffsprotokolle des Webservers (höchstens 14 Tage), Hinweis
     auf die übrigen Server-Protokolle und Ablauf der Geräte-Token (180 Tage); Passwort-Reset
@@ -969,7 +1082,7 @@
 
 <section id="en" lang="en">
 
-<nav class="nav" aria-label="Pages"><a class="marke" href="index.html">Tauben &amp; Co</a><a href="index.html">Home</a><a href="funktionen.html">Features</a><a href="vergleich.html">Comparison</a><a href="pi-installieren.html">Install the Pi</a><a href="server-einrichten.html">Set up a server</a><a href="lizenzen.html">Licences</a><a href="datenschutz.html" aria-current="page">Privacy</a><a href="impressum.html">Legal notice</a></nav>
+<nav class="nav" aria-label="Pages"><a class="marke" href="index.html">Tauben &amp; Co</a><a href="index.html">Home</a><a href="funktionen.html">Features</a><a href="vergleich.html">Comparison</a><a href="pi-installieren.html">Install the Pi</a><a href="server-einrichten.html">Set up a server</a><a href="lizenzen.html">Licences</a><a href="nutzungsbedingungen.html">Terms of use</a><a href="datenschutz.html" aria-current="page">Privacy</a><a href="impressum.html">Legal notice</a></nav>
 
 
 
@@ -977,7 +1090,7 @@
 
   <p class="pre">Tauben &amp; Co — app for iPhone and Android</p>
   <h1>Privacy policy</h1>
-  <p class="stand">Last updated: 31 October 2026</p>
+  <p class="stand">Last updated: 1 November 2026</p>
   <p class="sprachhinweis"><a href="#de" hreflang="de">Deutsche Fassung oben</a></p>
 
   <h2>1. Controller</h2>
@@ -1002,7 +1115,7 @@
   <div class="kasten">
     <p>
       The app is a private bird diary. It has <strong>no advertising, no analytics
-      tools and no sharing with third parties for advertising</strong>.
+      tools of its own and no sharing with third parties for advertising</strong>.
     </p>
     <p>
       With Tauben &amp; Co stations there is <strong>no user account with a
@@ -1045,10 +1158,11 @@
       myself, and only if I have explicitly turned it on. It is off by default.
     </p>
     <p>
-      From version 1.4, your <strong>phone builds the review videos itself</strong>. If
-      you enter a <strong>Gemini key of your own</strong>, Gemini writes the script; the
-      request then goes straight from the phone to Google, never with sound and without
-      any place information (section 3.11).
+      From version 1.4 your <strong>phone builds the review videos itself</strong>. With a
+      <strong>Gemini key of your own</strong>, Gemini writes the script and, if you wish, draws
+      missing bird species; the requests then go straight from the phone to Google, never with
+      sound and without location details. You can switch on your device's AI instead (Apple
+      Intelligence, Gemini Nano); it works on the phone (section 3.11).
     </p>
   </div>
 
@@ -1452,7 +1566,7 @@
     Art. 6(1)(f) GDPR (protecting the sign-in against abuse).
   </p>
 
-  <h3>3.11 New from version 1.4: videos, reading aloud and notifications on the phone</h3>
+  <h3>3.11 New from version 1.4: videos, drawings, reading aloud and notifications on the phone</h3>
   <p>
     The following features come with version 1.4 of the app for iPhone and Android. They run
     on your phone. What goes onto the network is described here.
@@ -1466,7 +1580,7 @@
     settings under “Reviews”. The data comes straight from your station
     (section 3.6) or from the finds on the phone. The videos stay on your phone; the app keeps
     the last eight. Nothing goes to us apart from the requests for bird drawings as in
-    section 3.4. With the stations that I run, the videos are still made on the server
+    section 3.4 and the download of the catalogue of bird drawings (see below). With the stations that I run, the videos are still made on the server
     (section 3.8).
   </p>
   <p>
@@ -1491,18 +1605,92 @@
   <p>
     <strong>A Gemini key of your own (optional).</strong> By default, fixed templates on the
     phone write the script; nothing then goes to Google. If you enter a Gemini key of your own
-    in the settings, the app sends one request per video straight to Google
-    (generativelanguage.googleapis.com, Google LLC, USA), without going through Tauben &amp; Co.
-    It contains the species names of your week, when they were heard (weekdays, times of day
-    and dates in words), the number of species and sentences from Wikipedia.
-    <strong>Never sound</strong>, never coordinates, no station or place name and no
-    detection counts. We see neither your key nor the request. The key sits only in the
-    device’s protected storage (Keychain or Keystore), is not synced with any cloud, cannot be
-    moved to another device and can be deleted in the settings. On the free tier Google may use
-    the inputs to improve its products; on the paid tier it may not. You yourself are Google’s
-    contracting party: you bear the costs and the terms of your Google account. Before saving
-    the key, the app points this out and recommends setting a spending limit at Google. The
-    legal basis is Art. 6(1)(a) GDPR: you enter the key voluntarily.
+    in the settings, the app checks it once with a test request that contains only a fixed
+    text. After that it sends one request per video straight to Google
+    (generativelanguage.googleapis.com, Google LLC, USA), without going through Tauben &amp; Co;
+    only if something goes wrong does it repeat the request, at most twice. The request
+    contains the species names of your week, when they were heard (weekdays, times of day and
+    dates in words), the number of species and sentences from Wikipedia.
+    <strong>Never sound</strong>, never coordinates, no station or place name and no detection
+    counts. What goes to Google for drawings is described below under bird drawings. We see
+    neither your key nor the requests. The key sits only in the device’s protected storage
+    (Keychain or Keystore), is not synced with any cloud, cannot be moved to another device and
+    can be deleted in the settings.
+  </p>
+  <p>
+    <strong>Gemini at night too.</strong> As soon as a key is saved, “Also at night with Gemini”
+    is switched on by default. Requests for videos and, if you turn on “Draw new species
+    automatically”, for drawings then also go to Google at night and in the background,
+    without you tapping anything. If you switch it off under “Reviews”, the app only uses
+    Gemini while you are using it yourself; the app remembers that choice.
+  </p>
+  <p>
+    <strong>Caps.</strong> The app counts your Gemini requests and slows them with caps per
+    day, week and month. The counters are kept on the device only. Once a cap is reached, no
+    further request is sent.
+  </p>
+  <p>
+    On the free tier Google may use the inputs to improve its products; on the paid tier it may
+    not. You yourself are Google’s contracting party: you bear the costs and the terms of your
+    Google account (see also the <a href="nutzungsbedingungen.html#en-p10">terms of use,
+    section 10</a>). Before saving the key, the app points this out and recommends setting a
+    spending limit at Google. The legal basis is Art. 6(1)(a) GDPR: you enter the key
+    voluntarily.
+  </p>
+  <p>
+    <strong>AI on the device (optional, off by default).</strong> Instead of Gemini, your
+    device’s AI can write the script if you switch on “Device AI” under “Reviews”. On the iPhone
+    this is Apple Intelligence (from iOS 26, where Apple offers it). The language model is part
+    of the operating system and works on the device; the app sends nothing onto the network for
+    it.
+  </p>
+  <p>
+    On Android it is Gemini Nano, where the device offers it. The app reaches it through
+    Google’s ML Kit library. The operating system, not the app, loads the model, and the script
+    is written on the phone; the week’s text does not leave the device. ML Kit may, however,
+    report usage data about the library to Google (firebaselogging.googleapis.com, Google LLC,
+    USA): the app’s package name and version, the library version, the device’s language
+    setting and a random identifier of this installation. No species names, no texts, no key,
+    no station. The app only asks ML Kit once you tap “Device AI”. The app uses a second part
+    of ML Kit for drawings (see “Bird drawings”). How long Google keeps this data is described
+    in Google’s privacy notices.
+  </p>
+  <p>
+    <strong>Bird drawings with your own key (optional).</strong> With a BirdNET-Go or
+    AvianVisitors station and with “Listen only”, the “Bird drawings” page shows which species
+    have no drawing yet. With your Gemini key the phone can have them drawn: when you tap “Make
+    a drawing” or, if you turn on “Draw new species automatically” (off by default), by itself
+    for species detected in the last seven days. To do so the app first fetches references: a
+    photo of the species from Wikipedia (en.wikipedia.org and upload.wikimedia.org, Wikimedia
+    Foundation, USA; the request contains only the species name), for some genera also the photo
+    of a comparison species, and a style sample from our server (the request contains only the
+    name of the sample species). The app re-encodes and shrinks the photos; location and other
+    metadata are removed in the process.
+  </p>
+  <p>
+    Only the scientific and English species name, the pose (perched or in flight), a short
+    drawing note about the species from the app and these pictures then go to Google
+    (generativelanguage.googleapis.com, Google LLC, USA). <strong>No place, no coordinates, no
+    station name, no station address, no times, no counts, no device data and never
+    sound.</strong> Google learns which species you have drawn; with the automatic mode these
+    are species that were detected recently. Google does not learn where or when. Cutting out
+    the bird happens on the phone. On Android the app also uses Google’s ML Kit library for this
+    (Subject Segmentation): only when you have a bird drawn for the first time do Google Play
+    services download the model. ML Kit may report usage data about the library to Google (the
+    app’s package name and version, the library version, language setting, a random identifier),
+    but no pictures and no content. The drawings stay on your device until you delete them;
+    nothing of them goes to us. For costs, the “Also at night with Gemini” switch and the legal
+    basis, the paragraph on the Gemini key above applies.
+  </p>
+  <p>
+    <strong>Catalogue of bird drawings.</strong> So that the app knows which drawings exist in
+    our image library and who drew them, it downloads the public catalogue from taubenundco.de
+    at most once a day with a BirdNET-Go or AvianVisitors station and with “Listen only”, and
+    also when you open the licences page. The request contains no location data, no station, no
+    species names and no identifier, only the version of the catalogue last loaded, so that
+    unchanged data is not sent again. As with every request, the server sees the IP address and
+    the address requested; they are kept in the access logs (at most 14 days, section 3.2). The
+    app stores the catalogue in the device’s cache.
   </p>
   <p>
     <strong>Reading species names aloud.</strong> If you wish, the phone says the name of the
@@ -1520,6 +1708,12 @@
     reach the station, for example on the home network or over a VPN. What the station sees is
     up to whoever runs it (section 3.6). The system only asks for permission for notifications
     when you turn this on.
+  </p>
+  <p>
+    <strong>The “What’s new in this version” page.</strong> If you update the app and use a
+    BirdNET-Go or AvianVisitors station or “Listen only”, you see a page with the changes once.
+    Its content is built into the app. Nothing is transmitted; only the device remembers that
+    you have seen the page.
   </p>
 
   <h3>3.12 This help site (GitHub Pages)</h3>
@@ -1545,6 +1739,11 @@
     <li><strong>Local network</strong> (iPhone) — only so the app can reach the
         station you enter yourself (section 3.6). Without it, stations on your home
         network do not work; everything else does.</li>
+    <li><strong>Add photos</strong> (iPhone) or <strong>storage</strong>
+        (Android 8 and 9 only) — only when you save a recap with “Save”. The app then
+        puts the video into your photo library or the “Movies” folder; it does not
+        read any photos or other files. From Android 10 on no permission is needed
+        for this.</li>
   </ul>
   <p>
     You can withdraw any permission at any time in your device’s settings.
@@ -1597,10 +1796,10 @@
           (section 3.12)</td>
     </tr>
     <tr>
-      <td><strong>Wikimedia Foundation</strong> (en.wikipedia.org and de.wikipedia.org,
-          USA)</td>
-      <td>species description when a species card is opened, and text source of the review
-          videos from version 1.4 — only the scientific species name</td>
+      <td><strong>Wikimedia Foundation</strong> (en.wikipedia.org, de.wikipedia.org and
+          upload.wikimedia.org, USA)</td>
+      <td>species description when you open a species card, text source for the review videos
+          and photo reference for bird drawings from version 1.4 — species name only</td>
     </tr>
     <tr>
       <td><strong>Hugging Face Inc.</strong> (huggingface.co, USA)</td>
@@ -1609,8 +1808,15 @@
     </tr>
     <tr>
       <td><strong>Google</strong> (Gemini API; Google LLC, USA)</td>
-      <td>script of the review videos — <strong>only if you enter a Gemini key of your
-          own</strong>; the request goes straight from your phone to Google
+      <td>script of the review videos and bird drawings — <strong>only if you enter a Gemini
+          key of your own</strong>; the requests go straight from your phone to Google
+          (section 3.11)</td>
+    </tr>
+    <tr>
+      <td><strong>Google</strong> (ML Kit; Google LLC, USA)</td>
+      <td>usage data of the library through which Android devices reach Gemini Nano and cut out
+          birds you have drawn — <strong>only once you tap “Device AI” or have a bird drawn for the
+          first time</strong>; Google Play services download the cut-out model; no content
           (section 3.11)</td>
     </tr>
   </table>
@@ -1618,9 +1824,11 @@
     A notification contains only what is on the screen anyway (such as “New
     species: Chaffinch”). The station you enter yourself is not a recipient of our
     data: the app talks to it directly (section 3.6). Apart from those named,
-    nothing goes to third parties; the requests to GitHub and Wikipedia are
-    described in sections 3.4 and 3.11. <strong>No sale of data, no advertising networks, no analytics
-    libraries.</strong>
+    the app sends nothing to third parties; the requests to GitHub and Wikipedia are
+    described in sections 3.4 and 3.11. What services of the operating system do, such as the
+    speech output or loading models for the device AI, is not controlled by the app
+    (section 3.11). <strong>No sale of data, no advertising networks, no analytics libraries of
+    our own.</strong> The usage reports of ML Kit (Android only) are described in section 3.11.
   </p>
 
   <h2>6. Legal bases</h2>
@@ -1633,8 +1841,8 @@
     <li><strong>Art. 6(1)(a) GDPR</strong> (consent) — microphone, location,
         notifications and local network; you give it in the system dialog and can
         withdraw it at any time. The same goes for the web push notifications of the bell,
-        a Gemini key of your own and saving a BirdNET-Go password: it
-        only happens with your agreement.</li>
+        a Gemini key of your own including the script and bird drawings, the device AI and
+        saving a BirdNET-Go password: it only happens with your agreement.</li>
     <li><strong>Art. 6(1)(f) GDPR</strong> (legitimate interest) — server logs for
         secure operation, protecting the sign-in page against guessing (section 3.10),
         detections and sound clips of the stations that I
@@ -1664,12 +1872,13 @@
     <li>Detections of the stations that I run: no fixed period. Sound clips: 30 days, some
         of each species stay for good (section 3.8). Live band: only in memory, 15 minutes at
         most.</li>
-    <li>Web push subscription: until you switch the bell off or the push service reports it
-        as invalid.</li>
-    <li>Review videos on the phone (from version 1.4): the last eight, until you delete them
-        or delete the app. Wikipedia excerpts: up to 30 days on the device. Downloaded
-        voice: until you delete the app. Gemini key (only if entered): until you delete
-        it, sign out or delete the app.</li>
+    <li>Review videos on the phone (from version 1.4): the last eight, until you delete them or
+        delete the app. Wikipedia excerpts: up to 30 days on the device. Downloaded voice: until
+        you remove it in the settings or delete the app. Gemini key (only if entered): until you
+        delete it, sign out or delete the app. Bird pictures drawn with your key: until you
+        delete them or delete the app; photo references for them up to seven days. Catalogue of
+        bird drawings: in the cache, until the next version replaces it or the system clears
+        the cache.</li>
     <li>Collage requests (species names and counts): not stored.</li>
     <li>Pictures and notes between connected devices: 30 days, then deleted
         automatically; immediately when the connection is ended or the message is
@@ -1718,6 +1927,10 @@
     The app is not aimed at children and does not knowingly collect data from
     children.
   </p>
+  <p>
+    Tauben &amp; Co is meant for people aged 16 and over. The app does not ask for anyone's age.
+    Younger people should only use it together with their parents.
+  </p>
 
   <h2>10. Security</h2>
   <p>
@@ -1733,7 +1946,14 @@
     top always shows when.
   </p>
   <p>
-    Last changed on 31 October 2026: reference to the legal notice; station data, third
+    Last changed on 1 November 2026: bird drawings with a Gemini key of your own and
+    the image library catalogue; “Also at night with Gemini” switched on by default once a key
+    is saved; caps for Gemini requests; AI on the device (Apple Intelligence, Gemini Nano with
+    ML Kit); the “What’s new in this version” page; age statement (16 and over); reference to
+    the terms of use.
+  </p>
+  <p>
+    Before that, on 31 October 2026: reference to the legal notice; station data, third
     parties’ voices within earshot, web push and storage in the browser; this help site at
     GitHub Pages; retention of the web server access logs (14 days at most), a note on the
     other server logs and expiry of device tokens (180 days); password reset via Brevo and
